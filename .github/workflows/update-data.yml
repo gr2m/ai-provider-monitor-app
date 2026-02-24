@@ -1,0 +1,56 @@
+name: Update Data
+on:
+  repository_dispatch:
+    types:
+      - "api:*"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - name: Fetch and update changes
+        env:
+          PROVIDER: ${{ github.event.client_payload.provider }}
+          RELATIVE_PATH: ${{ github.event.client_payload.relativePath }}
+          STATUS: ${{ github.event.client_payload.status }}
+        run: |
+          echo "Provider: $PROVIDER"
+          echo "Route: $RELATIVE_PATH"
+          echo "Status: $STATUS"
+
+          if [ "$STATUS" = "D" ]; then
+            echo "Route was deleted, skipping"
+            exit 0
+          fi
+
+          # Derive change file path: relativePath "v1/chat/completions/post.json"
+          # becomes "changes/<provider>/v1/chat/completions/post.yml"
+          CHANGE_FILE="changes/${PROVIDER}/${RELATIVE_PATH%.json}.yml"
+          YAML_URL="https://raw.githubusercontent.com/gr2m/ai-provider-monitor/main/${CHANGE_FILE}"
+
+          echo "Fetching: $YAML_URL"
+          HTTP_STATUS=$(curl -s -o /tmp/changes.yml -w "%{http_code}" "$YAML_URL")
+
+          if [ "$HTTP_STATUS" != "200" ]; then
+            echo "No change file found (HTTP $HTTP_STATUS)"
+            exit 0
+          fi
+
+          node scripts/update-route.js "$PROVIDER" "$RELATIVE_PATH" /tmp/changes.yml
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/changes.json
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "update: ${{ github.event.client_payload.provider }} ${{ github.event.client_payload.relativePath }}"
+          git push
