@@ -15,11 +15,10 @@ function ChangesTableInner({
   const router = useRouter();
   const pathname = usePathname();
 
-  const selectedProviders = useMemo(() => {
-    const param = searchParams.get("providers");
-    return param ? param.split(",").filter(Boolean) : [];
-  }, [searchParams]);
+  // Provider dropdown is just for scoping the route picker
+  const currentProvider = searchParams.get("provider") || "";
 
+  // Selected routes stored as "provider:METHOD /path"
   const selectedRoutes = useMemo(() => {
     const param = searchParams.get("routes");
     return param ? param.split(",").filter(Boolean) : [];
@@ -30,86 +29,54 @@ function ChangesTableInner({
   const breakingFilter = searchParams.get("breaking") || "";
   const docOnlyFilter = searchParams.get("doc_only") || "";
 
-  const updateParams = useCallback(
-    (updates: Record<string, string>) => {
+  const updateParam = useCallback(
+    (key: string, value: string) => {
       const params = new URLSearchParams(searchParams.toString());
-      for (const [key, value] of Object.entries(updates)) {
-        if (value) {
-          params.set(key, value);
-        } else {
-          params.delete(key);
-        }
+      if (value) {
+        params.set(key, value);
+      } else {
+        params.delete(key);
       }
       router.replace(`${pathname}?${params.toString()}`, { scroll: false });
     },
     [searchParams, router, pathname]
   );
 
-  const updateParam = useCallback(
-    (key: string, value: string) => updateParams({ [key]: value }),
-    [updateParams]
-  );
-
-  const toggleProvider = useCallback(
-    (provider: string) => {
-      const current = new Set(selectedProviders);
-      if (current.has(provider)) {
-        current.delete(provider);
-      } else {
-        current.add(provider);
-      }
-      const newProviders = [...current].sort().join(",");
-
-      // Clear routes that no longer belong to any selected provider
-      if (selectedRoutes.length > 0) {
-        const providerRoutes = new Set<string>();
-        for (const c of changes) {
-          if (current.has(c.provider)) {
-            providerRoutes.add(`${c.method} /${c.route}`);
-          }
-        }
-        const validRoutes = selectedRoutes.filter((r) =>
-          providerRoutes.has(r)
-        );
-        updateParams({
-          providers: newProviders,
-          routes: validRoutes.join(","),
-        });
-      } else {
-        updateParam("providers", newProviders);
-      }
-    },
-    [selectedProviders, selectedRoutes, changes, updateParams, updateParam]
-  );
-
+  // Routes available for the currently selected provider
   const availableRoutes = useMemo(() => {
-    if (selectedProviders.length === 0) return [];
+    if (!currentProvider) return [];
     const routeSet = new Set<string>();
     for (const c of changes) {
-      if (selectedProviders.includes(c.provider)) {
+      if (c.provider === currentProvider) {
         routeSet.add(`${c.method} /${c.route}`);
       }
     }
     return [...routeSet].sort();
-  }, [changes, selectedProviders]);
+  }, [changes, currentProvider]);
 
+  // Routes not yet selected for the current provider
   const unselectedRoutes = useMemo(
-    () => availableRoutes.filter((r) => !selectedRoutes.includes(r)),
-    [availableRoutes, selectedRoutes]
+    () =>
+      availableRoutes.filter(
+        (r) => !selectedRoutes.includes(`${currentProvider}:${r}`)
+      ),
+    [availableRoutes, selectedRoutes, currentProvider]
   );
 
   const addRoute = useCallback(
     (route: string) => {
-      if (!route || selectedRoutes.includes(route)) return;
-      const newRoutes = [...selectedRoutes, route].sort();
+      if (!route || !currentProvider) return;
+      const key = `${currentProvider}:${route}`;
+      if (selectedRoutes.includes(key)) return;
+      const newRoutes = [...selectedRoutes, key].sort();
       updateParam("routes", newRoutes.join(","));
     },
-    [selectedRoutes, updateParam]
+    [selectedRoutes, currentProvider, updateParam]
   );
 
   const removeRoute = useCallback(
-    (route: string) => {
-      const newRoutes = selectedRoutes.filter((r) => r !== route);
+    (routeKey: string) => {
+      const newRoutes = selectedRoutes.filter((r) => r !== routeKey);
       updateParam("routes", newRoutes.join(","));
     },
     [selectedRoutes, updateParam]
@@ -117,16 +84,11 @@ function ChangesTableInner({
 
   const filtered = useMemo(() => {
     return changes.filter((c) => {
-      if (
-        selectedProviders.length > 0 &&
-        !selectedProviders.includes(c.provider)
-      )
-        return false;
-      if (
-        selectedRoutes.length > 0 &&
-        !selectedRoutes.includes(`${c.method} /${c.route}`)
-      )
-        return false;
+      // Route filter: match against selected provider:route pairs
+      if (selectedRoutes.length > 0) {
+        const key = `${c.provider}:${c.method} /${c.route}`;
+        if (!selectedRoutes.includes(key)) return false;
+      }
       if (changeFilter && c.change !== changeFilter) return false;
       if (targetFilter && c.target !== targetFilter) return false;
       if (breakingFilter === "true" && !c.breaking) return false;
@@ -137,7 +99,6 @@ function ChangesTableInner({
     });
   }, [
     changes,
-    selectedProviders,
     selectedRoutes,
     changeFilter,
     targetFilter,
@@ -150,7 +111,6 @@ function ChangesTableInner({
   }, [router, pathname]);
 
   const hasFilters =
-    selectedProviders.length > 0 ||
     selectedRoutes.length > 0 ||
     changeFilter ||
     targetFilter ||
@@ -161,46 +121,40 @@ function ChangesTableInner({
     <div>
       {/* Filters */}
       <div className="mb-4 flex flex-wrap gap-3 items-end">
-        {/* Provider filter */}
+        {/* Provider dropdown */}
         <div>
           <label className="block text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1">
-            Providers
+            Provider
           </label>
-          <div className="flex flex-wrap gap-1">
+          <select
+            value={currentProvider}
+            onChange={(e) => updateParam("provider", e.target.value)}
+            className="px-2 py-1 text-sm rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
+          >
+            <option value="">Select provider...</option>
             {providers.map((p) => (
-              <button
-                key={p}
-                onClick={() => toggleProvider(p)}
-                className={`px-2 py-1 text-xs rounded border transition-colors ${
-                  selectedProviders.includes(p)
-                    ? "bg-zinc-800 text-white border-zinc-700 dark:bg-zinc-200 dark:text-black dark:border-zinc-300"
-                    : "bg-zinc-100 text-zinc-700 border-zinc-200 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700 dark:hover:bg-zinc-700"
-                }`}
-              >
+              <option key={p} value={p}>
                 {p}
-              </button>
+              </option>
             ))}
-          </div>
+          </select>
         </div>
 
-        {/* Route filter - only when providers are selected */}
-        {selectedProviders.length > 0 && (
+        {/* Route dropdown - only when a provider is selected */}
+        {currentProvider && (
           <div className="min-w-48">
             <label className="block text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1">
-              Routes
+              Route
             </label>
             <select
               value=""
-              onChange={(e) => {
-                addRoute(e.target.value);
-                e.target.value = "";
-              }}
+              onChange={(e) => addRoute(e.target.value)}
               className="w-full px-2 py-1 text-sm rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
             >
               <option value="">
-                {selectedRoutes.length > 0
-                  ? "Add another route..."
-                  : "All routes"}
+                {unselectedRoutes.length === 0
+                  ? "All routes selected"
+                  : "Add route..."}
               </option>
               {unselectedRoutes.map((r) => (
                 <option key={r} value={r}>
@@ -290,21 +244,27 @@ function ChangesTableInner({
       {/* Selected route chips */}
       {selectedRoutes.length > 0 && (
         <div className="mb-3 flex flex-wrap gap-1">
-          {selectedRoutes.map((r) => (
-            <span
-              key={r}
-              className="inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-200 font-mono"
-            >
-              {r}
-              <button
-                onClick={() => removeRoute(r)}
-                className="ml-0.5 hover:text-red-600 dark:hover:text-red-400"
-                aria-label={`Remove ${r}`}
+          {selectedRoutes.map((key) => {
+            const colonIdx = key.indexOf(":");
+            const provider = key.slice(0, colonIdx);
+            const route = key.slice(colonIdx + 1);
+            return (
+              <span
+                key={key}
+                className="inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-200 font-mono"
               >
-                &times;
-              </button>
-            </span>
-          ))}
+                <span className="font-sans font-medium">{provider}</span>
+                {route}
+                <button
+                  onClick={() => removeRoute(key)}
+                  className="ml-0.5 hover:text-red-600 dark:hover:text-red-400"
+                  aria-label={`Remove ${key}`}
+                >
+                  &times;
+                </button>
+              </span>
+            );
+          })}
         </div>
       )}
 
