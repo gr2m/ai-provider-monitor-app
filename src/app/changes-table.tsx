@@ -20,24 +20,34 @@ function ChangesTableInner({
     return param ? param.split(",").filter(Boolean) : [];
   }, [searchParams]);
 
-  const routeFilter = searchParams.get("route") || "";
+  const selectedRoutes = useMemo(() => {
+    const param = searchParams.get("routes");
+    return param ? param.split(",").filter(Boolean) : [];
+  }, [searchParams]);
 
   const changeFilter = searchParams.get("change") || "";
   const targetFilter = searchParams.get("target") || "";
   const breakingFilter = searchParams.get("breaking") || "";
   const docOnlyFilter = searchParams.get("doc_only") || "";
 
-  const updateParam = useCallback(
-    (key: string, value: string) => {
+  const updateParams = useCallback(
+    (updates: Record<string, string>) => {
       const params = new URLSearchParams(searchParams.toString());
-      if (value) {
-        params.set(key, value);
-      } else {
-        params.delete(key);
+      for (const [key, value] of Object.entries(updates)) {
+        if (value) {
+          params.set(key, value);
+        } else {
+          params.delete(key);
+        }
       }
       router.replace(`${pathname}?${params.toString()}`, { scroll: false });
     },
     [searchParams, router, pathname]
+  );
+
+  const updateParam = useCallback(
+    (key: string, value: string) => updateParams({ [key]: value }),
+    [updateParams]
   );
 
   const toggleProvider = useCallback(
@@ -48,26 +58,62 @@ function ChangesTableInner({
       } else {
         current.add(provider);
       }
-      updateParam(
-        "providers",
-        [...current].sort().join(",")
-      );
+      const newProviders = [...current].sort().join(",");
+
+      // Clear routes that no longer belong to any selected provider
+      if (selectedRoutes.length > 0) {
+        const providerRoutes = new Set<string>();
+        for (const c of changes) {
+          if (current.has(c.provider)) {
+            providerRoutes.add(`${c.method} /${c.route}`);
+          }
+        }
+        const validRoutes = selectedRoutes.filter((r) =>
+          providerRoutes.has(r)
+        );
+        updateParams({
+          providers: newProviders,
+          routes: validRoutes.join(","),
+        });
+      } else {
+        updateParam("providers", newProviders);
+      }
     },
-    [selectedProviders, updateParam]
+    [selectedProviders, selectedRoutes, changes, updateParams, updateParam]
   );
 
-  const routes = useMemo(() => {
+  const availableRoutes = useMemo(() => {
+    if (selectedProviders.length === 0) return [];
     const routeSet = new Set<string>();
     for (const c of changes) {
-      if (
-        selectedProviders.length === 0 ||
-        selectedProviders.includes(c.provider)
-      ) {
+      if (selectedProviders.includes(c.provider)) {
         routeSet.add(`${c.method} /${c.route}`);
       }
     }
     return [...routeSet].sort();
   }, [changes, selectedProviders]);
+
+  const unselectedRoutes = useMemo(
+    () => availableRoutes.filter((r) => !selectedRoutes.includes(r)),
+    [availableRoutes, selectedRoutes]
+  );
+
+  const addRoute = useCallback(
+    (route: string) => {
+      if (!route || selectedRoutes.includes(route)) return;
+      const newRoutes = [...selectedRoutes, route].sort();
+      updateParam("routes", newRoutes.join(","));
+    },
+    [selectedRoutes, updateParam]
+  );
+
+  const removeRoute = useCallback(
+    (route: string) => {
+      const newRoutes = selectedRoutes.filter((r) => r !== route);
+      updateParam("routes", newRoutes.join(","));
+    },
+    [selectedRoutes, updateParam]
+  );
 
   const filtered = useMemo(() => {
     return changes.filter((c) => {
@@ -76,7 +122,10 @@ function ChangesTableInner({
         !selectedProviders.includes(c.provider)
       )
         return false;
-      if (routeFilter && `${c.method} /${c.route}` !== routeFilter)
+      if (
+        selectedRoutes.length > 0 &&
+        !selectedRoutes.includes(`${c.method} /${c.route}`)
+      )
         return false;
       if (changeFilter && c.change !== changeFilter) return false;
       if (targetFilter && c.target !== targetFilter) return false;
@@ -89,7 +138,7 @@ function ChangesTableInner({
   }, [
     changes,
     selectedProviders,
-    routeFilter,
+    selectedRoutes,
     changeFilter,
     targetFilter,
     breakingFilter,
@@ -102,7 +151,7 @@ function ChangesTableInner({
 
   const hasFilters =
     selectedProviders.length > 0 ||
-    routeFilter ||
+    selectedRoutes.length > 0 ||
     changeFilter ||
     targetFilter ||
     breakingFilter ||
@@ -134,24 +183,33 @@ function ChangesTableInner({
           </div>
         </div>
 
-        {/* Route filter */}
-        <div className="min-w-48">
-          <label className="block text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1">
-            Route
-          </label>
-          <select
-            value={routeFilter}
-            onChange={(e) => updateParam("route", e.target.value)}
-            className="w-full px-2 py-1 text-sm rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
-          >
-            <option value="">All routes</option>
-            {routes.map((r) => (
-              <option key={r} value={r}>
-                {r}
+        {/* Route filter - only when providers are selected */}
+        {selectedProviders.length > 0 && (
+          <div className="min-w-48">
+            <label className="block text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1">
+              Routes
+            </label>
+            <select
+              value=""
+              onChange={(e) => {
+                addRoute(e.target.value);
+                e.target.value = "";
+              }}
+              className="w-full px-2 py-1 text-sm rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
+            >
+              <option value="">
+                {selectedRoutes.length > 0
+                  ? "Add another route..."
+                  : "All routes"}
               </option>
-            ))}
-          </select>
-        </div>
+              {unselectedRoutes.map((r) => (
+                <option key={r} value={r}>
+                  {r}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
 
         {/* Change type filter */}
         <div>
@@ -228,6 +286,27 @@ function ChangesTableInner({
           </button>
         )}
       </div>
+
+      {/* Selected route chips */}
+      {selectedRoutes.length > 0 && (
+        <div className="mb-3 flex flex-wrap gap-1">
+          {selectedRoutes.map((r) => (
+            <span
+              key={r}
+              className="inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-200 font-mono"
+            >
+              {r}
+              <button
+                onClick={() => removeRoute(r)}
+                className="ml-0.5 hover:text-red-600 dark:hover:text-red-400"
+                aria-label={`Remove ${r}`}
+              >
+                &times;
+              </button>
+            </span>
+          ))}
+        </div>
+      )}
 
       {/* Results count */}
       <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-2">
