@@ -1,8 +1,5 @@
 name: Update Data
-on:
-  repository_dispatch:
-    types:
-      - "api:*"
+on: repository_dispatch
 
 jobs:
   update:
