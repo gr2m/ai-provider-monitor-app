@@ -1,5 +1,29 @@
 [
   {
+    "provider": "xai",
+    "route": "v1/images/generations",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Marked GeneratedImage.revised_prompt as deprecated.",
+    "date": "2026-02-25"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/generations",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of revised_prompt to state it always returns an empty string.",
+    "date": "2026-02-25"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
@@ -1273,42 +1297,6 @@
   },
   {
     "provider": "xai",
-    "route": "v1/images/generations",
-    "method": "POST",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added optional usage object to 200 response containing cost_in_usd_ticks.",
-    "date": "2026-02-23"
-  },
-  {
-    "provider": "xai",
-    "route": "v1/images/generations",
-    "method": "POST",
-    "change": "removed",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Removed the 'usage' field from the 200 response schema, eliminating cost_in_usd_ticks usage info.",
-    "date": "2026-02-23"
-  },
-  {
-    "provider": "xai",
-    "route": "v1/images/generations",
-    "method": "POST",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added optional usage field in 200 response with cost_in_usd_ticks for billing info.",
-    "date": "2026-02-23"
-  },
-  {
-    "provider": "xai",
     "route": "v1/videos/{request_id}",
     "method": "GET",
     "change": "added",
@@ -1377,6 +1365,42 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added 'wo' (Wolof) to allowed values for pre-recorded request_params.translation_config.target_languages.",
+    "date": "2026-02-23"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/generations",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional usage object to 200 response containing cost_in_usd_ticks.",
+    "date": "2026-02-23"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/generations",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed the 'usage' field from the 200 response schema, eliminating cost_in_usd_ticks usage info.",
+    "date": "2026-02-23"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/generations",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional usage field in 200 response with cost_in_usd_ticks for billing info.",
     "date": "2026-02-23"
   },
   {
