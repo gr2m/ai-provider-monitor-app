@@ -15,12 +15,14 @@ function ChangesTableInner({
   const router = useRouter();
   const pathname = usePathname();
 
-  const selectedProviders = useMemo(() => {
-    const param = searchParams.get("providers");
+  // Provider dropdown is just for scoping the route picker
+  const currentProvider = searchParams.get("provider") || "";
+
+  // Selected routes stored as "provider:METHOD /path"
+  const selectedRoutes = useMemo(() => {
+    const param = searchParams.get("routes");
     return param ? param.split(",").filter(Boolean) : [];
   }, [searchParams]);
-
-  const routeFilter = searchParams.get("route") || "";
 
   const changeFilter = searchParams.get("change") || "";
   const targetFilter = searchParams.get("target") || "";
@@ -40,44 +42,53 @@ function ChangesTableInner({
     [searchParams, router, pathname]
   );
 
-  const toggleProvider = useCallback(
-    (provider: string) => {
-      const current = new Set(selectedProviders);
-      if (current.has(provider)) {
-        current.delete(provider);
-      } else {
-        current.add(provider);
-      }
-      updateParam(
-        "providers",
-        [...current].sort().join(",")
-      );
-    },
-    [selectedProviders, updateParam]
-  );
-
-  const routes = useMemo(() => {
+  // Routes available for the currently selected provider
+  const availableRoutes = useMemo(() => {
+    if (!currentProvider) return [];
     const routeSet = new Set<string>();
     for (const c of changes) {
-      if (
-        selectedProviders.length === 0 ||
-        selectedProviders.includes(c.provider)
-      ) {
+      if (c.provider === currentProvider) {
         routeSet.add(`${c.method} /${c.route}`);
       }
     }
     return [...routeSet].sort();
-  }, [changes, selectedProviders]);
+  }, [changes, currentProvider]);
+
+  // Routes not yet selected for the current provider
+  const unselectedRoutes = useMemo(
+    () =>
+      availableRoutes.filter(
+        (r) => !selectedRoutes.includes(`${currentProvider}:${r}`)
+      ),
+    [availableRoutes, selectedRoutes, currentProvider]
+  );
+
+  const addRoute = useCallback(
+    (route: string) => {
+      if (!route || !currentProvider) return;
+      const key = `${currentProvider}:${route}`;
+      if (selectedRoutes.includes(key)) return;
+      const newRoutes = [...selectedRoutes, key].sort();
+      updateParam("routes", newRoutes.join(","));
+    },
+    [selectedRoutes, currentProvider, updateParam]
+  );
+
+  const removeRoute = useCallback(
+    (routeKey: string) => {
+      const newRoutes = selectedRoutes.filter((r) => r !== routeKey);
+      updateParam("routes", newRoutes.join(","));
+    },
+    [selectedRoutes, updateParam]
+  );
 
   const filtered = useMemo(() => {
     return changes.filter((c) => {
-      if (
-        selectedProviders.length > 0 &&
-        !selectedProviders.includes(c.provider)
-      )
-        return false;
-      if (routeFilter && `${c.method} /${c.route}` !== routeFilter)
-        return false;
+      // Route filter: match against selected provider:route pairs
+      if (selectedRoutes.length > 0) {
+        const key = `${c.provider}:${c.method} /${c.route}`;
+        if (!selectedRoutes.includes(key)) return false;
+      }
       if (changeFilter && c.change !== changeFilter) return false;
       if (targetFilter && c.target !== targetFilter) return false;
       if (breakingFilter === "true" && !c.breaking) return false;
@@ -88,8 +99,7 @@ function ChangesTableInner({
     });
   }, [
     changes,
-    selectedProviders,
-    routeFilter,
+    selectedRoutes,
     changeFilter,
     targetFilter,
     breakingFilter,
@@ -101,8 +111,7 @@ function ChangesTableInner({
   }, [router, pathname]);
 
   const hasFilters =
-    selectedProviders.length > 0 ||
-    routeFilter ||
+    selectedRoutes.length > 0 ||
     changeFilter ||
     targetFilter ||
     breakingFilter ||
@@ -112,46 +121,49 @@ function ChangesTableInner({
     <div>
       {/* Filters */}
       <div className="mb-4 flex flex-wrap gap-3 items-end">
-        {/* Provider filter */}
+        {/* Provider dropdown */}
         <div>
           <label className="block text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1">
-            Providers
-          </label>
-          <div className="flex flex-wrap gap-1">
-            {providers.map((p) => (
-              <button
-                key={p}
-                onClick={() => toggleProvider(p)}
-                className={`px-2 py-1 text-xs rounded border transition-colors ${
-                  selectedProviders.includes(p)
-                    ? "bg-zinc-800 text-white border-zinc-700 dark:bg-zinc-200 dark:text-black dark:border-zinc-300"
-                    : "bg-zinc-100 text-zinc-700 border-zinc-200 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:border-zinc-700 dark:hover:bg-zinc-700"
-                }`}
-              >
-                {p}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Route filter */}
-        <div className="min-w-48">
-          <label className="block text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1">
-            Route
+            Provider
           </label>
           <select
-            value={routeFilter}
-            onChange={(e) => updateParam("route", e.target.value)}
-            className="w-full px-2 py-1 text-sm rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
+            value={currentProvider}
+            onChange={(e) => updateParam("provider", e.target.value)}
+            className="px-2 py-1 text-sm rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
           >
-            <option value="">All routes</option>
-            {routes.map((r) => (
-              <option key={r} value={r}>
-                {r}
+            <option value="">Select provider...</option>
+            {providers.map((p) => (
+              <option key={p} value={p}>
+                {p}
               </option>
             ))}
           </select>
         </div>
+
+        {/* Route dropdown - only when a provider is selected */}
+        {currentProvider && (
+          <div className="min-w-48">
+            <label className="block text-xs font-medium text-zinc-500 dark:text-zinc-400 mb-1">
+              Route
+            </label>
+            <select
+              value=""
+              onChange={(e) => addRoute(e.target.value)}
+              className="w-full px-2 py-1 text-sm rounded border border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-900"
+            >
+              <option value="">
+                {unselectedRoutes.length === 0
+                  ? "All routes selected"
+                  : "Add route..."}
+              </option>
+              {unselectedRoutes.map((r) => (
+                <option key={r} value={r}>
+                  {r}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
 
         {/* Change type filter */}
         <div>
@@ -228,6 +240,33 @@ function ChangesTableInner({
           </button>
         )}
       </div>
+
+      {/* Selected route chips */}
+      {selectedRoutes.length > 0 && (
+        <div className="mb-3 flex flex-wrap gap-1">
+          {selectedRoutes.map((key) => {
+            const colonIdx = key.indexOf(":");
+            const provider = key.slice(0, colonIdx);
+            const route = key.slice(colonIdx + 1);
+            return (
+              <span
+                key={key}
+                className="inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded-full bg-zinc-200 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-200 font-mono"
+              >
+                <span className="font-sans font-medium">{provider}</span>
+                {route}
+                <button
+                  onClick={() => removeRoute(key)}
+                  className="ml-0.5 hover:text-red-600 dark:hover:text-red-400"
+                  aria-label={`Remove ${key}`}
+                >
+                  &times;
+                </button>
+              </span>
+            );
+          })}
+        </div>
+      )}
 
       {/* Results count */}
       <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-2">
