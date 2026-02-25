@@ -25,6 +25,18 @@
   },
   {
     "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "PII redaction entity type enumeration switched from numeric codes to string labels in responses (PiiRedactionEntityTypeEnum). This affects nested request_params.pii_redaction_config in returned items.",
+    "date": "2026-02-25"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
     "change": "added",
@@ -177,30 +189,6 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated examples for before_date and after_date query parameters.",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/pre-recorded",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added new response field request_params.pii_redaction to indicate if PII redaction was enabled for a job.",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/pre-recorded",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added new response field request_params.pii_redaction_config with PII redaction settings (entity types and processed text type).",
     "date": "2026-02-24"
   },
   {
@@ -885,6 +873,30 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added PII redaction options to pre-recorded job request_params: pii_redaction and pii_redaction_config.",
+    "date": "2026-02-24"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new response field request_params.pii_redaction to indicate if PII redaction was enabled for a job.",
+    "date": "2026-02-24"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new response field request_params.pii_redaction_config with PII redaction settings (entity types and processed text type).",
     "date": "2026-02-24"
   },
   {
@@ -3681,18 +3693,6 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added 'wo' (Wolof) to allowed languages enum in translation results items.",
-    "date": "2026-02-20"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/pre-recorded",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 'wo' (Wolof) to translation target language enums in response schemas.",
     "date": "2026-02-20"
   },
   {
@@ -10449,6 +10449,18 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added 'wo' (Wolof) to enum of allowed target_languages in pre-recorded request_params.translation_config.",
+    "date": "2026-02-20"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to translation target language enums in response schemas.",
     "date": "2026-02-20"
   }
 ]
