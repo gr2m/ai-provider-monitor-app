@@ -721,30 +721,6 @@
   },
   {
     "provider": "gladia",
-    "route": "v2/pre-recorded",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added new response field request_params.pii_redaction to indicate if PII redaction was enabled for a job.",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/pre-recorded",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added new response field request_params.pii_redaction_config with PII redaction settings (entity types and processed text type).",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
     "change": "added",
@@ -897,6 +873,30 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated examples for before_date and after_date query parameters.",
+    "date": "2026-02-24"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new response field request_params.pii_redaction to indicate if PII redaction was enabled for a job.",
+    "date": "2026-02-24"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new response field request_params.pii_redaction_config with PII redaction settings (entity types and processed text type).",
     "date": "2026-02-24"
   },
   {
@@ -10333,18 +10333,6 @@
   },
   {
     "provider": "gladia",
-    "route": "v2/pre-recorded",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 'wo' (Wolof) to translation target language enums in response schemas.",
-    "date": "2026-02-20"
-  },
-  {
-    "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
     "change": "added",
@@ -10461,6 +10449,18 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added 'wo' (Wolof) to allowed languages enum in translation results items.",
+    "date": "2026-02-20"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to translation target language enums in response schemas.",
     "date": "2026-02-20"
   }
 ]
