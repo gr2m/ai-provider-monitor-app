@@ -109,6 +109,18 @@
   },
   {
     "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "PiiRedactionEntityTypeEnum switched from numeric codes to string identifiers, affecting all responses referencing it (e.g., PiiRedactionConfigDTO.entity_types).",
+    "date": "2026-02-25"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "POST",
     "change": "added",
@@ -165,54 +177,6 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added pii_redaction_config object under request_params with entity_types and processed_text_type settings.",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/transcription",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added pii_redaction flag to pre-recorded transcription request_params in response items.",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/transcription",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added pii_redaction_config to configure PII redaction (entity_types, processed_text_type) for pre-recorded transcription request_params in response items.",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/transcription",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example value for before_date query parameter.",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/transcription",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example value for after_date query parameter.",
     "date": "2026-02-24"
   },
   {
@@ -980,20 +944,8 @@
     "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "Added 'wo' (Wolof) to enum of allowed target_languages in pre-recorded request_params.translation_config.",
-    "date": "2026-02-23"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/transcription",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example values for before_date and after_date query parameters.",
-    "date": "2026-02-23"
+    "note": "Added pii_redaction flag to pre-recorded transcription request_params in response items.",
+    "date": "2026-02-24"
   },
   {
     "provider": "gladia",
@@ -1004,8 +956,32 @@
     "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "Added 'wo' (Wolof) to allowed target_languages enum for pre-recorded translation_config in response items.",
-    "date": "2026-02-23"
+    "note": "Added pii_redaction_config to configure PII redaction (entity_types, processed_text_type) for pre-recorded transcription request_params in response items.",
+    "date": "2026-02-24"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for before_date query parameter.",
+    "date": "2026-02-24"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for after_date query parameter.",
+    "date": "2026-02-24"
   },
   {
     "provider": "openai",
@@ -1492,12 +1468,36 @@
     "route": "v2/transcription",
     "method": "GET",
     "change": "added",
-    "target": "request",
+    "target": "response",
     "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "Added 'wo' (Wolof) to allowed values for pre-recorded translation_config.target_languages.",
-    "date": "2026-02-22"
+    "note": "Added 'wo' (Wolof) to enum of allowed target_languages in pre-recorded request_params.translation_config.",
+    "date": "2026-02-23"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for before_date and after_date query parameters.",
+    "date": "2026-02-23"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to allowed target_languages enum for pre-recorded translation_config in response items.",
+    "date": "2026-02-23"
   },
   {
     "provider": "gladia",
@@ -1587,25 +1587,13 @@
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
-    "change": "removed",
-    "target": "response",
-    "breaking": true,
+    "change": "added",
+    "target": "request",
+    "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "Removed 'wo' (Wolof) from allowed values of pre-recorded request_params.translation_config.target_languages enum in response schema.",
-    "date": "2026-02-21"
-  },
-  {
-    "provider": "gladia",
-    "route": "v2/transcription",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Removed 'wo' (Wolof) from allowed values of pre-recorded request_params.translation_config.target_languages enum in response items.",
-    "date": "2026-02-21"
+    "note": "Added 'wo' (Wolof) to allowed values for pre-recorded translation_config.target_languages.",
+    "date": "2026-02-22"
   },
   {
     "provider": "gladia",
@@ -1749,6 +1737,30 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added 'wo' (Wolof) to the allowed enum values for pre-recorded request_params.translation_config.target_languages.",
+    "date": "2026-02-21"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed 'wo' (Wolof) from allowed values of pre-recorded request_params.translation_config.target_languages enum in response schema.",
+    "date": "2026-02-21"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed 'wo' (Wolof) from allowed values of pre-recorded request_params.translation_config.target_languages enum in response items.",
     "date": "2026-02-21"
   },
   {
