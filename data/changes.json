@@ -24,6 +24,18 @@
     "date": "2026-03-02"
   },
   {
+    "provider": "togetherai",
+    "route": "deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added version property to VolumeMount objects returned in deployments.",
+    "date": "2026-03-02"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
