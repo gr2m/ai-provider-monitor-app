@@ -63,6 +63,7 @@ for (const entry of entries) {
     doc_only: entry.doc_only || false,
     note: entry.note,
     date: entry.date,
+    ...(entry.diff_url && { diff_url: entry.diff_url }),
   });
 }
 

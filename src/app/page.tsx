@@ -13,6 +13,7 @@ export type Change = {
   doc_only: boolean;
   note: string;
   date: string;
+  diff_url?: string;
 };
 
 function loadChanges(): { changes: Change[]; lastUpdated: string } {

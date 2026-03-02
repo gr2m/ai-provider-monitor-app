@@ -321,6 +321,16 @@ function ChangesTableInner({
                 {c.doc_only && (
                   <span className="text-zinc-400">doc-only</span>
                 )}
+                {c.diff_url && (
+                  <a
+                    href={c.diff_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200 transition-colors"
+                  >
+                    diff
+                  </a>
+                )}
               </div>
             </div>
             {c.note && (
