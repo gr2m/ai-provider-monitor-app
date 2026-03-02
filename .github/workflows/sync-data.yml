@@ -1,0 +1,38 @@
+name: Sync Data
+on:
+  schedule:
+    # Run daily at 06:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: gr2m/ai-provider-monitor
+          path: ai-provider-monitor
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      - name: Reseed from ai-provider-monitor
+        run: node scripts/seed.js ai-provider-monitor
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/changes.json
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "sync: reseed data from ai-provider-monitor"
+          git push

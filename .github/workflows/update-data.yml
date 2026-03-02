@@ -47,10 +47,32 @@ jobs:
           node scripts/update-route.js "$PROVIDER" "$RELATIVE_PATH" /tmp/changes.yml
 
       - name: Commit and push
+        env:
+          PROVIDER: ${{ github.event.client_payload.provider }}
+          RELATIVE_PATH: ${{ github.event.client_payload.relativePath }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/changes.json
           git diff --cached --quiet && echo "No changes" && exit 0
-          git commit -m "update: ${{ github.event.client_payload.provider }} ${{ github.event.client_payload.relativePath }}"
-          git push
+          git commit -m "update: ${PROVIDER} ${RELATIVE_PATH}"
+
+          # Retry push with rebase to handle concurrent workflow runs
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "Push succeeded on attempt $attempt"
+              exit 0
+            fi
+            echo "Push failed (attempt $attempt), pulling with rebase and re-applying..."
+            git pull --rebase
+            # Re-run the update on the rebased data to avoid conflicts
+            node scripts/update-route.js "$PROVIDER" "$RELATIVE_PATH" /tmp/changes.yml
+            git add data/changes.json
+            if git diff --cached --quiet; then
+              echo "Changes already present after rebase, nothing to push"
+              exit 0
+            fi
+            git commit --amend --no-edit
+          done
+          echo "Failed to push after 5 attempts"
+          exit 1
