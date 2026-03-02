@@ -1,5 +1,29 @@
 [
   {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added mime_type field to GeneratedImage objects to indicate the image MIME type.",
+    "date": "2026-03-02"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated b64_json description: clarifies no data-URI prefix and removes guarantee of JPEG-only encoding; clients should check mime_type to determine format.",
+    "date": "2026-03-02"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
@@ -45,6 +69,18 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Route description updated: endpoints are now described as 'owned' by the user instead of 'accessible' to the user.",
+    "date": "2026-02-27"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional block_reason field to 200 response to indicate input moderation block reason.",
     "date": "2026-02-27"
   },
   {
@@ -117,6 +153,18 @@
     "deprecated": false,
     "doc_only": false,
     "note": "PiiRedactionEntityTypeEnum switched from numeric codes to string identifiers, affecting all responses referencing it (e.g., PiiRedactionConfigDTO.entity_types).",
+    "date": "2026-02-25"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Field GeneratedImage.revised_prompt is now deprecated and documented to always be an empty string; clients should not rely on its content.",
     "date": "2026-02-25"
   },
   {
@@ -684,30 +732,6 @@
     "date": "2026-02-24"
   },
   {
-    "provider": "xai",
-    "route": "v1/images/edits",
-    "method": "POST",
-    "change": "added",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added aspect_ratio parameter to control output aspect ratio (mainly for multi-image edits).",
-    "date": "2026-02-24"
-  },
-  {
-    "provider": "xai",
-    "route": "v1/images/edits",
-    "method": "POST",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated resolution description; removed note about auto-detecting aspect ratio.",
-    "date": "2026-02-24"
-  },
-  {
     "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
@@ -984,6 +1008,30 @@
     "date": "2026-02-24"
   },
   {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added aspect_ratio parameter to control output aspect ratio (mainly for multi-image edits).",
+    "date": "2026-02-24"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated resolution description; removed note about auto-detecting aspect ratio.",
+    "date": "2026-02-24"
+  },
+  {
     "provider": "openai",
     "route": "realtime/calls",
     "method": "POST",
@@ -1077,42 +1125,6 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Transcription session noise_reduction now defaults to null and docs clarify it can be set to null to turn off.",
-    "date": "2026-02-23"
-  },
-  {
-    "provider": "xai",
-    "route": "v1/images/edits",
-    "method": "POST",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added optional `usage` field in 200 response with cost information (`cost_in_usd_ticks`).",
-    "date": "2026-02-23"
-  },
-  {
-    "provider": "xai",
-    "route": "v1/images/edits",
-    "method": "POST",
-    "change": "removed",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Removed the usage field (with cost_in_usd_ticks) from the 200 response schema.",
-    "date": "2026-02-23"
-  },
-  {
-    "provider": "xai",
-    "route": "v1/images/edits",
-    "method": "POST",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added optional `usage` field to 200 response containing `cost_in_usd_ticks` for billing info.",
     "date": "2026-02-23"
   },
   {
@@ -1497,6 +1509,42 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added 'wo' (Wolof) to allowed values for languages in translation results returned in 200 response.",
+    "date": "2026-02-23"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional `usage` field in 200 response with cost information (`cost_in_usd_ticks`).",
+    "date": "2026-02-23"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed the usage field (with cost_in_usd_ticks) from the 200 response schema.",
+    "date": "2026-02-23"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional `usage` field to 200 response containing `cost_in_usd_ticks` for billing info.",
     "date": "2026-02-23"
   },
   {
