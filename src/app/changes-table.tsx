@@ -4,6 +4,17 @@ import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { useCallback, useMemo, Suspense } from "react";
 import type { Change } from "./page";
 
+const PROVIDER_COLORS = [
+  "bg-blue-600 dark:bg-blue-500",
+  "bg-emerald-600 dark:bg-emerald-500",
+  "bg-violet-600 dark:bg-violet-500",
+  "bg-amber-600 dark:bg-amber-500",
+  "bg-rose-600 dark:bg-rose-500",
+  "bg-cyan-700 dark:bg-cyan-600",
+  "bg-indigo-600 dark:bg-indigo-500",
+  "bg-orange-600 dark:bg-orange-500",
+];
+
 function ChangesTableInner({
   changes,
   providers,
@@ -109,6 +120,14 @@ function ChangesTableInner({
   const clearFilters = useCallback(() => {
     router.replace(pathname, { scroll: false });
   }, [router, pathname]);
+
+  const providerColorMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    providers.forEach((p, i) => {
+      map[p] = PROVIDER_COLORS[i % PROVIDER_COLORS.length];
+    });
+    return map;
+  }, [providers]);
 
   const hasFilters =
     selectedRoutes.length > 0 ||
@@ -274,65 +293,43 @@ function ChangesTableInner({
       </p>
 
       {/* Table */}
-      <div className="overflow-x-auto border border-zinc-200 dark:border-zinc-700 rounded-lg">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="bg-zinc-50 dark:bg-zinc-800/50 text-left">
-              <th className="px-3 py-2 font-medium whitespace-nowrap">Date</th>
-              <th className="px-3 py-2 font-medium whitespace-nowrap">
-                Provider
-              </th>
-              <th className="px-3 py-2 font-medium whitespace-nowrap">
-                Route
-              </th>
-              <th className="px-3 py-2 font-medium whitespace-nowrap">
-                Change
-              </th>
-              <th className="px-3 py-2 font-medium whitespace-nowrap">
-                Target
-              </th>
-              <th className="px-3 py-2 font-medium">Note</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-zinc-100 dark:divide-zinc-800">
-            {filtered.map((c, i) => (
-              <tr
-                key={i}
-                className="hover:bg-zinc-50 dark:hover:bg-zinc-800/30"
-              >
-                <td className="px-3 py-2 whitespace-nowrap font-mono text-xs">
+      <div className="border border-zinc-200 dark:border-zinc-700 rounded-lg overflow-hidden divide-y divide-zinc-200 dark:divide-zinc-700">
+        {filtered.map((c, i) => (
+          <div key={i}>
+            <div className="px-3 py-2 text-sm bg-zinc-50 dark:bg-zinc-800/50">
+              <div className="whitespace-nowrap flex items-center gap-1.5">
+                <span
+                  className={`inline-block px-2 py-0.5 text-xs font-semibold rounded-full text-white ${providerColorMap[c.provider] || "bg-zinc-500"}`}
+                >
+                  {c.provider}
+                </span>
+                <span className="font-mono text-xs font-bold">
+                  <span className="text-zinc-500 font-normal">{c.method}</span> /{c.route}
+                </span>
+              </div>
+              <div className="flex items-center gap-1.5 text-xs">
+                <span className="font-mono text-zinc-500 dark:text-zinc-400">
                   {c.date}
-                </td>
-                <td className="px-3 py-2 whitespace-nowrap">{c.provider}</td>
-                <td className="px-3 py-2 whitespace-nowrap font-mono text-xs">
-                  <span className="inline-block w-14 text-zinc-500">
-                    {c.method}
-                  </span>{" "}
-                  /{c.route}
-                </td>
-                <td className="px-3 py-2 whitespace-nowrap">
-                  <ChangeBadge change={c.change} />
-                </td>
-                <td className="px-3 py-2 whitespace-nowrap">
-                  <span className="text-xs">{c.target}</span>
-                  {c.breaking && (
-                    <span className="ml-1 text-xs text-red-600 dark:text-red-400 font-medium">
-                      breaking
-                    </span>
-                  )}
-                  {c.doc_only && (
-                    <span className="ml-1 text-xs text-zinc-400">
-                      doc-only
-                    </span>
-                  )}
-                </td>
-                <td className="px-3 py-2 text-xs text-zinc-600 dark:text-zinc-400 max-w-lg">
-                  {c.note}
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+                </span>
+                <ChangeBadge change={c.change} />
+                <span>{c.target}</span>
+                {c.breaking && (
+                  <span className="text-red-600 dark:text-red-400 font-medium">
+                    breaking
+                  </span>
+                )}
+                {c.doc_only && (
+                  <span className="text-zinc-400">doc-only</span>
+                )}
+              </div>
+            </div>
+            {c.note && (
+              <div className="px-3 py-2 text-xs text-zinc-600 dark:text-zinc-400">
+                {c.note}
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );
