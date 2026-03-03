@@ -1,5 +1,57 @@
 [
   {
+    "provider": "assemblyai",
+    "route": "v2/transcript",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default value for language_detection_options.code_switching corrected from string \"false\" to boolean false in request schema.",
+    "date": "2026-03-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/734"
+  },
+  {
+    "provider": "assemblyai",
+    "route": "v2/transcript",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default value for language_detection_options.code_switching corrected from string \"false\" to boolean false in response schema.",
+    "date": "2026-03-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/734"
+  },
+  {
+    "provider": "assemblyai",
+    "route": "v2/transcript",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "language_detection_options.expected_languages now correctly specifies array items (items) instead of the invalid key (objects) in request schema.",
+    "date": "2026-03-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/734"
+  },
+  {
+    "provider": "assemblyai",
+    "route": "v2/transcript",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "language_detection_options.expected_languages now correctly specifies array items (items) instead of the invalid key (objects) in response schema.",
+    "date": "2026-03-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/734"
+  },
+  {
     "provider": "togetherai",
     "route": "deployments",
     "method": "GET",
