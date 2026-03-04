@@ -195,6 +195,19 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/745"
   },
   {
+    "provider": "replicate",
+    "route": "predictions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated Prefer header description to use a markdown link (no schema impact).",
+    "date": "2026-03-04",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/746"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "POST",
