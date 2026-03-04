@@ -119,6 +119,32 @@
   {
     "provider": "assemblyai",
     "route": "v2/transcript",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Inlined query parameter schemas (limit, created_on, before_id, after_id, throttled_only) instead of referencing ListTranscriptParams.",
+    "date": "2026-03-04",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/742"
+  },
+  {
+    "provider": "assemblyai",
+    "route": "v2/transcript",
+    "method": "GET",
+    "change": "removed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed components.schemas.ListTranscriptParams; its fields are now defined inline in parameters.",
+    "date": "2026-03-04",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/742"
+  },
+  {
+    "provider": "assemblyai",
+    "route": "v2/transcript",
     "method": "POST",
     "change": "changed",
     "target": "request",
