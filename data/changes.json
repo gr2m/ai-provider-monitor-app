@@ -78,6 +78,19 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/749"
   },
   {
+    "provider": "openai",
+    "route": "threads/runs",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "In CreateThreadRequest.thread.tool_resources.file_search.vector_stores.items.file_ids, the maxItems limit increased from 10,000 to 100,000,000 and the description was updated to clarify limits by vector store creation date.",
+    "date": "2026-03-05",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/749"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "GET",
@@ -15729,19 +15742,6 @@
   },
   {
     "provider": "openai",
-    "route": "threads/runs",
-    "method": "POST",
-    "change": "added",
-    "target": "route",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Adds POST /threads/runs, allowing clients to create a new thread and immediately start a run with optional overrides (model, tools, response_format, truncation, token limits, streaming) and returns the Run object.",
-    "date": "2026-02-20",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
-  },
-  {
-    "provider": "openai",
     "route": "threads/{thread_id}",
     "method": "DELETE",
     "change": "added",
@@ -16361,6 +16361,19 @@
     "deprecated": true,
     "doc_only": false,
     "note": "Introduces POST /assistants (deprecated) to create an assistant configured with a model, instructions, optional tools (code_interpreter, file_search, function), tool resources, and generation params (temperature, top_p, response_format, reasoning_effort). Returns the Assistant object with IDs and metadata.",
+    "date": "2026-02-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
+  },
+  {
+    "provider": "openai",
+    "route": "threads/runs",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds POST /threads/runs, allowing clients to create a new thread and immediately start a run with optional overrides (model, tools, response_format, truncation, token limits, streaming) and returns the Run object.",
     "date": "2026-02-20",
     "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
   }
