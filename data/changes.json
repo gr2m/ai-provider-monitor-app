@@ -52,6 +52,32 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/748"
   },
   {
+    "provider": "openai",
+    "route": "assistants",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Increased max files per vector store when creating assistants from 10,000 to 100,000,000.",
+    "date": "2026-03-05",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/749"
+  },
+  {
+    "provider": "openai",
+    "route": "assistants",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of vector store file_ids to reflect new limits and Nov 2025 cutoff.",
+    "date": "2026-03-05",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/749"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "GET",
@@ -13207,19 +13233,6 @@
   },
   {
     "provider": "openai",
-    "route": "assistants",
-    "method": "POST",
-    "change": "added",
-    "target": "route",
-    "breaking": false,
-    "deprecated": true,
-    "doc_only": false,
-    "note": "Introduces POST /assistants (deprecated) to create an assistant configured with a model, instructions, optional tools (code_interpreter, file_search, function), tool resources, and generation params (temperature, top_p, response_format, reasoning_effort). Returns the Assistant object with IDs and metadata.",
-    "date": "2026-02-20",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
-  },
-  {
-    "provider": "openai",
     "route": "assistants/{assistant_id}",
     "method": "DELETE",
     "change": "added",
@@ -16337,5 +16350,18 @@
     "note": "Introduces GET /v1/video-generation-models/{model_id} to retrieve full details for a video generation model by ID (aliases, timestamps, fingerprint, input/output modalities, ownership, version). Requires bearer auth; returns 200 with model object, 400 for bad request, 404 if not found.",
     "date": "2026-02-20",
     "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/571"
+  },
+  {
+    "provider": "openai",
+    "route": "assistants",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "Introduces POST /assistants (deprecated) to create an assistant configured with a model, instructions, optional tools (code_interpreter, file_search, function), tool resources, and generation params (temperature, top_p, response_format, reasoning_effort). Returns the Assistant object with IDs and metadata.",
+    "date": "2026-02-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
   }
 ]
