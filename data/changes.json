@@ -13,6 +13,45 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/747"
   },
   {
+    "provider": "fal",
+    "route": "models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional enterprise_status field to each model (expandable) with values 'ready'|'pending' or an error object.",
+    "date": "2026-03-05",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/748"
+  },
+  {
+    "provider": "fal",
+    "route": "models",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated expand parameter docs to include new 'enterprise_status' expansion option.",
+    "date": "2026-03-05",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/748"
+  },
+  {
+    "provider": "fal",
+    "route": "models",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to document new expand option 'enterprise_status' and clarify expand usage.",
+    "date": "2026-03-05",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/748"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "GET",
