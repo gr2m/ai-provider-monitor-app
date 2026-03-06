@@ -1,5 +1,31 @@
 [
   {
+    "provider": "xai",
+    "route": "v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional output_files property to ChatResponse to return files generated during the response.",
+    "date": "2026-03-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/752"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new OutputFile schema referenced by ChatResponse.output_files.",
+    "date": "2026-03-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/752"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
