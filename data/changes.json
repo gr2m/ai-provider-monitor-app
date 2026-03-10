@@ -1,5 +1,18 @@
 [
   {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified TranslationDTO.error description to state it's null on success and updated wording from 'addon' to 'model'.",
+    "date": "2026-03-08",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/757"
+  },
+  {
     "provider": "xai",
     "route": "v1/documents/search",
     "method": "POST",
@@ -24,19 +37,6 @@
     "note": "Introduced RagPipeline enum schema with values chroma_db and es.",
     "date": "2026-03-08",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/758"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Clarified TranslationDTO.error description to state it's null on success and updated wording from 'addon' to 'model'.",
-    "date": "2026-03-08",
-    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/757"
   },
   {
     "provider": "assemblyai",
@@ -323,6 +323,19 @@
     "note": "Route description updated to document new expand option 'enterprise_status' and clarify expand usage.",
     "date": "2026-03-05",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/748"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new target language 'wo' (Wolof) to TranslationLanguageCodeEnum; responses may now include this value.",
+    "date": "2026-03-05",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/747"
   },
   {
     "provider": "openai",
@@ -2754,19 +2767,6 @@
     "note": "Introduced VideoError schema with code and message fields.",
     "date": "2026-03-05",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/750"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added new target language 'wo' (Wolof) to TranslationLanguageCodeEnum; responses may now include this value.",
-    "date": "2026-03-05",
-    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/747"
   },
   {
     "provider": "assemblyai",
@@ -7632,6 +7632,19 @@
   },
   {
     "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "PiiRedactionEntityTypeEnum changed from numeric codes to string constants, altering the type from number to string.",
+    "date": "2026-02-25",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/721"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
     "change": "changed",
@@ -7751,14 +7764,53 @@
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
-    "change": "changed",
+    "change": "removed",
     "target": "response",
     "breaking": true,
     "deprecated": false,
     "doc_only": false,
-    "note": "PiiRedactionEntityTypeEnum changed from numeric codes to string constants, altering the type from number to string.",
-    "date": "2026-02-25",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/721"
+    "note": "Removed 'wo' (Wolof) from the allowed enum values for pre-recorded request_params.translation_config.target_languages in history items.",
+    "date": "2026-02-24",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/695"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example timestamps for before_date and after_date query parameters (doc-only).",
+    "date": "2026-02-24",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/696"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to allowed values for pre-recorded translation target_languages in returned items' request_params.",
+    "date": "2026-02-24",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/697"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added PII redaction options to pre-recorded job request_params: pii_redaction and pii_redaction_config.",
+    "date": "2026-02-24",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/706"
   },
   {
     "provider": "gladia",
@@ -8648,27 +8700,14 @@
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
-    "change": "removed",
+    "change": "added",
     "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Removed 'wo' (Wolof) from the allowed enum values for pre-recorded request_params.translation_config.target_languages in history items.",
-    "date": "2026-02-24",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/695"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
     "breaking": false,
     "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example timestamps for before_date and after_date query parameters (doc-only).",
-    "date": "2026-02-24",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/696"
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to the allowed values of target_languages in pre-recorded translation_config within returned request_params.",
+    "date": "2026-02-23",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/681"
   },
   {
     "provider": "gladia",
@@ -8679,9 +8718,9 @@
     "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "Added 'wo' (Wolof) to allowed values for pre-recorded translation target_languages in returned items' request_params.",
-    "date": "2026-02-24",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/697"
+    "note": "Added 'wo' (Wolof) to allowed target_languages enum for pre-recorded jobs' translation_config in the response payload.",
+    "date": "2026-02-23",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/682"
   },
   {
     "provider": "gladia",
@@ -8692,9 +8731,9 @@
     "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "Added PII redaction options to pre-recorded job request_params: pii_redaction and pii_redaction_config.",
-    "date": "2026-02-24",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/706"
+    "note": "Added 'wo' (Wolof) to allowed values for pre-recorded request_params.translation_config.target_languages.",
+    "date": "2026-02-23",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/690"
   },
   {
     "provider": "gladia",
@@ -9222,38 +9261,12 @@
     "method": "GET",
     "change": "added",
     "target": "response",
-    "breaking": false,
+    "breaking": true,
     "deprecated": false,
     "doc_only": false,
-    "note": "Added 'wo' (Wolof) to the allowed values of target_languages in pre-recorded translation_config within returned request_params.",
-    "date": "2026-02-23",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/681"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 'wo' (Wolof) to allowed target_languages enum for pre-recorded jobs' translation_config in the response payload.",
-    "date": "2026-02-23",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/682"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 'wo' (Wolof) to allowed values for pre-recorded request_params.translation_config.target_languages.",
-    "date": "2026-02-23",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/690"
+    "note": "Added 'wo' (Wolof) to target_languages enum in pre-recorded request_params.translation_config.",
+    "date": "2026-02-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/653"
   },
   {
     "provider": "gladia",
@@ -9352,12 +9365,25 @@
     "method": "GET",
     "change": "added",
     "target": "response",
-    "breaking": true,
+    "breaking": false,
     "deprecated": false,
     "doc_only": false,
     "note": "Added 'wo' (Wolof) to target_languages enum in pre-recorded request_params.translation_config.",
-    "date": "2026-02-22",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/653"
+    "date": "2026-02-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/628"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to the allowed enum values for pre-recorded request_params.translation_config.target_languages.",
+    "date": "2026-02-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/638"
   },
   {
     "provider": "gladia",
@@ -9514,32 +9540,6 @@
     "note": "Removed 'wo' (Wolof) from allowed values of pre-recorded request_params.translation_config.target_languages enum in response items.",
     "date": "2026-02-21",
     "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/627"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 'wo' (Wolof) to target_languages enum in pre-recorded request_params.translation_config.",
-    "date": "2026-02-21",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/628"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 'wo' (Wolof) to the allowed enum values for pre-recorded request_params.translation_config.target_languages.",
-    "date": "2026-02-21",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/638"
   },
   {
     "provider": "anthropic",
@@ -11592,6 +11592,32 @@
     "note": "Beta endpoint to create a Skill by uploading files (multipart/form-data) with a SKILL.md and optional display_title; returned created skill metadata.",
     "date": "2026-02-20",
     "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/574"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to allowed target_languages enum for pre-recorded request_params.translation_config in job history items.",
+    "date": "2026-02-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/606"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to enum of allowed target_languages in pre-recorded request_params.translation_config.",
+    "date": "2026-02-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/609"
   },
   {
     "provider": "gladia",
@@ -19028,31 +19054,5 @@
     "note": "Introduces GET /v1/video-generation-models/{model_id} to retrieve full details for a video generation model by ID (aliases, timestamps, fingerprint, input/output modalities, ownership, version). Requires bearer auth; returns 200 with model object, 400 for bad request, 404 if not found.",
     "date": "2026-02-20",
     "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/571"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 'wo' (Wolof) to allowed target_languages enum for pre-recorded request_params.translation_config in job history items.",
-    "date": "2026-02-20",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/606"
-  },
-  {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 'wo' (Wolof) to enum of allowed target_languages in pre-recorded request_params.translation_config.",
-    "date": "2026-02-20",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/609"
   }
 ]
