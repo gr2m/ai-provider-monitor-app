@@ -1,5 +1,57 @@
 [
   {
+    "provider": "togetherai",
+    "route": "deployments",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "DeploymentResponseItem.autoscaling changed from free-form object to oneOf typed autoscaling configs.",
+    "date": "2026-03-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/761"
+  },
+  {
+    "provider": "togetherai",
+    "route": "deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added HTTPAutoscalingConfig schema used by autoscaling oneOf.",
+    "date": "2026-03-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/761"
+  },
+  {
+    "provider": "togetherai",
+    "route": "deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added QueueAutoscalingConfig schema used by autoscaling oneOf.",
+    "date": "2026-03-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/761"
+  },
+  {
+    "provider": "togetherai",
+    "route": "deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added CustomMetricAutoscalingConfig schema used by autoscaling oneOf.",
+    "date": "2026-03-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/761"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
@@ -6866,19 +6918,6 @@
   {
     "provider": "togetherai",
     "route": "deployments",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added version property to VolumeMount objects returned in deployments.",
-    "date": "2026-03-02",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/731"
-  },
-  {
-    "provider": "togetherai",
-    "route": "deployments",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -7538,6 +7577,19 @@
     "note": "VideoResponse required fields updated to include status.",
     "date": "2026-03-02",
     "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/730"
+  },
+  {
+    "provider": "togetherai",
+    "route": "deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added version property to VolumeMount objects returned in deployments.",
+    "date": "2026-03-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/731"
   },
   {
     "provider": "gladia",
