@@ -1,5 +1,18 @@
 [
   {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' to TranslationLanguageCodeEnum (target translation languages) used in response schemas.",
+    "date": "2026-03-12",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/766"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "POST",
@@ -78,19 +91,6 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/763"
   },
   {
-    "provider": "gladia",
-    "route": "v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example values for date-related query parameters (date, before_date, after_date).",
-    "date": "2026-03-11",
-    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/764"
-  },
-  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "GET",
@@ -102,6 +102,19 @@
     "note": "Route description updated to include explicit pagination details; no schema or parameter changes.",
     "date": "2026-03-11",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/765"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date-related query parameters (date, before_date, after_date).",
+    "date": "2026-03-11",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/764"
   },
   {
     "provider": "openai",
