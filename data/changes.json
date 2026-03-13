@@ -273,6 +273,19 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/773"
   },
   {
+    "provider": "openai",
+    "route": "audio/speech",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Simplified VoiceIdsOrCustomVoice schema: replaced allOf+type wrapper with direct $ref to VoiceIdsShared (no functional change).",
+    "date": "2026-03-13",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/774"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-2-klein-9b-preview",
     "method": "POST",
@@ -18212,19 +18225,6 @@
   },
   {
     "provider": "openai",
-    "route": "audio/speech",
-    "method": "POST",
-    "change": "added",
-    "target": "route",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added POST /audio/speech to generate text-to-speech audio from text, returning an audio file or streamed audio events.",
-    "date": "2026-02-20",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
-  },
-  {
-    "provider": "openai",
     "route": "audio/transcriptions",
     "method": "POST",
     "change": "added",
@@ -21290,5 +21290,18 @@
     "note": "Introduces GET /v1/video-generation-models/{model_id} to retrieve full details for a video generation model by ID (aliases, timestamps, fingerprint, input/output modalities, ownership, version). Requires bearer auth; returns 200 with model object, 400 for bad request, 404 if not found.",
     "date": "2026-02-20",
     "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/571"
+  },
+  {
+    "provider": "openai",
+    "route": "audio/speech",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added POST /audio/speech to generate text-to-speech audio from text, returning an audio file or streamed audio events.",
+    "date": "2026-02-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
   }
 ]
