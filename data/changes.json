@@ -1,5 +1,31 @@
 [
   {
+    "provider": "openai",
+    "route": "batches",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added '/v1/videos' to the supported values of the request 'endpoint' enum.",
+    "date": "2026-03-14",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/775"
+  },
+  {
+    "provider": "openai",
+    "route": "batches",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated the 'endpoint' description to include '/v1/videos' as a supported endpoint.",
+    "date": "2026-03-14",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/775"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript/{transcript_id}",
     "method": "DELETE",
@@ -18342,19 +18368,6 @@
   },
   {
     "provider": "openai",
-    "route": "batches",
-    "method": "POST",
-    "change": "added",
-    "target": "route",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Adds POST /batches to create and execute a batch job from an uploaded JSONL file of requests (purpose=batch), targeting one supported endpoint (e.g., /v1/responses, /v1/chat/completions, /v1/embeddings, etc.) within a 24h completion window; returns a batch object with IDs, status, timestamps, counts, and optional usage.",
-    "date": "2026-02-20",
-    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
-  },
-  {
-    "provider": "openai",
     "route": "batches/{batch_id}/cancel",
     "method": "POST",
     "change": "added",
@@ -21301,6 +21314,19 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added POST /audio/speech to generate text-to-speech audio from text, returning an audio file or streamed audio events.",
+    "date": "2026-02-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
+  },
+  {
+    "provider": "openai",
+    "route": "batches",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds POST /batches to create and execute a batch job from an uploaded JSONL file of requests (purpose=batch), targeting one supported endpoint (e.g., /v1/responses, /v1/chat/completions, /v1/embeddings, etc.) within a 24h completion window; returns a batch object with IDs, status, timestamps, counts, and optional usage.",
     "date": "2026-02-20",
     "diff_url": "https://github.com/gr2m/ai-provider-api-changes/pull/578"
   }
