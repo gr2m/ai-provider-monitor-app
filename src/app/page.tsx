@@ -1,6 +1,7 @@
 import { readFileSync, statSync } from "fs";
 import { join } from "path";
 import { ChangesTable } from "./changes-table";
+import { RelativeTime } from "./relative-time";
 
 export type Change = {
   provider: string;
@@ -38,14 +39,7 @@ export default function Home() {
             providers
             <span className="mx-1.5">·</span>
             <span>
-              Last updated{" "}
-              <time dateTime={lastUpdated}>
-                {new Date(lastUpdated).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "short",
-                  day: "numeric",
-                })}
-              </time>
+              Last updated <RelativeTime dateTime={lastUpdated} />
             </span>
           </p>
         </div>
