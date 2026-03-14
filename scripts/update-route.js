@@ -1,43 +1,45 @@
 #!/usr/bin/env node
 
 /**
- * Updates a single route in data/changes.json from a YAML file.
+ * Updates a single route in data/changes.json from dispatch payload data.
  *
  * Usage:
- *   node scripts/update-route.js <provider> <relativePath> <yaml-file>
+ *   node scripts/update-route.js <provider> <route> <changes-json>
  *
  * Arguments:
  *   provider     - e.g. "openai"
- *   relativePath - e.g. "v1/chat/completions/post.json"
- *   yaml-file    - path to the downloaded YAML change file
+ *   route        - e.g. "POST /v1/chat/completions"
+ *   changes-json - JSON array of change objects
  */
 
 import { readFileSync, writeFileSync } from "fs";
 import { join } from "path";
-import yaml from "js-yaml";
 
 const provider = process.argv[2];
-const relativePath = process.argv[3];
-const yamlFile = process.argv[4];
+const routeArg = process.argv[3];
+const changesJson = process.argv[4];
 
-if (!provider || !relativePath || !yamlFile) {
+if (!provider || !routeArg || !changesJson) {
   console.error(
-    "Usage: node scripts/update-route.js <provider> <relativePath> <yaml-file>"
+    "Usage: node scripts/update-route.js <provider> <route> <changes-json>"
   );
   process.exit(1);
 }
 
-// Derive route and method from relativePath like "v1/chat/completions/post.json"
-const parts = relativePath.replace(/\.json$/, "").split("/");
-const method = parts.pop().toUpperCase();
-const route = parts.join("/");
+// Parse route like "POST /v1/chat/completions"
+const spaceIndex = routeArg.indexOf(" ");
+if (spaceIndex === -1) {
+  console.error(`Invalid route format: "${routeArg}" (expected "METHOD /path")`);
+  process.exit(1);
+}
+const method = routeArg.slice(0, spaceIndex).toUpperCase();
+const route = routeArg.slice(spaceIndex + 1);
 
-// Parse the YAML
-const yamlContent = readFileSync(yamlFile, "utf-8");
-const entries = yaml.load(yamlContent);
+// Parse the changes JSON
+const entries = JSON.parse(changesJson);
 
 if (!Array.isArray(entries) || entries.length === 0) {
-  console.log("No entries in YAML file");
+  console.log("No entries in changes payload");
   process.exit(0);
 }
 
@@ -50,7 +52,7 @@ const filtered = db.filter(
   (c) => !(c.provider === provider && c.route === route && c.method === method)
 );
 
-// Add all entries from the YAML file
+// Add all entries from the changes payload
 for (const entry of entries) {
   filtered.push({
     provider,
