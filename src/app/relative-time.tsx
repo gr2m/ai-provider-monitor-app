@@ -19,24 +19,17 @@ function getRelativeTime(iso: string): string {
 }
 
 export function RelativeTime({ dateTime }: { dateTime: string }) {
-  const [relative, setRelative] = useState<string | null>(null);
+  const [relative, setRelative] = useState(() => getRelativeTime(dateTime));
 
   useEffect(() => {
-    setRelative(getRelativeTime(dateTime));
-    const id = setInterval(() => setRelative(getRelativeTime(dateTime)), 60000);
+    // Update immediately when dateTime changes, then refresh every minute
+    const update = () => setRelative(getRelativeTime(dateTime));
+    update();
+    const id = setInterval(update, 60000);
     return () => clearInterval(id);
   }, [dateTime]);
 
   const utcString = new Date(dateTime).toUTCString();
-
-  // Before hydration, show the UTC date as fallback
-  if (relative === null) {
-    return (
-      <time dateTime={dateTime} title={utcString}>
-        {utcString}
-      </time>
-    );
-  }
 
   return (
     <time dateTime={dateTime} title={utcString}>
