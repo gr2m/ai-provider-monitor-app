@@ -1,5 +1,17 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/images/edits",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed block_reason from GeneratedImageResponse; clients reading this field will no longer receive it.",
+    "date": "2026-03-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
