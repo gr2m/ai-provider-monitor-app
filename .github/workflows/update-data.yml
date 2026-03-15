@@ -24,17 +24,10 @@ jobs:
         env:
           PROVIDER: ${{ github.event.client_payload.provider }}
           ROUTE: ${{ github.event.client_payload.route }}
-          STATUS: ${{ github.event.client_payload.status }}
           CHANGES: ${{ toJson(github.event.client_payload.changes) }}
         run: |
           echo "Provider: $PROVIDER"
           echo "Route: $ROUTE"
-          echo "Status: $STATUS"
-
-          if [ "$STATUS" = "D" ]; then
-            echo "Route was deleted, skipping"
-            exit 0
-          fi
 
           node scripts/update-route.js "$PROVIDER" "$ROUTE" "$CHANGES"
 
