@@ -85,6 +85,18 @@
     "date": "2026-03-16"
   },
   {
+    "provider": "fal",
+    "route": "/models/analytics",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified that the end query parameter is exclusive and updated its example.",
+    "date": "2026-03-16"
+  },
+  {
     "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
