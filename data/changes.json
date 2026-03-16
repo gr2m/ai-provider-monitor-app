@@ -25,6 +25,66 @@
     "date": "2026-03-16"
   },
   {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed legacy model identifiers from Model enum in request payload",
+    "date": "2026-03-16"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed legacy model identifiers from Model enum in response object",
+    "date": "2026-03-16"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new model identifier claude-opus-4-1 to Model enum (request)",
+    "date": "2026-03-16"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new model identifier claude-opus-4-1 to Model enum (response)",
+    "date": "2026-03-16"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated descriptions for several Model enum options (no schema/behavior change)",
+    "date": "2026-03-16"
+  },
+  {
     "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
