@@ -1,7 +1,7 @@
 [
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -9,7 +9,8 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Corrected description for TranslationDTO.error to clarify it is null on success and contains error details on failure.",
-    "date": "2026-03-16"
+    "date": "2026-03-16",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/783"
   },
   {
     "provider": "gladia",
