@@ -1,6 +1,18 @@
 [
   {
     "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Corrected description for TranslationDTO.error to clarify it is null on success and contains error details on failure.",
+    "date": "2026-03-16"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
     "change": "changed",
