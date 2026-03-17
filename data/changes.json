@@ -97,6 +97,18 @@
     "date": "2026-03-16"
   },
   {
+    "provider": "openai",
+    "route": "/vector_stores/{vector_store_id}/search",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added in and nin operators to ComparisonFilter.type for request filter comparisons.",
+    "date": "2026-03-16"
+  },
+  {
     "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
