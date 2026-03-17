@@ -141,6 +141,30 @@
     "date": "2026-03-17"
   },
   {
+    "provider": "deepgram",
+    "route": "/v1/projects/{project_id}/members",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Moved first_name and last_name from inside email to top-level member object.",
+    "date": "2026-03-17"
+  },
+  {
+    "provider": "deepgram",
+    "route": "/v1/projects/{project_id}/members",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Moved scopes from member_id.scopes to a top-level member property scopes.",
+    "date": "2026-03-17"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/complete",
     "method": "POST",
