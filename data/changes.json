@@ -213,6 +213,42 @@
     "date": "2026-03-17"
   },
   {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added resume_from_checkpoint_id field to RL.TrainingSession objects in the list response.",
+    "date": "2026-03-17"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added training_checkpoints field (array of RL.TrainingCheckpoint) to RL.TrainingSession.",
+    "date": "2026-03-17"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new schema RL.TrainingCheckpoint used by training_checkpoints.",
+    "date": "2026-03-17"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/complete",
     "method": "POST",
