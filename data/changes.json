@@ -177,6 +177,42 @@
     "date": "2026-03-17"
   },
   {
+    "provider": "fal",
+    "route": "/account/focus",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional timezone query parameter to control date bucketing timezone (default UTC).",
+    "date": "2026-03-17"
+  },
+  {
+    "provider": "fal",
+    "route": "/account/focus",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional timeframe query parameter to select aggregation granularity.",
+    "date": "2026-03-17"
+  },
+  {
+    "provider": "fal",
+    "route": "/account/focus",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional bound_to_timeframe query parameter to align dates to timeframe boundaries (default true).",
+    "date": "2026-03-17"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/complete",
     "method": "POST",
