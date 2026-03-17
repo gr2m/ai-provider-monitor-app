@@ -12,6 +12,18 @@
     "date": "2026-03-17"
   },
   {
+    "provider": "fal",
+    "route": "/account/focus",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds GET /account/focus to download a FOCUS-compliant billing report (invoice or estimate) as CSV for enterprise customers.",
+    "date": "2026-03-17"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
