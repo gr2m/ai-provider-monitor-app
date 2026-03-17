@@ -24,6 +24,18 @@
     "date": "2026-03-17"
   },
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional url field to FileRef to allow public URL for file attachments.",
+    "date": "2026-03-17"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
