@@ -12,6 +12,18 @@
     "date": "2026-03-18"
   },
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for TranslationDTO.error to clarify it is null when success is true and contains error details otherwise.",
+    "date": "2026-03-18"
+  },
+  {
     "provider": "fal",
     "route": "account/focus",
     "method": "GET",
