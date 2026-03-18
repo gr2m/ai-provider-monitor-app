@@ -27,6 +27,30 @@
   },
   {
     "provider": "assemblyai",
+    "route": "/v2/transcript",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed the explicit JSON Schema default (10) for speaker_options.max_speakers_expected.",
+    "date": "2026-03-18"
+  },
+  {
+    "provider": "assemblyai",
+    "route": "/v2/transcript",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default behavior for speaker_options.max_speakers_expected changed from a fixed 10 to duration-based defaults (no limit for 0–2 min, 10 for 2–10 min, 30 for 10+ min).",
+    "date": "2026-03-18"
+  },
+  {
+    "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "POST",
     "change": "added",
