@@ -1,5 +1,17 @@
 [
   {
+    "provider": "assemblyai",
+    "route": "/v2/transcript/{transcript_id}/{subtitle_format}",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added text/html as a supported media type for 200 response alongside text/plain.",
+    "date": "2026-03-18"
+  },
+  {
     "provider": "fal",
     "route": "account/focus",
     "method": "GET",
