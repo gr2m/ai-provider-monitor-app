@@ -50,6 +50,18 @@
     "date": "2026-03-18"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-2-klein-4b",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional boolean field transparent_bg to request to enable background removal (returns transparent PNG).",
+    "date": "2026-03-18"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "POST",
