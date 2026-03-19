@@ -13,6 +13,18 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/805"
   },
   {
+    "provider": "togetherai",
+    "route": "/fine-tunes",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added nullable integer property random_seed to fine-tune job metadata objects in the list response.",
+    "date": "2026-03-19"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/complete",
     "method": "POST",
