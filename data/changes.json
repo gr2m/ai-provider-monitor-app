@@ -1,5 +1,17 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/documents/search",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional page_number field to SearchMatch objects in search results.",
+    "date": "2026-03-21"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-2-flex",
     "method": "POST",
