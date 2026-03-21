@@ -12,6 +12,18 @@
     "date": "2026-03-21"
   },
   {
+    "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new translation target language code wo (Wolof) to TranslationLanguageCodeEnum.",
+    "date": "2026-03-21"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-2-flex",
     "method": "POST",
