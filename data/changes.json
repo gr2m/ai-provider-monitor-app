@@ -12,6 +12,42 @@
     "date": "2026-03-22"
   },
   {
+    "provider": "xai",
+    "route": "/v1/documents/search",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional group_by field to SearchRequest to group results by metadata keys.",
+    "date": "2026-03-22"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/documents/search",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced GroupBy schema for grouping search results and keeping top-k per group.",
+    "date": "2026-03-22"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/documents/search",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced GroupByAggregate schema with min_k and max_k aggregation options.",
+    "date": "2026-03-22"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
