@@ -1,7 +1,7 @@
 [
   {
     "provider": "gladia",
-    "route": "/v1/history",
+    "route": "v1/history",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Clarified description of TranslationDTO.error to explain it is null on success and contains error details on failure.",
-    "date": "2026-03-22"
+    "date": "2026-03-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/813"
   },
   {
     "provider": "xai",
-    "route": "/v1/documents/search",
+    "route": "v1/documents/search",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -21,11 +22,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added optional group_by field to SearchRequest to group results by metadata keys.",
-    "date": "2026-03-22"
+    "date": "2026-03-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/814"
   },
   {
     "provider": "xai",
-    "route": "/v1/documents/search",
+    "route": "v1/documents/search",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -33,11 +35,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Introduced GroupBy schema for grouping search results and keeping top-k per group.",
-    "date": "2026-03-22"
+    "date": "2026-03-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/814"
   },
   {
     "provider": "xai",
-    "route": "/v1/documents/search",
+    "route": "v1/documents/search",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -45,7 +48,60 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Introduced GroupByAggregate schema with min_k and max_k aggregation options.",
-    "date": "2026-03-22"
+    "date": "2026-03-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/814"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "FileSearchResult.score is no longer required in responses (it may now be omitted).",
+    "date": "2026-03-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/814"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified description for FileSearchResult.score to note default 0.0 when omitted.",
+    "date": "2026-03-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/814"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses/{response_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "FileSearchResult.score is no longer required; responses may omit this field.",
+    "date": "2026-03-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/814"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses/{response_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for FileSearchResult.score to note omission/default behavior.",
+    "date": "2026-03-22",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/814"
   },
   {
     "provider": "gladia",
