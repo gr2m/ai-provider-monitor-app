@@ -1,6 +1,18 @@
 [
   {
     "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified description of TranslationDTO.error to explain it is null on success and contains error details on failure.",
+    "date": "2026-03-22"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
     "change": "added",
