@@ -1,5 +1,17 @@
 [
   {
+    "provider": "openai",
+    "route": "/responses/{response_id}/input_items",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "InputMessageResource now requires the type field in responses (was only id before).",
+    "date": "2026-03-23"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
