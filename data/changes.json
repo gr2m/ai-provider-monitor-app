@@ -12,6 +12,18 @@
     "date": "2026-03-24"
   },
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of TranslationDTO.error to state it is null when success is true.",
+    "date": "2026-03-24"
+  },
+  {
     "provider": "openai",
     "route": "/responses/{response_id}/input_items",
     "method": "GET",
