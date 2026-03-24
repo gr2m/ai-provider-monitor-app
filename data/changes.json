@@ -1,17 +1,5 @@
 [
   {
-    "provider": "xai",
-    "route": "/v1/videos/extensions",
-    "method": "POST",
-    "change": "removed",
-    "target": "route",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Removed POST /v1/videos/extensions, an async endpoint to extend a video by generating continuation content from a provided input video and prompt, returning a request_id for polling.",
-    "date": "2026-03-24"
-  },
-  {
     "provider": "gladia",
     "route": "/v1/history",
     "method": "GET",
@@ -21,6 +9,18 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description of TranslationDTO.error to state it is null when success is true.",
+    "date": "2026-03-24"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/videos/extensions",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds POST /v1/videos/extensions to extend an input MP4 by generating continuation content; asynchronous, returns request_id for polling. Accepts prompt, video URL, optional duration/model/output.",
     "date": "2026-03-24"
   },
   {
