@@ -1,5 +1,17 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/videos/extensions",
+    "method": "POST",
+    "change": "removed",
+    "target": "route",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed POST /v1/videos/extensions, an async endpoint to extend a video by generating continuation content from a provided input video and prompt, returning a request_id for polling.",
+    "date": "2026-03-24"
+  },
+  {
     "provider": "openai",
     "route": "/responses/{response_id}/input_items",
     "method": "GET",
@@ -21,18 +33,6 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added optional reference_images array (ImageUrl[]) for reference-to-video (R2V) generation.",
-    "date": "2026-03-23"
-  },
-  {
-    "provider": "xai",
-    "route": "/v1/videos/extensions",
-    "method": "POST",
-    "change": "added",
-    "target": "route",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Adds POST /v1/videos/extensions to asynchronously extend an input MP4 video by generating continuation content based on a prompt; returns a request_id for polling. Supports optional duration (1–10s, default 6), optional model and output destination, and requires a video URL (2–30s).",
     "date": "2026-03-23"
   },
   {
