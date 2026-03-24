@@ -99,6 +99,30 @@
     "date": "2026-03-24"
   },
   {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "metadata.highlighted is now deprecated and documented as always false.",
+    "date": "2026-03-24"
+  },
+  {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "metadata.pinned is now deprecated and documented as always false.",
+    "date": "2026-03-24"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
