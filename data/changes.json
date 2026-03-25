@@ -133,6 +133,18 @@
     "date": "2026-03-25"
   },
   {
+    "provider": "cohere",
+    "route": "/v2/audio/transcriptions",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduces POST /v2/audio/transcriptions to transcribe uploaded audio into text.",
+    "date": "2026-03-25"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
