@@ -49,6 +49,78 @@
     "date": "2026-03-25"
   },
   {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional modifier keys to click actions.",
+    "date": "2026-03-25"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional modifier keys to double-click actions.",
+    "date": "2026-03-25"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "DoubleClickAction now requires the keys field.",
+    "date": "2026-03-25"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional modifier keys to drag actions.",
+    "date": "2026-03-25"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional modifier keys to mouse move actions.",
+    "date": "2026-03-25"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional modifier keys to scroll actions.",
+    "date": "2026-03-25"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
