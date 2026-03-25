@@ -25,6 +25,30 @@
     "date": "2026-03-25"
   },
   {
+    "provider": "assemblyai",
+    "route": "/v2/transcript",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added domain optional parameter to enable domain-specific transcription models (e.g., medical-v1).",
+    "date": "2026-03-25"
+  },
+  {
+    "provider": "assemblyai",
+    "route": "/v2/transcript",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added domain field to Transcript response indicating which domain model was applied (e.g., medical-v1).",
+    "date": "2026-03-25"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
