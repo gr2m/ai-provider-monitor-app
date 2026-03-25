@@ -121,6 +121,18 @@
     "date": "2026-03-25"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-2-flex",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added webp to OutputFormat enum; output_format now accepts webp in requests.",
+    "date": "2026-03-25"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
