@@ -39,6 +39,18 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/834"
   },
   {
+    "provider": "togetherai",
+    "route": "/fine-tunes",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new boolean property `packing` to fine-tune job objects indicating whether sequence packing is used.",
+    "date": "2026-03-26"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "POST",
