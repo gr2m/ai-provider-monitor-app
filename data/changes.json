@@ -51,6 +51,54 @@
     "date": "2026-03-26"
   },
   {
+    "provider": "openai",
+    "route": "/vector_stores/{vector_store_id}/file_batches",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to include per-vector-store rate limits and recommendation to use batch ingestion.",
+    "date": "2026-03-26"
+  },
+  {
+    "provider": "openai",
+    "route": "/vector_stores/{vector_store_id}/file_batches",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for file_ids to recommend batch endpoint for multi-file ingestion and mention reduced per-vector-store write pressure.",
+    "date": "2026-03-26"
+  },
+  {
+    "provider": "openai",
+    "route": "/vector_stores/{vector_store_id}/file_batches",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for files to recommend batch endpoint for multi-file ingestion and mention reduced per-vector-store write pressure.",
+    "date": "2026-03-26"
+  },
+  {
+    "provider": "openai",
+    "route": "/vector_stores/{vector_store_id}/file_batches",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for nested CreateVectorStoreFileRequest.file_id to recommend using file_batches for multi-file ingestion to minimize per-vector-store write requests.",
+    "date": "2026-03-26"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "POST",
