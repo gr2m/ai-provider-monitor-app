@@ -1,6 +1,42 @@
 [
   {
     "provider": "gladia",
+    "route": "/v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the date query parameter.",
+    "date": "2026-03-26"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the before_date query parameter.",
+    "date": "2026-03-26"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the after_date query parameter.",
+    "date": "2026-03-26"
+  },
+  {
+    "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
     "change": "changed",
