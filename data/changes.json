@@ -52,6 +52,18 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/838"
   },
   {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added next_cursor field to pagination metadata (RL.ListMeta) in the list response.",
+    "date": "2026-03-27"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
