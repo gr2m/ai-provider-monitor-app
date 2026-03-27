@@ -64,6 +64,30 @@
     "date": "2026-03-27"
   },
   {
+    "provider": "openai",
+    "route": "/conversations/{conversation_id}/items",
+    "method": "GET",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed include enum value web_search_call.results from the include query parameter.",
+    "date": "2026-03-27"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations/{conversation_id}/items",
+    "method": "GET",
+    "change": "removed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documentation updated to remove web_search_call.results from IncludeEnum description.",
+    "date": "2026-03-27"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
