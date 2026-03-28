@@ -1,6 +1,18 @@
 [
   {
     "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date-related query params; no schema/behavior change.",
+    "date": "2026-03-28"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
     "change": "changed",
