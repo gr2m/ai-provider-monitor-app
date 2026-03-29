@@ -1,7 +1,20 @@
 [
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to TranslationLanguageCodeEnum; responses may now include 'wo' in translation-related fields.",
+    "date": "2026-03-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/841"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
     "target": "request",
@@ -9,7 +22,8 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated example values for date-related query params; no schema/behavior change.",
-    "date": "2026-03-28"
+    "date": "2026-03-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/841"
   },
   {
     "provider": "gladia",
