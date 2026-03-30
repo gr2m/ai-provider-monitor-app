@@ -12,6 +12,30 @@
     "date": "2026-03-30"
   },
   {
+    "provider": "openai",
+    "route": "/conversations/{conversation_id}/items",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional phase property to Message items to label assistant messages as commentary or final_answer.",
+    "date": "2026-03-30"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations/{conversation_id}/items",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new enum schema MessagePhase-2 with values commentary and final_answer, used by Message.phase.",
+    "date": "2026-03-30"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
