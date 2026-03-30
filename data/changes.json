@@ -1,7 +1,7 @@
 [
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
     "target": "request",
@@ -9,7 +9,8 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated example values for date, before_date, and after_date query parameters.",
-    "date": "2026-03-29"
+    "date": "2026-03-29",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/842"
   },
   {
     "provider": "gladia",
