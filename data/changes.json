@@ -1,5 +1,17 @@
 [
   {
+    "provider": "togetherai",
+    "route": "/audio/speech",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added bit_rate to AudioSpeechRequest to control MP3 bitrate (only when response_format=mp3; currently on Cartesia models).",
+    "date": "2026-03-30"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
