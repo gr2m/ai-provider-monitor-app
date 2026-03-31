@@ -138,6 +138,42 @@
     "date": "2026-03-31"
   },
   {
+    "provider": "fal",
+    "route": "/models/requests/by-endpoint",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "endpoint_id now accepts multiple IDs (string or array, up to 50); added form style/explode; descriptions/examples updated",
+    "date": "2026-03-31"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/requests/by-endpoint",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to clarify multi-endpoint support and ID limits",
+    "date": "2026-03-31"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/requests/by-endpoint",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Summary updated to reflect multi-endpoint support",
+    "date": "2026-03-31"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
