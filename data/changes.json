@@ -91,6 +91,18 @@
   },
   {
     "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "NamesConsistencyDTO.results description marked as deprecated; no schema change.",
+    "date": "2026-03-31"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
