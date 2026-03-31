@@ -103,6 +103,42 @@
   },
   {
     "provider": "gladia",
+    "route": "/v2/transcription/{id}",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added model property to AudioToLlmListConfigDTO (default: \"openai/gpt-3.5-turbo\").",
+    "date": "2026-03-31"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v2/transcription/{id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Made model required in AudioToLlmListConfigDTO (updated required array).",
+    "date": "2026-03-31"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v2/transcription/{id}",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added wo to TranslationLanguageCodeEnum values.",
+    "date": "2026-03-31"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
