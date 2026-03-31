@@ -1,5 +1,29 @@
 [
   {
+    "provider": "assemblyai",
+    "route": "/v2/transcript",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documentation updated to note Auto Chapters and Summarization are only supported on the Universal-2 model in the response schema.",
+    "date": "2026-03-31"
+  },
+  {
+    "provider": "assemblyai",
+    "route": "/v2/transcript",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documentation updated to note Auto Chapters and Summarization are only supported on the Universal-2 model in the request schema.",
+    "date": "2026-03-31"
+  },
+  {
     "provider": "togetherai",
     "route": "/audio/speech",
     "method": "POST",
