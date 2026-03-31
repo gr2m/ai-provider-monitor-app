@@ -78,6 +78,18 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/848"
   },
   {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "200 response example updated: usage now shows input/output token fields (ModelUsage) instead of prompt/completion token fields.",
+    "date": "2026-03-31"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
