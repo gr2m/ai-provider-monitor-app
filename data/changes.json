@@ -1,5 +1,17 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional context_management array for context-management directives; parsed but not yet executed.",
+    "date": "2026-04-01"
+  },
+  {
     "provider": "assemblyai",
     "route": "v2/transcript",
     "method": "POST",
@@ -76,18 +88,6 @@
     "note": "Documented that summarization is only supported for the Universal-2 model (no schema change).",
     "date": "2026-03-31",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/848"
-  },
-  {
-    "provider": "xai",
-    "route": "/v1/responses",
-    "method": "POST",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "200 response example updated: usage now shows input/output token fields (ModelUsage) instead of prompt/completion token fields.",
-    "date": "2026-03-31"
   },
   {
     "provider": "gladia",
