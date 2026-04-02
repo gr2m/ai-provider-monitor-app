@@ -1,5 +1,17 @@
 [
   {
+    "provider": "fal",
+    "route": "/account/model-access-controls",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds GET /account/model-access-controls to download current org model access controls as a CSV; enterprise customers with model access controls enabled.",
+    "date": "2026-04-02"
+  },
+  {
     "provider": "xai",
     "route": "v1/responses",
     "method": "POST",
