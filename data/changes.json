@@ -37,6 +37,42 @@
     "date": "2026-04-02"
   },
   {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/forward-backward",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "RL.LossInputs.target_tokens is now required",
+    "date": "2026-04-02"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/forward-backward",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new GRPO loss aggregation type: GRPO_LOSS_AGGREGATION_TYPE_SEQUENCE_MEAN",
+    "date": "2026-04-02"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/forward-backward",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for RL.LossInputs.target_tokens (removed note about being optional with default)",
+    "date": "2026-04-02"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/messages/batches/{message_batch_id}/results",
     "method": "GET",
