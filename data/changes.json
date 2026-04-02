@@ -25,6 +25,18 @@
     "date": "2026-04-02"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/delete_finetune",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of finetune_id in DeleteFinetuneInputs; no schema changes",
+    "date": "2026-04-02"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/messages/batches/{message_batch_id}/results",
     "method": "GET",
