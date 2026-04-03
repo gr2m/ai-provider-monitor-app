@@ -1,7 +1,7 @@
 [
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added generate_audio flag to control audio generation.",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -21,11 +22,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added media object for unified media inputs (images/videos/audio).",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -33,11 +35,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added ratio property for aspect ratio.",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -45,11 +48,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added resolution property for video resolution.",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -57,11 +61,12 @@
     "deprecated": true,
     "doc_only": false,
     "note": "frame_images is deprecated; use media.frame_images instead.",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -69,11 +74,12 @@
     "deprecated": true,
     "doc_only": false,
     "note": "reference_images is deprecated; use media.reference_images instead.",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -81,11 +87,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added VideoMedia schema definition for media inputs.",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -93,11 +100,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added AudioRef schema for audio inputs.",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "togetherai",
-    "route": "/videos",
+    "route": "videos",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -105,11 +113,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added VideoRef schema for video inputs.",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/862"
   },
   {
     "provider": "xai",
-    "route": "/v1/messages",
+    "route": "v1/messages",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -117,11 +126,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "tool_result content in MessageContentPart now accepts either a string or an array of typed content blocks (via new ToolResultContent schema)",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/863"
   },
   {
     "provider": "xai",
-    "route": "/v1/messages",
+    "route": "v1/messages",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -129,11 +139,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added optional signature field to thinking content block in MessageContentPart (for Anthropic SDK round-tripping)",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/863"
   },
   {
     "provider": "xai",
-    "route": "/v1/messages",
+    "route": "v1/messages",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -141,11 +152,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Introduced ToolResultContent schema to allow tool_result content as string or array of blocks",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/863"
   },
   {
     "provider": "xai",
-    "route": "/v1/messages",
+    "route": "v1/messages",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -153,7 +165,47 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Introduced ToolResultContentBlock schema (supports text and image blocks) for tool_result arrays",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/863"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "v1/delete_finetune",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of finetune_id in DeleteFinetuneInputs; no schema changes",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/859"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "v1/flux-pro-1.0-fill-finetuned",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated finetune_id description to clarify LoRA usage and support for 'org-id/lora-name' format.",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/859"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "v1/flux-pro-1.1-ultra-finetuned",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated finetune_id description to clarify it refers to a LoRA name and how to reference LoRAs from other orgs using 'org-id/lora-name'.",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/859"
   },
   {
     "provider": "fal",
@@ -170,31 +222,20 @@
   },
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "removed",
     "target": "response",
     "breaking": true,
     "deprecated": false,
     "doc_only": false,
-    "note": "Removed language code wo (Wolof) from TranscriptionLanguageCodeEnum used in response payloads (e.g., utterance.language, transcription.languages).",
-    "date": "2026-04-02"
-  },
-  {
-    "provider": "black-forest-labs",
-    "route": "/v1/delete_finetune",
-    "method": "POST",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated description of finetune_id in DeleteFinetuneInputs; no schema changes",
-    "date": "2026-04-02"
+    "note": "Removed language code 'wo' (Wolof) from TranscriptionLanguageCodeEnum used in response payloads (e.g., utterance.language, transcription.languages).",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/858"
   },
   {
     "provider": "togetherai",
-    "route": "/rl/training-sessions/{session_id}/operations/forward-backward",
+    "route": "rl/training-sessions/{session_id}/operations/forward-backward",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -202,11 +243,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "RL.LossInputs.target_tokens is now required",
-    "date": "2026-04-02"
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/861"
   },
   {
     "provider": "togetherai",
-    "route": "/rl/training-sessions/{session_id}/operations/forward-backward",
+    "route": "rl/training-sessions/{session_id}/operations/forward-backward",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -214,11 +256,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added new GRPO loss aggregation type: GRPO_LOSS_AGGREGATION_TYPE_SEQUENCE_MEAN",
-    "date": "2026-04-02"
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/861"
   },
   {
     "provider": "togetherai",
-    "route": "/rl/training-sessions/{session_id}/operations/forward-backward",
+    "route": "rl/training-sessions/{session_id}/operations/forward-backward",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -226,7 +269,112 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description for RL.LossInputs.target_tokens (removed note about being optional with default)",
-    "date": "2026-04-02"
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/861"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed ContentPart.text_file from chat message content parts; use a file attachment or inline text instead.",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/860"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/videos/generations",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "'prompt' is no longer required in GenerateVideoRequest (required array removed).",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/860"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/videos/generations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated 'prompt' description to note it's required for T2V/R2V and optional for I2V.",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/860"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/videos/{request_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "VideoResponse no longer requires model and video; only status and progress are required.",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/860"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/videos/{request_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "VideoResponse.model can now be null and may be omitted when status is \"failed\".",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/860"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/videos/{request_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "VideoResponse.video may be null/omitted when status is \"failed\"; previously always a present object.",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/860"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/videos/{request_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "VideoError.code now references an enumerated VideoErrorCode instead of an arbitrary string.",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/860"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/videos/{request_id}",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added VideoErrorCode enum with allowed error codes.",
+    "date": "2026-04-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/860"
   },
   {
     "provider": "anthropic",
