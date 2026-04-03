@@ -108,6 +108,54 @@
     "date": "2026-04-03"
   },
   {
+    "provider": "xai",
+    "route": "/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "tool_result content in MessageContentPart now accepts either a string or an array of typed content blocks (via new ToolResultContent schema)",
+    "date": "2026-04-03"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/messages",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional signature field to thinking content block in MessageContentPart (for Anthropic SDK round-tripping)",
+    "date": "2026-04-03"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/messages",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced ToolResultContent schema to allow tool_result content as string or array of blocks",
+    "date": "2026-04-03"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/messages",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced ToolResultContentBlock schema (supports text and image blocks) for tool_result arrays",
+    "date": "2026-04-03"
+  },
+  {
     "provider": "fal",
     "route": "account/model-access-controls",
     "method": "GET",
