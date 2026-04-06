@@ -1,5 +1,65 @@
 [
   {
+    "provider": "togetherai",
+    "route": "/compute/regions",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "driver_versions array items changed from string to ClusterDriverVersionInfo objects.",
+    "date": "2026-04-06"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/regions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added ClusterDriverVersionInfo schema for CUDA/NVIDIA driver version pairs.",
+    "date": "2026-04-06"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/regions",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed availability_zones from the required fields of region items.",
+    "date": "2026-04-06"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/regions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "supported_instance_types is now required for region items.",
+    "date": "2026-04-06"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/regions",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated driver_versions description to clarify it lists CUDA/NVIDIA version pairs.",
+    "date": "2026-04-06"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
