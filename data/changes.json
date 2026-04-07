@@ -1,5 +1,53 @@
 [
   {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new allowed model value claude-mythos-preview to CompletionRequest Model enum.",
+    "date": "2026-04-07"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new allowed model value claude-mythos-preview to CompletionResponse Model enum.",
+    "date": "2026-04-07"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for model claude-opus-4-6 in Model enum.",
+    "date": "2026-04-07"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for model claude-opus-4-6 in Model enum.",
+    "date": "2026-04-07"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
