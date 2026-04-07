@@ -1,7 +1,20 @@
 [
   {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date, before_date, and after_date query parameters.",
+    "date": "2026-04-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/868"
+  },
+  {
     "provider": "togetherai",
-    "route": "/compute/regions",
+    "route": "compute/regions",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -9,11 +22,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "driver_versions array items changed from string to ClusterDriverVersionInfo objects.",
-    "date": "2026-04-06"
+    "date": "2026-04-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/869"
   },
   {
     "provider": "togetherai",
-    "route": "/compute/regions",
+    "route": "compute/regions",
     "method": "GET",
     "change": "added",
     "target": "response",
@@ -21,11 +35,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added ClusterDriverVersionInfo schema for CUDA/NVIDIA driver version pairs.",
-    "date": "2026-04-06"
+    "date": "2026-04-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/869"
   },
   {
     "provider": "togetherai",
-    "route": "/compute/regions",
+    "route": "compute/regions",
     "method": "GET",
     "change": "removed",
     "target": "response",
@@ -33,11 +48,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Removed availability_zones from the required fields of region items.",
-    "date": "2026-04-06"
+    "date": "2026-04-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/869"
   },
   {
     "provider": "togetherai",
-    "route": "/compute/regions",
+    "route": "compute/regions",
     "method": "GET",
     "change": "added",
     "target": "response",
@@ -45,11 +61,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "supported_instance_types is now required for region items.",
-    "date": "2026-04-06"
+    "date": "2026-04-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/869"
   },
   {
     "provider": "togetherai",
-    "route": "/compute/regions",
+    "route": "compute/regions",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -57,7 +74,8 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated driver_versions description to clarify it lists CUDA/NVIDIA version pairs.",
-    "date": "2026-04-06"
+    "date": "2026-04-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/869"
   },
   {
     "provider": "gladia",
