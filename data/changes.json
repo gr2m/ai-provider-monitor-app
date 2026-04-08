@@ -5,22 +5,22 @@
     "method": "POST",
     "change": "changed",
     "target": "request",
-    "breaking": false,
+    "breaking": true,
     "deprecated": false,
     "doc_only": false,
-    "note": "FileRef.file_id is now nullable (type changed from string to string|null).",
+    "note": "FileRef now requires file_id for file attachments; URL-only FileRef objects are no longer valid.",
     "date": "2026-04-08"
   },
   {
     "provider": "xai",
     "route": "/v1/chat/completions",
     "method": "POST",
-    "change": "removed",
+    "change": "changed",
     "target": "request",
-    "breaking": false,
+    "breaking": true,
     "deprecated": false,
     "doc_only": false,
-    "note": "Removed required constraint on FileRef; file_id is no longer required.",
+    "note": "FileRef.file_id type is no longer nullable (changed from string|null to string).",
     "date": "2026-04-08"
   },
   {
