@@ -160,6 +160,30 @@
     "date": "2026-04-08"
   },
   {
+    "provider": "togetherai",
+    "route": "/videos",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "VideoMedia.audio_inputs now accepts either a URL string or an object with an \"audio\" key (previously only object).",
+    "date": "2026-04-08"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/videos",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "VideoMedia.source_video now accepts either a URL string or an object with a \"video\" key (previously only object).",
+    "date": "2026-04-08"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/complete",
     "method": "POST",
