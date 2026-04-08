@@ -1,5 +1,29 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "FileRef.file_id is now nullable (type changed from string to string|null).",
+    "date": "2026-04-08"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed required constraint on FileRef; file_id is no longer required.",
+    "date": "2026-04-08"
+  },
+  {
     "provider": "anthropic",
     "route": "/v1/complete",
     "method": "POST",
