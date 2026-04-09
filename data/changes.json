@@ -48,6 +48,18 @@
     "date": "2026-04-09"
   },
   {
+    "provider": "fal",
+    "route": "/models/analytics",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 500 Internal server error response with standard error schema.",
+    "date": "2026-04-09"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
