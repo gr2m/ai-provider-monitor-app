@@ -1,5 +1,41 @@
 [
   {
+    "provider": "mistral",
+    "route": "/v1/ocr",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional confidence_scores_granularity parameter to request to return page or word-level confidence scores.",
+    "date": "2026-04-09"
+  },
+  {
+    "provider": "mistral",
+    "route": "/v1/ocr",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added confidence_scores field on each page object, providing average/min page scores and optional per-word scores when requested.",
+    "date": "2026-04-09"
+  },
+  {
+    "provider": "mistral",
+    "route": "/v1/ocr",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added word_confidence_scores to table objects, returning per-word confidence scores when requested.",
+    "date": "2026-04-09"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
