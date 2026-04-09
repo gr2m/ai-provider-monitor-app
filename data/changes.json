@@ -37,6 +37,18 @@
   },
   {
     "provider": "anthropic",
+    "route": "/v1/environments/{environment_id}?beta=true",
+    "method": "DELETE",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed cookie parameter sessionKey from request.",
+    "date": "2026-04-09"
+  },
+  {
+    "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
     "change": "added",
