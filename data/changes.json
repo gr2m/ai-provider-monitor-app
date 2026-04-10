@@ -789,6 +789,18 @@
     "date": "2026-04-10"
   },
   {
+    "provider": "mistral",
+    "route": "/v1/workflows/executions/{execution_id}/trace/events",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route tag changed from beta.workflows.executions to workflows.executions (exiting beta group).",
+    "date": "2026-04-10"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/environments/{environment_id}/archive?beta=true",
     "method": "POST",
