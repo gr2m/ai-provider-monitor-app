@@ -1,5 +1,65 @@
 [
   {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional `detail` property to InputFileContentParam to control file rendering quality (`low` or `high`).",
+    "date": "2026-04-10"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new enum schema `FileDetailEnum` with values `low` and `high`.",
+    "date": "2026-04-10"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Increased maxLength for InputFileContentParam.file_data from 32MB to 70MB.",
+    "date": "2026-04-10"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional `detail` property to InputFileContent (non-Param) used in message content.",
+    "date": "2026-04-10"
+  },
+  {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new enum schema `FileInputDetail` with values `low` and `high`.",
+    "date": "2026-04-10"
+  },
+  {
     "provider": "mistral",
     "route": "/v1/ocr",
     "method": "POST",
