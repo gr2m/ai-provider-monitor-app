@@ -753,6 +753,30 @@
     "date": "2026-04-10"
   },
   {
+    "provider": "togetherai",
+    "route": "/evaluation",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional num_workers to EvaluationJudgeModelConfig to control concurrent judge requests.",
+    "date": "2026-04-10"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/evaluation",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional num_workers to EvaluationModelRequest to control concurrent model requests.",
+    "date": "2026-04-10"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/environments/{environment_id}/archive?beta=true",
     "method": "POST",
