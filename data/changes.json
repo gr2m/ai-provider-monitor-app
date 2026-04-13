@@ -182,6 +182,42 @@
     "date": "2026-04-13"
   },
   {
+    "provider": "togetherai",
+    "route": "/compute/regions",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed property cuda_driver_version from ClusterDriverVersionInfo (renamed to cuda_version).",
+    "date": "2026-04-13"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/regions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added property cuda_version to ClusterDriverVersionInfo (replacement for cuda_driver_version).",
+    "date": "2026-04-13"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/regions",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Updated required fields in ClusterDriverVersionInfo: cuda_driver_version -> cuda_version.",
+    "date": "2026-04-13"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/agent/settings/think/models",
     "method": "DESCRIPTION",
