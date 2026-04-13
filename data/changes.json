@@ -1,6 +1,30 @@
 [
   {
     "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added wo (Wolof) to TranslationLanguageCodeEnum, enabling wo in TranslationConfigDTO.target_languages and related request configs.",
+    "date": "2026-04-13"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added wo (Wolof) to TranslationLanguageCodeEnum, so TranslationResultDTO.languages may now contain wo.",
+    "date": "2026-04-13"
+  },
+  {
+    "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
     "change": "added",
