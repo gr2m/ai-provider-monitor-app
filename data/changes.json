@@ -86,6 +86,18 @@
     "date": "2026-04-14"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-2-klein-4b",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed transparent_bg from Flux2KleinInputs; background removal can no longer be requested.",
+    "date": "2026-04-14"
+  },
+  {
     "provider": "fal",
     "route": "workflows/{username}/{workflow_name}",
     "method": "GET",
