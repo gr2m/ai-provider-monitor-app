@@ -38,6 +38,54 @@
     "date": "2026-04-14"
   },
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "NamedEntityRecognitionDTO entity property removed (was a string).",
+    "date": "2026-04-14"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "NamedEntityRecognitionDTO now includes results array of structured entities.",
+    "date": "2026-04-14"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "NamedEntityRecognitionDTO required fields updated to require results instead of entity.",
+    "date": "2026-04-14"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New schema NamedEntityRecognitionResult added for NER results (text, entity_type, start, end).",
+    "date": "2026-04-14"
+  },
+  {
     "provider": "fal",
     "route": "workflows/{username}/{workflow_name}",
     "method": "GET",
