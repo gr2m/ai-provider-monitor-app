@@ -98,6 +98,54 @@
     "date": "2026-04-14"
   },
   {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "Model option claude-opus-4-0 marked as deprecated.",
+    "date": "2026-04-14"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "Model option claude-opus-4-20250514 marked as deprecated.",
+    "date": "2026-04-14"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "Model option claude-sonnet-4-0 marked as deprecated.",
+    "date": "2026-04-14"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/complete",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "Model option claude-sonnet-4-20250514 marked as deprecated.",
+    "date": "2026-04-14"
+  },
+  {
     "provider": "fal",
     "route": "workflows/{username}/{workflow_name}",
     "method": "GET",
