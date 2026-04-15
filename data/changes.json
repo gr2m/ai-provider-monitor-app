@@ -1,5 +1,17 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/videos/{request_id}",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed the out_of_range value from VideoErrorCode enum; responses will no longer return this error code.",
+    "date": "2026-04-15"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
