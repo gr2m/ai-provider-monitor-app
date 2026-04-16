@@ -1,5 +1,17 @@
 [
   {
+    "provider": "togetherai",
+    "route": "/fine-tunes",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added max_seq_length integer field to FinetuneResponseTruncated objects in the list response.",
+    "date": "2026-04-16"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
