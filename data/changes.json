@@ -60,6 +60,18 @@
     "date": "2026-04-16"
   },
   {
+    "provider": "anthropic",
+    "route": "/v1/user_profiles/{user_profile_id}?beta=true",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New beta endpoint to fetch a user profile by ID. Requires beta=true and path param user_profile_id. Optional headers: x-api-key, anthropic-version, anthropic-beta. Returns BetaUserProfile with metadata, trust_grants, and timestamps.",
+    "date": "2026-04-16"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
