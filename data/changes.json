@@ -13,6 +13,30 @@
   },
   {
     "provider": "deepgram",
+    "route": "/v1/listen",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Response metadata.channels type changed from number (double) to integer.",
+    "date": "2026-04-16"
+  },
+  {
+    "provider": "deepgram",
+    "route": "/v1/listen",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Token count fields (input_tokens, output_tokens) in metadata info objects changed from number (double) to integer.",
+    "date": "2026-04-16"
+  },
+  {
+    "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
     "change": "changed",
