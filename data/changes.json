@@ -36,6 +36,30 @@
     "date": "2026-04-16"
   },
   {
+    "provider": "anthropic",
+    "route": "/v1/agents/{agent_id}?beta=true",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new allowed model id claude-opus-4-7 to BetaManagedAgentsModel; requests can now set this value.",
+    "date": "2026-04-16"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/agents/{agent_id}?beta=true",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Responses may now return model id claude-opus-4-7 in BetaManagedAgentsModelConfig.id.",
+    "date": "2026-04-16"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
