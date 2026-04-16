@@ -1,5 +1,31 @@
 [
   {
+    "provider": "deepgram",
+    "route": "v1/listen",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Several response fields changed from number (double) to integer, aligning schema to integer-only values for channel, speaker, and paragraph counts.",
+    "date": "2026-04-15",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/900"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date-related query parameters.",
+    "date": "2026-04-15",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/901"
+  },
+  {
     "provider": "openai",
     "route": "responses/compact",
     "method": "POST",
@@ -37,30 +63,6 @@
     "note": "Removed the 'out_of_range' value from VideoErrorCode enum; responses will no longer return this error code.",
     "date": "2026-04-15",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/898"
-  },
-  {
-    "provider": "deepgram",
-    "route": "/v1/listen",
-    "method": "POST",
-    "change": "changed",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Several response fields changed from number (double) to integer, aligning schema to integer-only values for channel, speaker, and paragraph counts.",
-    "date": "2026-04-15"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v2/transcription",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example values for date-related query parameters.",
-    "date": "2026-04-15"
   },
   {
     "provider": "anthropic",
