@@ -1,5 +1,17 @@
 [
   {
+    "provider": "gladia",
+    "route": "/v2/live",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new language code wo to TranscriptionLanguageCodeEnum used in response schemas (e.g., transcription languages).",
+    "date": "2026-04-17"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
