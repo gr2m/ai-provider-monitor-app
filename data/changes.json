@@ -1,15 +1,16 @@
 [
   {
     "provider": "gladia",
-    "route": "/v2/live",
+    "route": "v2/live",
     "method": "GET",
     "change": "added",
     "target": "response",
     "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "Added new language code wo to TranscriptionLanguageCodeEnum used in response schemas (e.g., transcription languages).",
-    "date": "2026-04-17"
+    "note": "Added new language code 'wo' to TranscriptionLanguageCodeEnum used in response schemas (e.g., transcription languages).",
+    "date": "2026-04-17",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/906"
   },
   {
     "provider": "anthropic",
