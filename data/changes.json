@@ -12,6 +12,54 @@
     "date": "2026-04-19"
   },
   {
+    "provider": "togetherai",
+    "route": "/realtime",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified input_audio_buffer.commit behavior: with VAD enabled, server auto-detects segments; with VAD disabled, client must send commit to trigger transcription.",
+    "date": "2026-04-19"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/realtime",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Added client event transcription_session.updated to configure Voice Activity Detection (VAD) during a session or disable it by setting turn_detection to null.",
+    "date": "2026-04-19"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/realtime",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Added server event transcription_session.updated acknowledging and reflecting applied VAD settings.",
+    "date": "2026-04-19"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/realtime",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Added Voice Activity Detection (VAD) documentation, including defaults, runtime configuration via session message, and optional query parameters (turn_detection, threshold, min_silence_duration_ms, min_speech_duration_ms, max_speech_duration_s, speech_pad_ms).",
+    "date": "2026-04-19"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
