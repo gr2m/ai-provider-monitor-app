@@ -1,5 +1,17 @@
 [
   {
+    "provider": "fal",
+    "route": "/models/requests/by-endpoint",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to clarify default time range: when request_id is provided and start is omitted, default start expands to 90 days.",
+    "date": "2026-04-19"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
