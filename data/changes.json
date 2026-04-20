@@ -26,6 +26,32 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/908"
   },
   {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date, before_date, and after_date query parameters; no schema changes.",
+    "date": "2026-04-19",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/912"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to TranslationLanguageCodeEnum; translation results may now include this code.",
+    "date": "2026-04-19",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/911"
+  },
+  {
     "provider": "togetherai",
     "route": "realtime",
     "method": "GET",
@@ -76,18 +102,6 @@
     "note": "Added Voice Activity Detection (VAD) documentation, including defaults, runtime configuration via session message, and optional query parameters (turn_detection, threshold, min_silence_duration_ms, min_speech_duration_ms, max_speech_duration_s, speech_pad_ms).",
     "date": "2026-04-19",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/909"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v2/transcription",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added wo (Wolof) to TranslationLanguageCodeEnum; translation results may now include this code.",
-    "date": "2026-04-19"
   },
   {
     "provider": "gladia",
