@@ -1,5 +1,17 @@
 [
   {
+    "provider": "cohere",
+    "route": "/v2/parse",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduces Parse API v2: POST /v2/parse parses document images into structured output (markdown default or blocks); supports image_url inputs only.",
+    "date": "2026-08-26"
+  },
+  {
     "provider": "fal",
     "route": "models/requests/by-endpoint",
     "method": "GET",
