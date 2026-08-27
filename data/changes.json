@@ -1,5 +1,17 @@
 [
   {
+    "provider": "togetherai",
+    "route": "/billing/usage",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduces GET /billing/usage to fetch an organization's monthly billing usage as cost-annotated line items grouped by day or hour, with pagination via next_cursor.",
+    "date": "2026-08-27"
+  },
+  {
     "provider": "cohere",
     "route": "/v2/parse",
     "method": "POST",
