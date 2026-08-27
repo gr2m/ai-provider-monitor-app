@@ -234,6 +234,18 @@
   },
   {
     "provider": "anthropic",
+    "route": "/v1/files/{file_id}?beta=true",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added expires_at (date-time or null) to the file metadata object in 200 response.",
+    "date": "2026-08-27"
+  },
+  {
+    "provider": "anthropic",
     "route": "v1/environments/{environment_id}?beta=true",
     "method": "POST",
     "change": "changed",
