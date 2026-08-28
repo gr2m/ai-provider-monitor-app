@@ -1,5 +1,17 @@
 [
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/delete_finetune",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Server base URL updated from https://api.us1.bfl.ai to https://api.bfl.ai",
+    "date": "2026-08-28"
+  },
+  {
     "provider": "togetherai",
     "route": "billing/usage",
     "method": "GET",
