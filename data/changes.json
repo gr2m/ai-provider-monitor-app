@@ -12,6 +12,18 @@
     "date": "2026-08-28"
   },
   {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added POST /anthropic/v1/messages: Anthropic-compatible Messages API to call Kimi models with support for streaming (SSE), tool use, image input, thinking, and structured JSON output.",
+    "date": "2026-08-28"
+  },
+  {
     "provider": "togetherai",
     "route": "billing/usage",
     "method": "GET",
