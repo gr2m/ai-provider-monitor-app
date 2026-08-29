@@ -1,5 +1,18 @@
 [
   {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example timestamps for date, before_date and after_date query parameters; no schema changes.",
+    "date": "2026-08-29",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/970"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/delete_finetune",
     "method": "POST",
@@ -131,7 +144,7 @@
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "removed",
     "target": "request",
@@ -139,11 +152,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Removed model option glm-5-turbo from ChatCompletionTextRequest model enum.",
-    "date": "2026-08-28"
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "removed",
     "target": "request",
@@ -151,11 +165,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Removed vision model glm-5v-turbo from ChatCompletionVisionRequest model enum.",
-    "date": "2026-08-28"
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "removed",
     "target": "request",
@@ -163,11 +178,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Removed legacy VisionMultimodalContentItem variant with type \"file_url\"; use unified \"file\" type instead.",
-    "date": "2026-08-28"
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -175,11 +191,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Unified VisionMultimodalContentItem \"file\" variant now accepts file_id, file_url, or base64 file_data (filename optional); file_id is no longer required.",
-    "date": "2026-08-28"
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -187,11 +204,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added base64 file_data support in VisionMultimodalContentItem file object.",
-    "date": "2026-08-28"
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -199,11 +217,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added file_url field inside VisionMultimodalContentItem file object (replacing standalone file_url variant).",
-    "date": "2026-08-28"
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -211,11 +230,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added optional filename field to VisionMultimodalContentItem file object.",
-    "date": "2026-08-28"
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -223,7 +243,112 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Documentation updated to remove references to retired models (GLM-5-Turbo, GLM-5V-Turbo) across descriptions.",
-    "date": "2026-08-28"
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed VisionMultimodalContentItem variant with type \"file_url\". Use type=\"file\" with file.file_url instead.",
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Unified VisionMultimodalContentItem type \"file\": file.file_id is no longer required and the file object can now include file_id, file_url, file_data, and filename.",
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added file.file_url (string) inside VisionMultimodalContentItem type \"file\".",
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added file.file_data (base64 string) inside VisionMultimodalContentItem type \"file\".",
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added file.filename (string) inside VisionMultimodalContentItem type \"file\".",
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/videos/generations",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to remove Vidu model mention.",
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/videos/generations",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed Vidu request types from request body; only CogVideoX-3 is supported now.",
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/videos/generations",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed Vidu schema definitions from components.",
+    "date": "2026-08-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/969"
   },
   {
     "provider": "anthropic",
