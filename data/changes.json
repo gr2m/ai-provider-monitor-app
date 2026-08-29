@@ -13,6 +13,18 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/970"
   },
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for TranslationDTO.error to clarify it is null when success=true.",
+    "date": "2026-08-29"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/delete_finetune",
     "method": "POST",
