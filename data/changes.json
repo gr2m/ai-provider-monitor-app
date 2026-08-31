@@ -156,6 +156,42 @@
     "date": "2026-08-31"
   },
   {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/stop",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added policy_state property to RL.TrainingSession in the response.",
+    "date": "2026-08-31"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/stop",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "policy_state is now required on RL.TrainingSession in the response.",
+    "date": "2026-08-31"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/stop",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new schema RL.SessionPolicyState used by TrainingSession.policy_state.",
+    "date": "2026-08-31"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
