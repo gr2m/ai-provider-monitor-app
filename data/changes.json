@@ -1,5 +1,77 @@
 [
   {
+    "provider": "moonshotai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed model 'kimi-k2.5' from discriminator mapping; requests using this model are no longer accepted.",
+    "date": "2026-08-31"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed Moonshot V1 models from discriminator mapping; these models are no longer supported on this route.",
+    "date": "2026-08-31"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed KimiK25ChatRequest from request oneOf options.",
+    "date": "2026-08-31"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed MoonshotV1ChatRequest from request oneOf options (and its parameters like temperature/top_p/n, etc.).",
+    "date": "2026-08-31"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed KimiK25ChatRequest schema from components.",
+    "date": "2026-08-31"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed MoonshotV1ChatRequest schema from components.",
+    "date": "2026-08-31"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
