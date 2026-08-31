@@ -1,7 +1,7 @@
 [
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
     "target": "request",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated example value for 'date' query parameter.",
-    "date": "2026-08-30"
+    "date": "2026-08-30",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/973"
   },
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
     "target": "request",
@@ -21,11 +22,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated example value for 'before_date' query parameter.",
-    "date": "2026-08-30"
+    "date": "2026-08-30",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/973"
   },
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
     "target": "request",
@@ -33,7 +35,8 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated example value for 'after_date' query parameter.",
-    "date": "2026-08-30"
+    "date": "2026-08-30",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/973"
   },
   {
     "provider": "gladia",
