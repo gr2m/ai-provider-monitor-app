@@ -72,6 +72,18 @@
     "date": "2026-08-31"
   },
   {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduces POST /v1/responses to create model responses from text/images, optionally call developer-defined tools, and stream results via SSE when stream=true; supports JSON-schema-constrained outputs and returns response objects or SSE events.",
+    "date": "2026-08-31"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
