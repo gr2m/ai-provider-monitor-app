@@ -132,6 +132,30 @@
     "date": "2026-08-31"
   },
   {
+    "provider": "togetherai",
+    "route": "/organizations/{organizationId}/endpoints",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "DE.ScalingMetric.name is now restricted to an allowlisted enum of metric names; previously any string was allowed. Allowed: cache_hit_rate, decoding_speed, e2e_latency, gpu_utilization, inflight_requests, throughput_per_replica, token_utilization, ttft.",
+    "date": "2026-08-31"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/organizations/{organizationId}/endpoints",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for DE.ScalingMetric.name to reference the server allowlist.",
+    "date": "2026-08-31"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
