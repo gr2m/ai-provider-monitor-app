@@ -13,6 +13,42 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/978"
   },
   {
+    "provider": "fal",
+    "route": "/assets/{asset_id}/lineage",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Expanded enum for smart entity_type on edges.entities to include prop, environment, style, scene",
+    "date": "2026-09-01"
+  },
+  {
+    "provider": "fal",
+    "route": "/assets/{asset_id}/lineage",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Expanded enum for smart entity_type on entity nodes to include prop, environment, style, scene",
+    "date": "2026-09-01"
+  },
+  {
+    "provider": "fal",
+    "route": "/assets/{asset_id}/lineage",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated from 'referenced characters' to 'referenced smart entities'",
+    "date": "2026-09-01"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
