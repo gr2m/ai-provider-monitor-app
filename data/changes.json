@@ -1,5 +1,17 @@
 [
   {
+    "provider": "fal",
+    "route": "/storage/settings",
+    "method": "PUT",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description expanded to clarify that sending {} clears all settings, partial updates require GET then PUT full object, and invalid/non-JSON bodies (including empty body) are rejected with 400 without changing stored settings.",
+    "date": "2026-09-01"
+  },
+  {
     "provider": "moonshotai",
     "route": "/v1/chat/completions",
     "method": "POST",
