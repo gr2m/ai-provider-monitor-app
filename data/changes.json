@@ -49,6 +49,30 @@
     "date": "2026-09-01"
   },
   {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional X-Msh-Request-Nonce request header to enable request signature verification.",
+    "date": "2026-09-01"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "200 response may include Msh-Request-Signature and Msh-Request-Timestamp headers when a valid nonce is supplied.",
+    "date": "2026-09-01"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
