@@ -98,6 +98,30 @@
     "date": "2026-09-02"
   },
   {
+    "provider": "fal",
+    "route": "/account/focus",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new source option 'tagged-estimate' to the 'source' query parameter.",
+    "date": "2026-09-02"
+  },
+  {
+    "provider": "fal",
+    "route": "/account/focus",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Expanded description of the 'source' parameter to document 'tagged-estimate' behavior and requirements.",
+    "date": "2026-09-02"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
