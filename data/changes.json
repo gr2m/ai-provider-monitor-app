@@ -1,7 +1,7 @@
 [
   {
     "provider": "xai",
-    "route": "/v1/messages",
+    "route": "v1/messages",
     "method": "POST",
     "change": "changed",
     "target": "response",
@@ -9,7 +9,34 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description of usage.input_tokens to clarify it excludes tokens served from cache (Anthropic semantics).",
-    "date": "2026-09-03"
+    "date": "2026-09-03",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/988"
+  },
+  {
+    "provider": "deepgram",
+    "route": "v1/listen",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of 'keywords' parameter to state it's not supported with Nova-3 models; use 'keyterm' instead.",
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/984"
+  },
+  {
+    "provider": "deepgram",
+    "route": "v1/speak",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed model option 'aura-2-perseo-it' from the 'model' query parameter enum.",
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/986"
   },
   {
     "provider": "deepgram",
@@ -38,80 +65,8 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/983"
   },
   {
-    "provider": "deepgram",
-    "route": "/v1/listen",
-    "method": "POST",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated description of 'keywords' parameter to state it's not supported with Nova-3 models; use 'keyterm' instead.",
-    "date": "2026-09-02"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example value for the 'date' query parameter.",
-    "date": "2026-09-02"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example value for the 'before_date' query parameter.",
-    "date": "2026-09-02"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated example value for the 'after_date' query parameter.",
-    "date": "2026-09-02"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Clarified TranslationDTO.error description to state it is null when success is true.",
-    "date": "2026-09-02"
-  },
-  {
-    "provider": "deepgram",
-    "route": "/v1/speak",
-    "method": "POST",
-    "change": "removed",
-    "target": "request",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Removed model option 'aura-2-perseo-it' from the 'model' query parameter enum.",
-    "date": "2026-09-02"
-  },
-  {
     "provider": "fal",
-    "route": "/account/focus",
+    "route": "account/focus",
     "method": "GET",
     "change": "added",
     "target": "request",
@@ -119,11 +74,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added new source option 'tagged-estimate' to the 'source' query parameter.",
-    "date": "2026-09-02"
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/987"
   },
   {
     "provider": "fal",
-    "route": "/account/focus",
+    "route": "account/focus",
     "method": "GET",
     "change": "changed",
     "target": "request",
@@ -131,7 +87,86 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Expanded description of the 'source' parameter to document 'tagged-estimate' behavior and requirements.",
-    "date": "2026-09-02"
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/987"
+  },
+  {
+    "provider": "fal",
+    "route": "organization/focus",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new 'tagged-estimate' option to the 'source' query parameter enum.",
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/987"
+  },
+  {
+    "provider": "fal",
+    "route": "organization/focus",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Expanded 'source' parameter description to document 'tagged-estimate' behavior and requirements.",
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/987"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'date' query parameter.",
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/985"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'before_date' query parameter.",
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/985"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'after_date' query parameter.",
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/985"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified TranslationDTO.error description to state it is null when success is true.",
+    "date": "2026-09-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/985"
   },
   {
     "provider": "anthropic",
