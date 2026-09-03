@@ -1,5 +1,17 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of usage.input_tokens to clarify it excludes tokens served from cache (Anthropic semantics).",
+    "date": "2026-09-03"
+  },
+  {
     "provider": "deepgram",
     "route": "v2/speak",
     "method": "POST",
