@@ -109,6 +109,18 @@
     "date": "2026-09-03"
   },
   {
+    "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed 'wo' (Wolof) from TranscriptionLanguageCodeEnum, affecting fields that reference it (e.g., TranscriptionDTO.languages, UtteranceDTO.language).",
+    "date": "2026-09-03"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
