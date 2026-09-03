@@ -97,6 +97,18 @@
     "date": "2026-09-03"
   },
   {
+    "provider": "fal",
+    "route": "/account/focus",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated route description to list three data sources and revised 'tagged-estimate' behavior/details.",
+    "date": "2026-09-03"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
