@@ -85,6 +85,18 @@
     "date": "2026-09-03"
   },
   {
+    "provider": "mistral",
+    "route": "/v1/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Capitalization of the 'ocr' property title changed from 'Ocr' to 'OCR' in ModelCapabilities schema.",
+    "date": "2026-09-03"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
