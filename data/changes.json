@@ -13,6 +13,78 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/988"
   },
   {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional 'include' to request to return web search sources and/or image results when using the web_search tool.",
+    "date": "2026-09-03"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New tool types supported: custom (only `apply_patch`) and server-side `web_search`; namespace tool can now contain custom tools.",
+    "date": "2026-09-03"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New input item types supported for history replay: `custom_tool_call`, `custom_tool_call_output`, and `web_search_call`.",
+    "date": "2026-09-03"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New response output item types: `custom_tool_call` and `web_search_call` (the latter may appear first in the output).",
+    "date": "2026-09-03"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Output ordering doc updated: when present, `web_search_call` appears first, followed by reasoning, message, and tool calls.",
+    "date": "2026-09-03"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New SSE event types for custom tool input and web search lifecycle were added.",
+    "date": "2026-09-03"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
