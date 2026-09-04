@@ -228,7 +228,7 @@
     "breaking": false,
     "deprecated": false,
     "doc_only": true,
-    "note": "Corrected the description of TranslationDTO.error; no schema/structure change.",
+    "note": "Updated TranslationDTO.error description to clarify it is null when success=true and refers to model, not addon.",
     "date": "2026-09-04"
   },
   {
