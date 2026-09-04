@@ -49,6 +49,30 @@
   },
   {
     "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ReasoningConfiguration.effort default \"low\" removed and description updated (support varies by model; adds possible value \"xhigh\"). May change server default behavior when omitted.",
+    "date": "2026-09-04"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ReasoningConfiguration.effort default \"low\" removed and description updated (adds possible value \"xhigh\").",
+    "date": "2026-09-04"
+  },
+  {
+    "provider": "xai",
     "route": "v1/messages",
     "method": "POST",
     "change": "changed",
