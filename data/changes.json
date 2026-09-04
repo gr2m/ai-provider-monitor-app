@@ -1,5 +1,53 @@
 [
   {
+    "provider": "groq",
+    "route": "/openai/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Expanded allowed values for reasoning_effort and updated description with model-specific support and validation behavior.",
+    "date": "2026-09-04"
+  },
+  {
+    "provider": "groq",
+    "route": "/openai/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added stream_options.include_obfuscation to control streaming obfuscation padding.",
+    "date": "2026-09-04"
+  },
+  {
+    "provider": "groq",
+    "route": "/openai/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "CreateChatCompletionResponse.service_tier now allows value 'default' and description updated.",
+    "date": "2026-09-04"
+  },
+  {
+    "provider": "groq",
+    "route": "/openai/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'refusal' field to ChatCompletionResponseMessage for safety refusals.",
+    "date": "2026-09-04"
+  },
+  {
     "provider": "xai",
     "route": "v1/messages",
     "method": "POST",
