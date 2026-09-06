@@ -1,5 +1,18 @@
 [
   {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Corrected the description of TranslationDTO.error to clarify it is null when success=true and contains error details on failure.",
+    "date": "2026-09-05",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1002"
+  },
+  {
     "provider": "groq",
     "route": "openai/v1/chat/completions",
     "method": "POST",
@@ -24,18 +37,6 @@
     "note": "Updated aspect_ratio description to clarify it is ignored for image-to-video; ratio derives from the input image.",
     "date": "2026-09-05",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1000"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Corrected the description of TranslationDTO.error to clarify it is null when success=true and contains error details on failure.",
-    "date": "2026-09-05"
   },
   {
     "provider": "gladia",
