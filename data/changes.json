@@ -1,7 +1,7 @@
 [
   {
     "provider": "gladia",
-    "route": "/v1/history",
+    "route": "v1/history",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -9,7 +9,8 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Clarified TranslationDTO.error description to note it is null on success and refer to 'model' instead of 'addon'.",
-    "date": "2026-09-06"
+    "date": "2026-09-06",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1003"
   },
   {
     "provider": "gladia",
