@@ -1,7 +1,46 @@
 [
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example for query parameter 'date'.",
+    "date": "2026-09-07",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1004"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example for query parameter 'before_date'.",
+    "date": "2026-09-07",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1004"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example for query parameter 'after_date'.",
+    "date": "2026-09-07",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1004"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -9,7 +48,8 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Corrected description for TranslationDTO.error to clarify it contains error details when success is false.",
-    "date": "2026-09-07"
+    "date": "2026-09-07",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1004"
   },
   {
     "provider": "gladia",
