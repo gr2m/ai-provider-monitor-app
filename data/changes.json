@@ -12,6 +12,18 @@
     "date": "2026-09-09"
   },
   {
+    "provider": "togetherai",
+    "route": "/organizations/{organizationId}/endpoints",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new autoscaling metric name 'active_sessions' to DE.ScalingMetric.name enum used in deployment summaries.",
+    "date": "2026-09-09"
+  },
+  {
     "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
