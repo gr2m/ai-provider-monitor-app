@@ -1,5 +1,17 @@
 [
   {
+    "provider": "fal",
+    "route": "/compute/instances",
+    "method": "POST",
+    "change": "removed",
+    "target": "route",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed POST /compute/instances, which created GPU compute instances (H100), required admin API key and SSH public key, supported InfiniBand sector (8x H100) and Idempotency-Key.",
+    "date": "2026-09-10"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
