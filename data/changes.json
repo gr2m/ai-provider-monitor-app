@@ -12,6 +12,18 @@
     "date": "2026-09-10"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-tools/video-edit-v1",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds POST /v1/flux-tools/video-edit-v1 to submit FLUX 3 video edit tasks. Accepts a video (URL or base64 mp4) and an edit prompt with optional safety_tolerance; duration, resolution, aspect ratio, audio, and inference controls (steps/guidance/seed) are server-pinned. Returns an async job via polling_url or webhook.",
+    "date": "2026-09-10"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
