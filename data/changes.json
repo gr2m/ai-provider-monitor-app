@@ -24,6 +24,18 @@
     "date": "2026-09-10"
   },
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Increased the maximum number of tool definitions allowed in ChatRequest.tools from 128 to 350.",
+    "date": "2026-09-10"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
