@@ -37,6 +37,18 @@
   },
   {
     "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated TranslationDTO.error description to clarify it is null on success and contains error details.",
+    "date": "2026-09-10"
+  },
+  {
+    "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
     "change": "changed",
