@@ -1,5 +1,17 @@
 [
   {
+    "provider": "gladia",
+    "route": "/v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date filters (date, before_date, after_date). No schema changes.",
+    "date": "2026-09-11"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-2-flex",
     "method": "POST",
