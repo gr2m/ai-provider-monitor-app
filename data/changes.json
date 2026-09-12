@@ -12,6 +12,18 @@
     "date": "2026-09-12"
   },
   {
+    "provider": "deepgram",
+    "route": "/v1/speak",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "operationId changed from 'generate' to 'audio_generate', which can break code-generated clients",
+    "date": "2026-09-12"
+  },
+  {
     "provider": "gladia",
     "route": "/v2/live",
     "method": "GET",
