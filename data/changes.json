@@ -1,5 +1,17 @@
 [
   {
+    "provider": "deepgram",
+    "route": "/v1/auth/grant",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "operationId changed from 'grant' to 'tokens_grant', which may break generated SDK method names",
+    "date": "2026-09-12"
+  },
+  {
     "provider": "gladia",
     "route": "/v2/live",
     "method": "GET",
