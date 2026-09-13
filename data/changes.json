@@ -651,7 +651,20 @@
   },
   {
     "provider": "fal",
-    "route": "/assets/entities",
+    "route": "assets/entities",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New GET /assets/entities lists saved characters, props, environments, styles, and scenes for the authenticated account, returning @mention handles and defining reference images; supports limit/offset pagination and optional types filtering.",
+    "date": "2026-09-12",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1018"
+  },
+  {
+    "provider": "fal",
+    "route": "assets/entities",
     "method": "POST",
     "change": "added",
     "target": "route",
@@ -659,7 +672,60 @@
     "deprecated": false,
     "doc_only": false,
     "note": "New POST /assets/entities to create reusable asset entities (character, prop, environment, style, scene) with reference images, unique handle, and optional idempotency key.",
-    "date": "2026-09-12"
+    "date": "2026-09-12",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1018"
+  },
+  {
+    "provider": "fal",
+    "route": "assets/entities/{entity_id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds DELETE /assets/entities/{entity_id} to delete a saved entity; reference assets are not deleted. Returns 204 on success.",
+    "date": "2026-09-12",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1018"
+  },
+  {
+    "provider": "fal",
+    "route": "assets/entities/{entity_id}",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New GET /assets/entities/{entity_id} to retrieve a saved entity's type, handle, visual description, cover image, and reference images; only for entities owned by the authenticated account.",
+    "date": "2026-09-12",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1018"
+  },
+  {
+    "provider": "fal",
+    "route": "assets/entities/{entity_id}",
+    "method": "PATCH",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduces PATCH /assets/entities/{entity_id} to partially update a saved smart entity; omitted fields stay unchanged, reference_images replaces the set, cover/description can be cleared where allowed, type and character handles are immutable; supports Idempotency-Key and returns the updated entity.",
+    "date": "2026-09-12",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1018"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated examples for date-related query parameters (date, before_date, after_date); no schema changes.",
+    "date": "2026-09-12",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1017"
   },
   {
     "provider": "black-forest-labs",
