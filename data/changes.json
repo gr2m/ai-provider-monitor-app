@@ -1,5 +1,17 @@
 [
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified TranslationDTO.error description: now states it's null when success=true and refers to a failed model (was failed addon).",
+    "date": "2026-09-14"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/agent/settings/think/models",
     "method": "GET",
