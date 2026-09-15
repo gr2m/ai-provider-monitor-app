@@ -72,6 +72,18 @@
     "date": "2026-09-15"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-tools/video-edit-v1",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional 'user' field to identify the end user making the request.",
+    "date": "2026-09-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
