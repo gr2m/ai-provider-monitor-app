@@ -84,6 +84,30 @@
     "date": "2026-09-15"
   },
   {
+    "provider": "togetherai",
+    "route": "/projects/{projectId}/endpoints/{endpointId}/deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added compliancePolicy to DE.InlinePlacement to specify compliance regimes (e.g., HIPAA).",
+    "date": "2026-09-15"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/projects/{projectId}/endpoints/{endpointId}/deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced DE.CompliancePolicy schema with hipaa boolean flag.",
+    "date": "2026-09-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
