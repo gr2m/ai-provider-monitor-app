@@ -48,6 +48,18 @@
     "date": "2026-09-15"
   },
   {
+    "provider": "moonshotai",
+    "route": "/v1/tools/fetch",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds POST /v1/tools/fetch to retrieve a page’s title and Markdown body from http/https URLs; returns title, markdown, and url. Charges apply only on successful extractions.",
+    "date": "2026-09-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
