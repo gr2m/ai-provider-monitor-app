@@ -1,5 +1,17 @@
 [
   {
+    "provider": "groq",
+    "route": "/openai/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional boolean parameter `raw` to skip output post-processing (e.g., stop-sequence trimming, special-token dropping, reasoning/tool parsing, JSON validation). Only supported on certain deployments.",
+    "date": "2026-09-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
