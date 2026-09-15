@@ -108,6 +108,30 @@
     "date": "2026-09-15"
   },
   {
+    "provider": "togetherai",
+    "route": "/projects/{projectId}/endpoints/{endpointId}/rollouts",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed enum values ROLLOUT_STATE_ABORTING and ROLLOUT_STATE_ABORTED from DE.Rollout.state.",
+    "date": "2026-09-15"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/projects/{projectId}/endpoints/{endpointId}/rollouts",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed enum values METRIC_STAT_TYPE_MIN and METRIC_STAT_TYPE_MAX from DE.MetricResult.stat.",
+    "date": "2026-09-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
