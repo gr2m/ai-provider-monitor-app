@@ -132,6 +132,78 @@
     "date": "2026-09-15"
   },
   {
+    "provider": "fal",
+    "route": "/models/billing-events",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added quantity field to billing_events items (billable units consumed).",
+    "date": "2026-09-15"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/billing-events",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added unit field to billing_events items (name of the billing unit).",
+    "date": "2026-09-15"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/billing-events",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "Marked output_units as deprecated in favor of quantity and updated its description.",
+    "date": "2026-09-15"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/billing-events",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of cost_estimate_nano_usd to clarify precision and purpose.",
+    "date": "2026-09-15"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/billing-events",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified description of unit_price to explain list vs negotiated rate context.",
+    "date": "2026-09-15"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/billing-events",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Updated required fields for billing_events items to include quantity and unit.",
+    "date": "2026-09-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
