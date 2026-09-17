@@ -36,6 +36,30 @@
     "date": "2026-09-17"
   },
   {
+    "provider": "deepgram",
+    "route": "/v1/projects/{project_id}/keys/{key_id}",
+    "method": "DELETE",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed explicit Authorization header parameter in favor of security scheme",
+    "date": "2026-09-17"
+  },
+  {
+    "provider": "deepgram",
+    "route": "/v1/projects/{project_id}/keys/{key_id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added ApiKeyAuth security requirement for authentication",
+    "date": "2026-09-17"
+  },
+  {
     "provider": "xai",
     "route": "v1/chat/completions",
     "method": "POST",
