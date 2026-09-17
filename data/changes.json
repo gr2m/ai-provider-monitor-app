@@ -1,6 +1,18 @@
 [
   {
     "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified that max_turns is also ignored for agentic SLOP requests without a server-side tool or a file attachment.",
+    "date": "2026-09-17"
+  },
+  {
+    "provider": "xai",
     "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
