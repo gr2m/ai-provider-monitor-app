@@ -52,6 +52,18 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1035"
   },
   {
+    "provider": "xai",
+    "route": "/v1/image-generation-models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Added '1.5k' as a documented resolution option for ImagePricingTier.resolution; responses may now include this value.",
+    "date": "2026-09-18"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/auth/grant",
     "method": "POST",
