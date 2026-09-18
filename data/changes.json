@@ -1,5 +1,41 @@
 [
   {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new vision model option `glm-5.3-flashx` to ChatCompletionVisionRequest.model enum.",
+    "date": "2026-09-18"
+  },
+  {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Changed default vision model from `glm-5.3-flash` to `glm-5.3-flashx`. Requests omitting `model` may now route to a different model.",
+    "date": "2026-09-18"
+  },
+  {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documentation clarifications: refer to the GLM-5.3-Flash family as a 'series' across vision-related fields; updated model example and several descriptions.",
+    "date": "2026-09-18"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/auth/grant",
     "method": "POST",
