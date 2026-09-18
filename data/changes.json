@@ -64,6 +64,30 @@
     "date": "2026-09-18"
   },
   {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added prompt_cache_options to configure context cache write behavior (mode=implicit, ttl=5m|1h).",
+    "date": "2026-09-18"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Response now includes prompt_cache_options reflecting the cache write options actually applied (mode and ttl).",
+    "date": "2026-09-18"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/auth/grant",
     "method": "POST",
