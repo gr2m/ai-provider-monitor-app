@@ -88,6 +88,42 @@
     "date": "2026-09-18"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-3-video",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new aspect_ratio option \"9:21\" for Text to Video requests.",
+    "date": "2026-09-18"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-3-video",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new aspect_ratio option \"9:21\" for Image to Video requests.",
+    "date": "2026-09-18"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-3-video",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new aspect_ratio option \"9:21\" for Video Continuation requests.",
+    "date": "2026-09-18"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/auth/grant",
     "method": "POST",
