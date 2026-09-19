@@ -104,6 +104,30 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1040"
   },
   {
+    "provider": "xai",
+    "route": "/v1/models",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed Model.capabilities property from the response schema.",
+    "date": "2026-09-19"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/models",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed ModelCapabilities schema definition (no longer referenced).",
+    "date": "2026-09-19"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-3-video",
     "method": "POST",
