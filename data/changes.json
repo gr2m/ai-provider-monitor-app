@@ -1,5 +1,29 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/language-models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional capabilities field to LanguageModel describing supported request parameters (e.g., reasoning_effort).",
+    "date": "2026-09-19"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/language-models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced ModelCapabilities schema with default_reasoning_effort and reasoning_effort fields.",
+    "date": "2026-09-19"
+  },
+  {
     "provider": "zai",
     "route": "paas/v4/chat/completions",
     "method": "POST",
