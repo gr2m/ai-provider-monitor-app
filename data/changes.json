@@ -1,6 +1,30 @@
 [
   {
     "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional field server_side_tool_usage_details to Usage with details about server-side tool usage.",
+    "date": "2026-09-20"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new schema ServerSideToolUsageDetails describing counts of various server-side tool calls.",
+    "date": "2026-09-20"
+  },
+  {
+    "provider": "xai",
     "route": "v1/language-models",
     "method": "GET",
     "change": "added",
