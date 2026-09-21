@@ -13,6 +13,18 @@
   },
   {
     "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default translation model changed from \"base\" to \"batch\" in TranslationConfigDTO.model",
+    "date": "2026-09-21"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
     "change": "added",
