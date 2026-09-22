@@ -12,6 +12,54 @@
     "date": "2026-09-22"
   },
   {
+    "provider": "togetherai",
+    "route": "/organizations/{organizationId}/endpoints",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added scaleDown to DE.Autoscaling for rate-limit rules when scaling down.",
+    "date": "2026-09-22"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/organizations/{organizationId}/endpoints",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added scaleUp to DE.Autoscaling for rate-limit rules when scaling up.",
+    "date": "2026-09-22"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/organizations/{organizationId}/endpoints",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced DE.ScalingRules schema for selecting and applying scaling policies.",
+    "date": "2026-09-22"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/organizations/{organizationId}/endpoints",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced DE.ScalingPolicy schema for replica/percentage rate-limit policies.",
+    "date": "2026-09-22"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
