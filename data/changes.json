@@ -1,6 +1,18 @@
 [
   {
     "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated TranslationDTO.error description to clarify it's null on success and changed wording from 'addon' to 'model'.",
+    "date": "2026-09-22"
+  },
+  {
+    "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
     "change": "changed",
