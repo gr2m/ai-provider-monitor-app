@@ -60,6 +60,30 @@
     "date": "2026-09-22"
   },
   {
+    "provider": "xai",
+    "route": "/v1/videos/generations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional keyframes array for mid-video image anchors (max 4) referencing VideoKeyframe.",
+    "date": "2026-09-22"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/videos/generations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced VideoKeyframe schema with image and timestamp_s fields for pinning keyframe images.",
+    "date": "2026-09-22"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
