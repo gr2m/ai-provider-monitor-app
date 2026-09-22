@@ -84,6 +84,18 @@
     "date": "2026-09-22"
   },
   {
+    "provider": "togetherai",
+    "route": "/deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added capacity_type field to deployment list items indicating replica capacity behavior.",
+    "date": "2026-09-22"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
