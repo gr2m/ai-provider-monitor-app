@@ -96,6 +96,66 @@
     "date": "2026-09-23"
   },
   {
+    "provider": "fal",
+    "route": "/models/usage",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'source' query parameter to select data source ('estimate' or 'tagged-estimate').",
+    "date": "2026-09-23"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/usage",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'tag' query parameter to filter by X-Fal-Tags key=value pairs (requires source=tagged-estimate).",
+    "date": "2026-09-23"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/usage",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'tags' object to summary rows when source=tagged-estimate, containing activated X-Fal-Tags for the row.",
+    "date": "2026-09-23"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/usage",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'tags' object to time_series results rows when source=tagged-estimate, containing activated X-Fal-Tags for the row.",
+    "date": "2026-09-23"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/usage",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to document tagged usage, including 'source=tagged-estimate' and 'tag' filtering behavior.",
+    "date": "2026-09-23"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
