@@ -1,5 +1,17 @@
 [
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified TranslationDTO.error description to mention null when success and use 'model' wording instead of 'addon'.",
+    "date": "2026-09-24"
+  },
+  {
     "provider": "fal",
     "route": "models/billing-events",
     "method": "GET",
