@@ -1,7 +1,7 @@
 [
   {
     "provider": "gladia",
-    "route": "/v1/history",
+    "route": "v1/history",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -9,7 +9,21 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Clarified TranslationDTO.error description to mention null when success and use 'model' wording instead of 'addon'.",
-    "date": "2026-09-24"
+    "date": "2026-09-24",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1056"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to TranscriptionLanguageCodeEnum; responses may now include 'wo' values.",
+    "date": "2026-09-24",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1056"
   },
   {
     "provider": "fal",
