@@ -36,6 +36,78 @@
     "date": "2026-09-25"
   },
   {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/custom-forward-backward",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added required Idempotency-Key header for idempotent retries.",
+    "date": "2026-09-25"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/custom-forward-backward",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed RL.TrainingSample.routed_experts; use routed_experts_key instead.",
+    "date": "2026-09-25"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/custom-forward-backward",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added RL.TrainingSample.routed_experts_key string to reference captured expert routing.",
+    "date": "2026-09-25"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/custom-forward-backward",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed RL.RoutedExperts schema; inline/object_uri routing buffers are no longer accepted.",
+    "date": "2026-09-25"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/custom-forward-backward",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for TensorData.sparse_col_indices to clarify it is unsupported.",
+    "date": "2026-09-25"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/rl/training-sessions/{session_id}/operations/custom-forward-backward",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for TensorData.sparse_crow_indices to clarify it is unsupported.",
+    "date": "2026-09-25"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
