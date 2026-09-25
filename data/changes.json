@@ -12,6 +12,30 @@
     "date": "2026-09-25"
   },
   {
+    "provider": "togetherai",
+    "route": "/compute/clusters",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added instance_cluster_id to shared_volume request body to pin the volume to the same substrate as a GPU cluster.",
+    "date": "2026-09-25"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/clusters",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Added schema-level description to GPUClustersSharedVolumeCreateRequest.",
+    "date": "2026-09-25"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
