@@ -108,6 +108,30 @@
     "date": "2026-09-25"
   },
   {
+    "provider": "cohere",
+    "route": "/v2/parse",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional finish_reason field to ParseResponse indicating why parsing ended (uses ChatFinishReason; for Parse only COMPLETE or MAX_TOKENS will occur).",
+    "date": "2026-09-25"
+  },
+  {
+    "provider": "cohere",
+    "route": "/v2/parse",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced ChatFinishReason enum schema used by ParseResponse.finish_reason.",
+    "date": "2026-09-25"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
