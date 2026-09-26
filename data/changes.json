@@ -12,6 +12,18 @@
     "date": "2026-09-26"
   },
   {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of reasoning_effort to clarify it's a non-standard alias of reasoning.effort and accepts the same values.",
+    "date": "2026-09-26"
+  },
+  {
     "provider": "cohere",
     "route": "v2/parse",
     "method": "POST",
