@@ -1,6 +1,18 @@
 [
   {
     "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to TranslationLanguageCodeEnum allowed values for translation.",
+    "date": "2026-09-27"
+  },
+  {
+    "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
     "change": "changed",
