@@ -1,7 +1,7 @@
 [
   {
     "provider": "moonshotai",
-    "route": "/anthropic/v1/messages",
+    "route": "anthropic/v1/messages",
     "method": "POST",
     "change": "changed",
     "target": "response",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description for usage.cache_creation from 'by TTL tier' to 'by TTL' in MessagesResponse; no schema change.",
-    "date": "2026-09-28"
+    "date": "2026-09-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1063"
   },
   {
     "provider": "moonshotai",
-    "route": "/anthropic/v1/messages",
+    "route": "anthropic/v1/messages",
     "method": "POST",
     "change": "changed",
     "target": "response",
@@ -21,11 +22,38 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description for usage.cache_creation from 'by TTL tier' to 'by TTL' in streaming message_delta event; no schema change.",
-    "date": "2026-09-28"
+    "date": "2026-09-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1063"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documentation clarified: removed the word 'tier' from cache_write_tokens billing description in JSON response.",
+    "date": "2026-09-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1063"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documentation clarified: removed the word 'tier' from cache_write_tokens billing description in streaming chunks.",
+    "date": "2026-09-28",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1063"
   },
   {
     "provider": "gladia",
-    "route": "/v2/transcription",
+    "route": "v2/transcription",
     "method": "GET",
     "change": "added",
     "target": "response",
@@ -33,7 +61,8 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added 'wo' (Wolof) to TranslationLanguageCodeEnum allowed values for translation.",
-    "date": "2026-09-27"
+    "date": "2026-09-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1062"
   },
   {
     "provider": "gladia",
