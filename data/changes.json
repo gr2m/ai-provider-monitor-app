@@ -88,6 +88,30 @@
     "date": "2026-09-28"
   },
   {
+    "provider": "deepgram",
+    "route": "/v1/listen",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Flattened intents response schema: SharedIntents now returns segments[] directly instead of results.intents.segments; related component schemas were renamed/removed.",
+    "date": "2026-09-28"
+  },
+  {
+    "provider": "deepgram",
+    "route": "/v1/listen",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Flattened topics response schema: SharedTopics now returns segments[] directly instead of results.topics.segments; related component schemas were renamed/removed.",
+    "date": "2026-09-28"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
