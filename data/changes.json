@@ -1,5 +1,29 @@
 [
   {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for usage.cache_creation from 'by TTL tier' to 'by TTL' in MessagesResponse; no schema change.",
+    "date": "2026-09-28"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for usage.cache_creation from 'by TTL tier' to 'by TTL' in streaming message_delta event; no schema change.",
+    "date": "2026-09-28"
+  },
+  {
     "provider": "gladia",
     "route": "/v2/transcription",
     "method": "GET",
