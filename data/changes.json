@@ -12,6 +12,30 @@
     "date": "2026-09-29"
   },
   {
+    "provider": "togetherai",
+    "route": "/deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional model_mounts array to each DeploymentResponseItem to list mounted model weights and pinned revisions.",
+    "date": "2026-09-29"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/deployments",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced ModelMount schema used by deployment responses.",
+    "date": "2026-09-29"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
