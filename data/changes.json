@@ -36,6 +36,18 @@
     "date": "2026-09-29"
   },
   {
+    "provider": "cohere",
+    "route": "/v2/embed",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated output_dimension description to remove explicit values/default and link to docs for supported dimensions.",
+    "date": "2026-09-29"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/listen",
     "method": "POST",
