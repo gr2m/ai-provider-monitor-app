@@ -36,6 +36,42 @@
     "date": "2026-09-30"
   },
   {
+    "provider": "deepgram",
+    "route": "/v2/speak",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated speed parameter description to document new interaction rules with inline pause/pronunciation controls (cap at 1.15 with pause; no non-1.0 speed with pronunciation).",
+    "date": "2026-09-30"
+  },
+  {
+    "provider": "deepgram",
+    "route": "/v2/speak",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Request body text description now allows inline pause and pronunciation controls with specified limits and combination rules.",
+    "date": "2026-09-30"
+  },
+  {
+    "provider": "deepgram",
+    "route": "/v2/speak",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "400 error description updated: inline control violations now return structured errors with specific `err_code`s instead of being silently stripped. This introduces validation that can cause requests that previously succeeded to fail.",
+    "date": "2026-09-30"
+  },
+  {
     "provider": "cohere",
     "route": "v2/embed",
     "method": "POST",
