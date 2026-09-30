@@ -3,12 +3,36 @@
     "provider": "gladia",
     "route": "/v1/history",
     "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed moderation field from TranscriptionResultDTO; moderation results are no longer returned.",
+    "date": "2026-09-30"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed ModerationDTO schema from components.",
+    "date": "2026-09-30"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
     "change": "changed",
     "target": "response",
     "breaking": false,
     "deprecated": false,
     "doc_only": true,
-    "note": "Updated description of TranslationDTO.error to clarify it is null when success is true and refer to 'failed model' instead of 'failed addon'.",
+    "note": "Updated description for TranslationDTO.error (now notes it is null when success is true).",
     "date": "2026-09-30"
   },
   {
