@@ -1,5 +1,17 @@
 [
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of TranslationDTO.error to clarify it is null when success is true and refer to 'failed model' instead of 'failed addon'.",
+    "date": "2026-09-30"
+  },
+  {
     "provider": "cohere",
     "route": "v2/embed",
     "method": "POST",
