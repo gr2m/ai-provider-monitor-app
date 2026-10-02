@@ -24,6 +24,30 @@
     "date": "2026-10-02"
   },
   {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "ModelRequest.max_output_tokens now applies only to visible output tokens; it no longer counts reasoning or function-call tokens.",
+    "date": "2026-10-02"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "ModelResponse.max_output_tokens description updated to clarify it only limits visible output tokens, excluding reasoning and function-call tokens.",
+    "date": "2026-10-02"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-3-image",
     "method": "POST",
