@@ -13,6 +13,18 @@
   },
   {
     "provider": "black-forest-labs",
+    "route": "/v1/flux-pro-1.0-fill-finetuned",
+    "method": "POST",
+    "change": "removed",
+    "target": "route",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed POST /v1/flux-pro-1.0-fill-finetuned, which submitted FLUX.1 Fill [pro] finetuned image inpainting using an input image and optional mask, returning async polling/webhook responses.",
+    "date": "2026-10-02"
+  },
+  {
+    "provider": "black-forest-labs",
     "route": "v1/flux-3-image",
     "method": "POST",
     "change": "added",
