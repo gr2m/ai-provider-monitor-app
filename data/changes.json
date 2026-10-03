@@ -1,19 +1,7 @@
 [
   {
-    "provider": "gladia",
-    "route": "/v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated description for TranslationDTO.error to clarify it is null when success is true and changed wording from addon to model.",
-    "date": "2026-10-02"
-  },
-  {
     "provider": "black-forest-labs",
-    "route": "/v1/flux-pro-1.0-fill-finetuned",
+    "route": "v1/flux-pro-1.0-fill-finetuned",
     "method": "POST",
     "change": "removed",
     "target": "route",
@@ -21,11 +9,77 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Removed POST /v1/flux-pro-1.0-fill-finetuned, which submitted FLUX.1 Fill [pro] finetuned image inpainting using an input image and optional mask, returning async polling/webhook responses.",
-    "date": "2026-10-02"
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1077"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for TranslationDTO.error to clarify it is null when success is true and changed wording from addon to model.",
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1076"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to TranslationLanguageCodeEnum for translation target/result languages.",
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1076"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'date' query parameter.",
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1076"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'before_date' query parameter.",
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1076"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'after_date' query parameter.",
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1076"
   },
   {
     "provider": "xai",
-    "route": "/v1/responses",
+    "route": "v1/responses",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -33,11 +87,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "ModelRequest.max_output_tokens now applies only to visible output tokens; it no longer counts reasoning or function-call tokens.",
-    "date": "2026-10-02"
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1078"
   },
   {
     "provider": "xai",
-    "route": "/v1/responses",
+    "route": "v1/responses",
     "method": "POST",
     "change": "changed",
     "target": "response",
@@ -45,7 +100,21 @@
     "deprecated": false,
     "doc_only": true,
     "note": "ModelResponse.max_output_tokens description updated to clarify it only limits visible output tokens, excluding reasoning and function-call tokens.",
-    "date": "2026-10-02"
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1078"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses/{response_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of ModelResponse.max_output_tokens to clarify it only limits visible output tokens (excludes reasoning and tool-call tokens).",
+    "date": "2026-10-02",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1078"
   },
   {
     "provider": "black-forest-labs",
