@@ -1,7 +1,7 @@
 [
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description for ContentPart.image_url to clarify object vs. string usage across endpoints.",
-    "date": "2026-10-04"
+    "date": "2026-10-04",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1079"
   },
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/chat/completions",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -21,7 +22,8 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Documented acceptance of additional ContentPart.type values: `input_text` and `input_image`.",
-    "date": "2026-10-04"
+    "date": "2026-10-04",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1079"
   },
   {
     "provider": "black-forest-labs",
