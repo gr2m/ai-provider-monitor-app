@@ -1,5 +1,29 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for ContentPart.image_url to clarify object vs. string usage across endpoints.",
+    "date": "2026-10-04"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documented acceptance of additional ContentPart.type values: `input_text` and `input_image`.",
+    "date": "2026-10-04"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-pro-1.0-fill-finetuned",
     "method": "POST",
