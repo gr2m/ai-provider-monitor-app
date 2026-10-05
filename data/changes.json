@@ -1,5 +1,31 @@
 [
   {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date, before_date, and after_date query parameters.",
+    "date": "2026-10-04",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1081"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified TranslationDTO.error description to note it is null when success is true and changed wording from 'addon' to 'model'.",
+    "date": "2026-10-04",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1080"
+  },
+  {
     "provider": "xai",
     "route": "v1/chat/completions",
     "method": "POST",
@@ -24,18 +50,6 @@
     "note": "Documented acceptance of additional ContentPart.type values: `input_text` and `input_image`.",
     "date": "2026-10-04",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1079"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v2/transcription",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Clarified TranslationDTO.error description to note it is null when success is true and changed wording from 'addon' to 'model'.",
-    "date": "2026-10-04"
   },
   {
     "provider": "black-forest-labs",
