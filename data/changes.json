@@ -12,6 +12,18 @@
     "date": "2026-10-05"
   },
   {
+    "provider": "groq",
+    "route": "/openai/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional chat_template_args object to CreateChatCompletionRequest for Dynamo chat-template parameters.",
+    "date": "2026-10-05"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
