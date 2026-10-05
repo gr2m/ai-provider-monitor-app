@@ -1,5 +1,17 @@
 [
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/get_result",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new StatusResponse enum value \"No Card Generated\" that may be returned by the API.",
+    "date": "2026-10-05"
+  },
+  {
     "provider": "gladia",
     "route": "v2/live",
     "method": "GET",
