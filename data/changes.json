@@ -1,5 +1,41 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional deferred processing flag to run edits asynchronously with polling.",
+    "date": "2026-10-06"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional output destination to upload generated images to client-provided signed URLs.",
+    "date": "2026-10-06"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new ImageOutput schema for external upload URLs.",
+    "date": "2026-10-06"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/get_result",
     "method": "GET",
