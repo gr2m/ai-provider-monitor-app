@@ -36,6 +36,18 @@
     "date": "2026-10-06"
   },
   {
+    "provider": "fal",
+    "route": "/compute/metrics",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New GET /compute/metrics endpoint returns Prometheus-compatible metrics for an active compute cluster owned by the authenticated caller, selected via the required compute_cluster query parameter; requires compute access and compute:instances:read permission.",
+    "date": "2026-10-06"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/get_result",
     "method": "GET",
