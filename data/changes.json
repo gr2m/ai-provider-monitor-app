@@ -1,6 +1,42 @@
 [
   {
     "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added sort query parameter to control list/search ordering (relevant|recent); ignored in endpoint_id find mode.",
+    "date": "2026-10-07"
+  },
+  {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional ordering object in 200 response to acknowledge explicit list/search sort.",
+    "date": "2026-10-07"
+  },
+  {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description expanded with Ordering behavior, default sorting, and cursor-following guidance.",
+    "date": "2026-10-07"
+  },
+  {
+    "provider": "fal",
     "route": "compute/metrics",
     "method": "GET",
     "change": "added",
