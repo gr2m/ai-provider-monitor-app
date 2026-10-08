@@ -1,5 +1,17 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/videos/generations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added two new allowed aspect ratios to VideoAspectRatio enum: 21:9 and 5:2.",
+    "date": "2026-10-08"
+  },
+  {
     "provider": "fal",
     "route": "/models",
     "method": "GET",
