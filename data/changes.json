@@ -1,7 +1,7 @@
 [
   {
     "provider": "xai",
-    "route": "/v1/videos/generations",
+    "route": "v1/videos/generations",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added two new allowed aspect ratios to VideoAspectRatio enum: 21:9 and 5:2.",
-    "date": "2026-10-08"
+    "date": "2026-10-08",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1090"
   },
   {
     "provider": "fal",
-    "route": "/models",
+    "route": "models",
     "method": "GET",
     "change": "added",
     "target": "request",
@@ -21,11 +22,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added sort query parameter to control list/search ordering (relevant|recent); ignored in endpoint_id find mode.",
-    "date": "2026-10-07"
+    "date": "2026-10-07",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1088"
   },
   {
     "provider": "fal",
-    "route": "/models",
+    "route": "models",
     "method": "GET",
     "change": "added",
     "target": "response",
@@ -33,11 +35,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added optional ordering object in 200 response to acknowledge explicit list/search sort.",
-    "date": "2026-10-07"
+    "date": "2026-10-07",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1088"
   },
   {
     "provider": "fal",
-    "route": "/models",
+    "route": "models",
     "method": "GET",
     "change": "changed",
     "target": "route",
@@ -45,7 +48,21 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Route description expanded with Ordering behavior, default sorting, and cursor-following guidance.",
-    "date": "2026-10-07"
+    "date": "2026-10-07",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1088"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new language code 'wo' (Wolof) to TranslationLanguageCodeEnum used in response schemas.",
+    "date": "2026-10-07",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1089"
   },
   {
     "provider": "fal",
