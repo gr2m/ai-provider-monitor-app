@@ -73,6 +73,54 @@
     "date": "2026-10-08"
   },
   {
+    "provider": "togetherai",
+    "route": "/compute/clusters",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced GPUClusterCreateRequestCommon schema factoring shared create fields.",
+    "date": "2026-10-08"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/clusters",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added GPUClusterCreateRequestNvidiaVersion variant for nvidia_version_id-based creation.",
+    "date": "2026-10-08"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/clusters",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added GPUClusterCreateRequestLegacyNvidia variant for legacy cuda_version + nvidia_driver_version creation.",
+    "date": "2026-10-08"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/compute/clusters",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "GPUClusterCreateRequest anyOf now references two variant schemas instead of inline constraints; behavior unchanged.",
+    "date": "2026-10-08"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
