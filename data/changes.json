@@ -1,5 +1,53 @@
 [
   {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Narrowed allowed text model enum; legacy 4.5/4.7-flash variants and 4-32B removed.",
+    "date": "2026-10-10"
+  },
+  {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Vision model enum reduced to GLM-5.3-Flash series only; v-series and autoglm removed.",
+    "date": "2026-10-10"
+  },
+  {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed reasoning_content from ChatCompletionResponseMessage.",
+    "date": "2026-10-10"
+  },
+  {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated descriptions for token limits, model support, and content/tag notes; no schema impact.",
+    "date": "2026-10-10"
+  },
+  {
     "provider": "fal",
     "route": "account/billing",
     "method": "GET",
