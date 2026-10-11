@@ -1,7 +1,7 @@
 [
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Narrowed allowed text model enum; legacy 4.5/4.7-flash variants and 4-32B removed.",
-    "date": "2026-10-10"
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -21,11 +22,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Vision model enum reduced to GLM-5.3-Flash series only; v-series and autoglm removed.",
-    "date": "2026-10-10"
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "removed",
     "target": "response",
@@ -33,11 +35,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Removed reasoning_content from ChatCompletionResponseMessage.",
-    "date": "2026-10-10"
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
   },
   {
     "provider": "zai",
-    "route": "/paas/v4/chat/completions",
+    "route": "paas/v4/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "route",
@@ -45,7 +48,73 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated descriptions for token limits, model support, and content/tag notes; no schema impact.",
-    "date": "2026-10-10"
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/images/generations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "CreateImageRequest.model enum restricted; 'cogview-4-250304' removed; only 'glm-image' allowed.",
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Restricted TokenizerRequest.model enum to only 'glm-4.6' (removed 'glm-4.6v' and 'glm-4.5').",
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated image URL description: removed model-specific limits; wording adjusted.",
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated video URL description: removed model-specific video count limits; wording adjusted.",
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
+  },
+  {
+    "provider": "zai",
+    "route": "paas/v4/tokenizer",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated file_url description: removed model-specific support notes; wording adjusted.",
+    "date": "2026-10-10",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1096"
   },
   {
     "provider": "fal",
