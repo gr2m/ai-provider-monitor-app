@@ -1,7 +1,7 @@
 [
   {
     "provider": "gladia",
-    "route": "/v1/history",
+    "route": "v1/history",
     "method": "GET",
     "change": "removed",
     "target": "response",
@@ -9,7 +9,8 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Removed language code 'wo' (Wolof) from TranslationLanguageCodeEnum used in response schemas; clients relying on 'wo' may break.",
-    "date": "2026-10-11"
+    "date": "2026-10-11",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1097"
   },
   {
     "provider": "zai",
