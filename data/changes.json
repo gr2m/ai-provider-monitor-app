@@ -1,6 +1,18 @@
 [
   {
     "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of TranslationDTO.error to clarify it is null when success is true and refer to a failed model instead of addon.",
+    "date": "2026-10-12"
+  },
+  {
+    "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
     "change": "removed",
