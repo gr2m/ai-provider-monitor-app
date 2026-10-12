@@ -12,6 +12,30 @@
     "date": "2026-10-12"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-2-flex",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "In Flux2FlexInputs.safety_tolerance, maximum increased from 5 to 7.",
+    "date": "2026-10-12"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-2-flex",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for Flux2FlexInputs.safety_tolerance to clarify moderation levels and 422 behavior.",
+    "date": "2026-10-12"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
