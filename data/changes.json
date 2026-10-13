@@ -38,6 +38,18 @@
     "date": "2026-10-13"
   },
   {
+    "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of TranslationDTO.error to clarify it is null on success and contains failed model details.",
+    "date": "2026-10-13"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-2-flex",
     "method": "POST",
