@@ -12,6 +12,18 @@
     "date": "2026-10-13"
   },
   {
+    "provider": "fal",
+    "route": "/keys",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "200 OK example updated: expanded permissions for preset key, replaced legacy key with a custom-mode example, and removed scope from examples.",
+    "date": "2026-10-13"
+  },
+  {
     "provider": "gladia",
     "route": "/v2/transcription",
     "method": "GET",
@@ -45,114 +57,6 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description for Flux2FlexInputs.safety_tolerance to clarify moderation levels and 422 behavior.",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "changed",
-    "target": "route",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Route description updated: now returns all workspace API keys (not limited to API preset/legacy).",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added key description field.",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added key expires_at field (also listed as required).",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added key mode field indicating permission model.",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added key permissions array (resolved permissions).",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added key preset field for preset-based keys.",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Changed required fields: removed scope; added mode and expires_at.",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Updated scope enum to include ADMIN (was only API).",
-    "date": "2026-10-12"
-  },
-  {
-    "provider": "fal",
-    "route": "/keys",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated scope description: still deprecated; may be omitted for granular-permission keys.",
     "date": "2026-10-12"
   },
   {
