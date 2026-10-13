@@ -26,6 +26,18 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1101"
   },
   {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated cache_control description: when omitted, cache now defaults to both reads and writes with 5m TTL instead of read-only behavior.",
+    "date": "2026-10-13"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-2-flex",
     "method": "POST",
