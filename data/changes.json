@@ -13,6 +13,71 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1102"
   },
   {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'date' query parameter.",
+    "date": "2026-10-13",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1104"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'before_date' query parameter.",
+    "date": "2026-10-13",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1104"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the 'after_date' query parameter.",
+    "date": "2026-10-13",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1104"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of TranslationDTO.error to clarify it is null on success and contains failed model details.",
+    "date": "2026-10-13",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1104"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "anthropic/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated cache_control description: when omitted, cache now defaults to both reads and writes with 5m TTL instead of read-only behavior.",
+    "date": "2026-10-13",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1103"
+  },
+  {
     "provider": "xai",
     "route": "v1/chat/completions",
     "method": "POST",
@@ -24,30 +89,6 @@
     "note": "Added support for a new 'developer' role in Message schema, allowing developer instructions in chat requests.",
     "date": "2026-10-13",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1101"
-  },
-  {
-    "provider": "moonshotai",
-    "route": "/anthropic/v1/messages",
-    "method": "POST",
-    "change": "changed",
-    "target": "request",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated cache_control description: when omitted, cache now defaults to both reads and writes with 5m TTL instead of read-only behavior.",
-    "date": "2026-10-13"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v2/transcription",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated description of TranslationDTO.error to clarify it is null on success and contains failed model details.",
-    "date": "2026-10-13"
   },
   {
     "provider": "black-forest-labs",
