@@ -309,6 +309,30 @@
     "date": "2026-10-15"
   },
   {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "search_parameters is no longer deprecated; it is now supported and takes effect (was previously documented to return 410 Gone).",
+    "date": "2026-10-15"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Tools description updated to note that `web_search_preview` (if specified) will be overridden by `search_parameters`.",
+    "date": "2026-10-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
