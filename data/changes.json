@@ -5,10 +5,10 @@
     "method": "POST",
     "change": "changed",
     "target": "request",
-    "breaking": true,
-    "deprecated": true,
-    "doc_only": false,
-    "note": "search_parameters is now deprecated; requests that set it will fail. Use Agent Tools API instead.",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "search_parameters is no longer documented as deprecated; docs now state it's used to fetch searched data.",
     "date": "2026-10-15"
   },
   {
@@ -17,10 +17,10 @@
     "method": "POST",
     "change": "changed",
     "target": "request",
-    "breaking": true,
-    "deprecated": true,
-    "doc_only": false,
-    "note": "web_search_options is now deprecated; requests that set it will fail. Use Agent Tools API instead.",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "web_search_options docs updated from deprecated/failing to compatibility-only guidance.",
     "date": "2026-10-15"
   },
   {
@@ -29,10 +29,10 @@
     "method": "POST",
     "change": "changed",
     "target": "request",
-    "breaking": true,
-    "deprecated": true,
-    "doc_only": false,
-    "note": "The Tool variant type \"live_search\" is deprecated; including it will fail. Use Agent Tools API instead.",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "live_search tool is no longer marked deprecated (annotation and deprecation note removed).",
     "date": "2026-10-15"
   },
   {
