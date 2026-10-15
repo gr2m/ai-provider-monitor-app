@@ -357,6 +357,18 @@
     "date": "2026-10-15"
   },
   {
+    "provider": "fal",
+    "route": "/models/usage",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified tags behavior for tagged-estimate: when a key is activated for all values, only the 50 highest-cost values are kept over the window and the rest are grouped as '(other)'.",
+    "date": "2026-10-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
