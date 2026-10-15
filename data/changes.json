@@ -333,6 +333,18 @@
     "date": "2026-10-15"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-3-image-klein",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New POST /v1/flux-3-image-klein endpoint to submit an async FLUX 3 Image Klein text-to-image or image-editing task (up to 10 reference images). Accepts JSON inputs like prompt, aspect/size, resolution, steps, seed, output_format, safety_tolerance. Returns AsyncResponse with id and polling_url. Secured via API key.",
+    "date": "2026-10-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
