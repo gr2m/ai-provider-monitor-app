@@ -1,5 +1,41 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "search_parameters is now deprecated; setting it will cause requests to fail. Use Agent Tools API instead.",
+    "date": "2026-10-15"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "web_search_options is now deprecated; setting it will cause requests to fail. Use Agent Tools API instead.",
+    "date": "2026-10-15"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "The live_search tool variant is now deprecated; including it will cause requests to fail. Use the Agent Tools API instead.",
+    "date": "2026-10-15"
+  },
+  {
     "provider": "gladia",
     "route": "/v1/history",
     "method": "GET",
