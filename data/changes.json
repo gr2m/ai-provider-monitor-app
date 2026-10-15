@@ -273,6 +273,54 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1109"
   },
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "search_parameters is now deprecated; requests that set it will fail. Use Agent Tools API instead.",
+    "date": "2026-10-15"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "web_search_options is now deprecated; requests that set it will fail. Use Agent Tools API instead.",
+    "date": "2026-10-15"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Tool `live_search` schema is now marked deprecated in the spec.",
+    "date": "2026-10-15"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Using the `live_search` tool is deprecated; requests that include it will fail. Use Agent Tools API instead.",
+    "date": "2026-10-15"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
