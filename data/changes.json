@@ -5,10 +5,10 @@
     "method": "POST",
     "change": "changed",
     "target": "request",
-    "breaking": true,
+    "breaking": false,
     "deprecated": false,
     "doc_only": true,
-    "note": "search_parameters is now deprecated; setting it will cause requests to fail. Use Agent Tools API instead.",
+    "note": "search_parameters is no longer marked deprecated; description updated to indicate support.",
     "date": "2026-10-15"
   },
   {
@@ -17,22 +17,34 @@
     "method": "POST",
     "change": "changed",
     "target": "request",
-    "breaking": true,
+    "breaking": false,
     "deprecated": false,
     "doc_only": true,
-    "note": "web_search_options is now deprecated; setting it will cause requests to fail. Use Agent Tools API instead.",
+    "note": "web_search_options description updated from deprecation notice to compatibility guidance.",
     "date": "2026-10-15"
   },
   {
     "provider": "xai",
     "route": "/v1/chat/completions",
     "method": "POST",
-    "change": "changed",
+    "change": "removed",
     "target": "request",
-    "breaking": true,
+    "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "The live_search tool variant is now deprecated; including it will cause requests to fail. Use the Agent Tools API instead.",
+    "note": "Removed deprecated marker on Tool schema variant `live_search`.",
+    "date": "2026-10-15"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Removed deprecation notice description on Tool schema variant `live_search`.",
     "date": "2026-10-15"
   },
   {
