@@ -1,6 +1,42 @@
 [
   {
     "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "search_parameters is now deprecated; setting it causes requests to fail. Use the Agent Tools API instead.",
+    "date": "2026-10-16"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "web_search_options is now deprecated; setting it causes requests to fail. Use the Agent Tools API instead.",
+    "date": "2026-10-16"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "The live_search tool is deprecated; including it now causes requests to fail. Use the Agent Tools API instead.",
+    "date": "2026-10-16"
+  },
+  {
+    "provider": "xai",
     "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
@@ -271,42 +307,6 @@
     "note": "Tools field description updated to note that `web_search_preview` will be overridden by `search_parameters`.",
     "date": "2026-10-15",
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1109"
-  },
-  {
-    "provider": "xai",
-    "route": "/v1/chat/completions",
-    "method": "POST",
-    "change": "changed",
-    "target": "request",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "search_parameters is now deprecated; requests that set it will fail. Use Agent Tools API instead.",
-    "date": "2026-10-15"
-  },
-  {
-    "provider": "xai",
-    "route": "/v1/chat/completions",
-    "method": "POST",
-    "change": "changed",
-    "target": "request",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "web_search_options is now deprecated; requests that set it will fail. Use Agent Tools API instead.",
-    "date": "2026-10-15"
-  },
-  {
-    "provider": "xai",
-    "route": "/v1/chat/completions",
-    "method": "POST",
-    "change": "changed",
-    "target": "request",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Tool type \"live_search\" is deprecated; requests that include it will fail. Use Agent Tools API instead.",
-    "date": "2026-10-15"
   },
   {
     "provider": "xai",
