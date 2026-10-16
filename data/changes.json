@@ -155,6 +155,30 @@
     "date": "2026-10-16"
   },
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Increased ChatRequest.tools maxItems from 350 to 1000, allowing more functions per request.",
+    "date": "2026-10-16"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated ChatRequest.tools description to reflect support for up to 1000 functions.",
+    "date": "2026-10-16"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-3-image-klein",
     "method": "POST",
