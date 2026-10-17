@@ -1,5 +1,18 @@
 [
   {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for TranslationDTO.error to clarify it is null when success is true and to reference 'model' instead of 'addon'.",
+    "date": "2026-10-16",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1119"
+  },
+  {
     "provider": "xai",
     "route": "v1/chat/completions",
     "method": "POST",
@@ -92,6 +105,45 @@
   },
   {
     "provider": "xai",
+    "route": "v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Increased ChatRequest.tools maxItems from 350 to 1000, allowing more functions per request.",
+    "date": "2026-10-16",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1120"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated ChatRequest.tools description to reflect support for up to 1000 functions.",
+    "date": "2026-10-16",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1120"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated MessageRequest.tools description: max supported functions increased from 350 to 1000.",
+    "date": "2026-10-16",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1120"
+  },
+  {
+    "provider": "xai",
     "route": "v1/responses",
     "method": "POST",
     "change": "changed",
@@ -143,40 +195,43 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1118"
   },
   {
-    "provider": "gladia",
-    "route": "/v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated description for TranslationDTO.error to clarify it is null when success is true and to reference 'model' instead of 'addon'.",
-    "date": "2026-10-16"
-  },
-  {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/responses",
     "method": "POST",
     "change": "changed",
     "target": "request",
     "breaking": false,
     "deprecated": false,
     "doc_only": false,
-    "note": "Increased ChatRequest.tools maxItems from 350 to 1000, allowing more functions per request.",
-    "date": "2026-10-16"
+    "note": "Increased maximum number of tools allowed in request from 350 to 1000.",
+    "date": "2026-10-16",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1120"
   },
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/responses",
     "method": "POST",
     "change": "changed",
-    "target": "request",
+    "target": "response",
     "breaking": false,
     "deprecated": false,
-    "doc_only": true,
-    "note": "Updated ChatRequest.tools description to reflect support for up to 1000 functions.",
-    "date": "2026-10-16"
+    "doc_only": false,
+    "note": "Increased maximum number of tools returned in response schema from 350 to 1000.",
+    "date": "2026-10-16",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1120"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses/{response_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "In ModelResponse.tools, increased the maximum allowed tools from 350 to 1000.",
+    "date": "2026-10-16",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1120"
   },
   {
     "provider": "black-forest-labs",
