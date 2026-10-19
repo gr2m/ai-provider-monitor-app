@@ -12,6 +12,30 @@
     "date": "2026-10-19"
   },
   {
+    "provider": "fal",
+    "route": "/models/usage",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated docs for tags in summary rows: fully activated keys are not reported; use 'tag' filter.",
+    "date": "2026-10-19"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/usage",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated docs for tags in time_series rows: fully activated keys are not reported; use 'tag' filter.",
+    "date": "2026-10-19"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
