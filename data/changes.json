@@ -1,19 +1,7 @@
 [
   {
-    "provider": "gladia",
-    "route": "/v2/transcription",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated TranslationDTO.error description to clarify it is null when success=true and to refer to a failed model instead of addon.",
-    "date": "2026-10-19"
-  },
-  {
     "provider": "fal",
-    "route": "/models/usage",
+    "route": "models/usage",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -21,11 +9,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated docs for tags in summary rows: fully activated keys are not reported; use 'tag' filter.",
-    "date": "2026-10-19"
+    "date": "2026-10-19",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1122"
   },
   {
     "provider": "fal",
-    "route": "/models/usage",
+    "route": "models/usage",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -33,7 +22,21 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated docs for tags in time_series rows: fully activated keys are not reported; use 'tag' filter.",
-    "date": "2026-10-19"
+    "date": "2026-10-19",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1122"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated TranslationDTO.error description to clarify it is null when success=true and to refer to a failed model instead of addon.",
+    "date": "2026-10-19",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1121"
   },
   {
     "provider": "gladia",
