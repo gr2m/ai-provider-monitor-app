@@ -1,5 +1,65 @@
 [
   {
+    "provider": "cohere",
+    "route": "/v2/rerank",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional relevant_spans parameter to enable context compression for supported models.",
+    "date": "2026-10-20"
+  },
+  {
+    "provider": "cohere",
+    "route": "/v2/rerank",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added relevant_spans array to each result item, returning the most relevant spans when enabled.",
+    "date": "2026-10-20"
+  },
+  {
+    "provider": "cohere",
+    "route": "/v2/rerank",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new schema RerankRelevantSpans for configuring context compression.",
+    "date": "2026-10-20"
+  },
+  {
+    "provider": "cohere",
+    "route": "/v2/rerank",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new schema RerankRelevantSpanResponse describing returned span ranges and scores.",
+    "date": "2026-10-20"
+  },
+  {
+    "provider": "cohere",
+    "route": "/v2/rerank",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated model description example from rerank-v3.5 to rerank-v5.0-pro.",
+    "date": "2026-10-20"
+  },
+  {
     "provider": "fal",
     "route": "models/usage",
     "method": "GET",
