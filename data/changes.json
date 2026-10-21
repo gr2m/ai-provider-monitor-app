@@ -115,6 +115,18 @@
     "date": "2026-10-21"
   },
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-2-flex",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added a regex constraint to 'user' field disallowing NUL bytes, tightening validation.",
+    "date": "2026-10-21"
+  },
+  {
     "provider": "cohere",
     "route": "v2/rerank",
     "method": "POST",
