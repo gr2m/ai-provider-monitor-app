@@ -103,6 +103,18 @@
     "date": "2026-10-21"
   },
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed 'wo' (Wolof) from TranscriptionLanguageCodeEnum supported languages used in response schemas.",
+    "date": "2026-10-21"
+  },
+  {
     "provider": "cohere",
     "route": "v2/rerank",
     "method": "POST",
