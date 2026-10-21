@@ -127,6 +127,18 @@
     "date": "2026-10-21"
   },
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Guidelines doc clarifies that if guidelines cannot be applied (e.g., on multi‑agent models or when used with `stop`), the request fails with 400.",
+    "date": "2026-10-21"
+  },
+  {
     "provider": "cohere",
     "route": "v2/rerank",
     "method": "POST",
