@@ -1,5 +1,41 @@
 [
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default value for top_p changed from 1 to 0.95 (Grok models' default). Requests omitting top_p will now use 0.95.",
+    "date": "2026-10-21"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified in temperature description that values above 1 are capped at 1 when sampling.",
+    "date": "2026-10-21"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated top_p description to state values above the model's default (0.95 for Grok) are capped at that default.",
+    "date": "2026-10-21"
+  },
+  {
     "provider": "cohere",
     "route": "/v2/rerank",
     "method": "POST",
