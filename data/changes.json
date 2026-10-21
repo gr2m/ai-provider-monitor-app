@@ -1,7 +1,7 @@
 [
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Default value for top_p changed from 1 to 0.95 (Grok models' default). Requests omitting top_p will now use 0.95.",
-    "date": "2026-10-21"
+    "date": "2026-10-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1126"
   },
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -21,11 +22,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Clarified in temperature description that values above 1 are capped at 1 when sampling.",
-    "date": "2026-10-21"
+    "date": "2026-10-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1126"
   },
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -33,11 +35,129 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated top_p description to state values above the model's default (0.95 for Grok) are capped at that default.",
-    "date": "2026-10-21"
+    "date": "2026-10-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1126"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Changed default top_p from 1 to 0.95 and updated description to note Grok default and clipping above default.",
+    "date": "2026-10-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1126"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated temperature description to clarify values above 1 are sampled at 1.",
+    "date": "2026-10-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1126"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default top_p changed from 1 to 0.95 and description clarifies capping to model default (0.95 for Grok).",
+    "date": "2026-10-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1126"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Temperature description updated to note values above 1 are sampled at 1.",
+    "date": "2026-10-21",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1126"
   },
   {
     "provider": "cohere",
-    "route": "/v2/rerank",
+    "route": "v2/rerank",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional relevant_spans parameter to enable context compression for supported models.",
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1123"
+  },
+  {
+    "provider": "cohere",
+    "route": "v2/rerank",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added relevant_spans array to each result item, returning the most relevant spans when enabled.",
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1123"
+  },
+  {
+    "provider": "cohere",
+    "route": "v2/rerank",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new schema RerankRelevantSpans for configuring context compression.",
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1123"
+  },
+  {
+    "provider": "cohere",
+    "route": "v2/rerank",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new schema RerankRelevantSpanResponse describing returned span ranges and scores.",
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1123"
+  },
+  {
+    "provider": "cohere",
+    "route": "v2/rerank",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated model description example from rerank-v3.5 to rerank-v5.0-pro.",
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1123"
+  },
+  {
+    "provider": "cohere",
+    "route": "v2/rerank",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -45,11 +165,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description for RerankRelevantSpans to clarify feature behavior/support.",
-    "date": "2026-10-20"
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1125"
   },
   {
     "provider": "cohere",
-    "route": "/v2/rerank",
+    "route": "v2/rerank",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -57,11 +178,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Reworded max_spans description; no functional change to constraints.",
-    "date": "2026-10-20"
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1125"
   },
   {
     "provider": "cohere",
-    "route": "/v2/rerank",
+    "route": "v2/rerank",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -69,11 +191,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Reworded mode description to explicitly list allowed values and clarify behavior.",
-    "date": "2026-10-20"
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1125"
   },
   {
     "provider": "cohere",
-    "route": "/v2/rerank",
+    "route": "v2/rerank",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -81,7 +204,21 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Reworded threshold description; defaults and bounds unchanged.",
-    "date": "2026-10-20"
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1125"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/live",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date-related query parameters; no schema or behavior changes.",
+    "date": "2026-10-20",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1124"
   },
   {
     "provider": "fal",
