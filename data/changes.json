@@ -49,6 +49,30 @@
   },
   {
     "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of ModelResponse.temperature to clarify echo semantics and cap at 1 for sampling.",
+    "date": "2026-10-22"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of ModelResponse.top_p to clarify echo semantics and sampling cap at model default.",
+    "date": "2026-10-22"
+  },
+  {
+    "provider": "xai",
     "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
