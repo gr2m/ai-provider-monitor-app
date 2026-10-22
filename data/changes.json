@@ -1,5 +1,53 @@
 [
   {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-3-image",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional height parameter to set exact output height in pixels.",
+    "date": "2026-10-22"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-3-image",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional width parameter to set exact output width in pixels.",
+    "date": "2026-10-22"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-3-image",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new resolution value 'match_input' (edits only).",
+    "date": "2026-10-22"
+  },
+  {
+    "provider": "black-forest-labs",
+    "route": "/v1/flux-3-image",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Expanded resolution description to note default, 'match_input' behavior, and that width/height override resolution and aspect_ratio.",
+    "date": "2026-10-22"
+  },
+  {
     "provider": "xai",
     "route": "v1/chat/completions",
     "method": "POST",
