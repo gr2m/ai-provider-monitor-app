@@ -116,6 +116,18 @@
     "date": "2026-10-22"
   },
   {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters/{cluster_id}/instances/{instance_id}/remediations",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed the remediation_id query parameter used for client idempotency.",
+    "date": "2026-10-22"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-2-flex",
     "method": "POST",
