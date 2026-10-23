@@ -61,6 +61,54 @@
     "date": "2026-10-23"
   },
   {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Expanded supported model enum: added kimi-k3.1-pro and kimi-k3.1-pro-highspeed.",
+    "date": "2026-10-23"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default model changed from kimi-k3 to kimi-k3.1-pro.",
+    "date": "2026-10-23"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Model description updated to list supported models and clarify usage.",
+    "date": "2026-10-23"
+  },
+  {
+    "provider": "moonshotai",
+    "route": "/anthropic/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Schema title changed from \"kimi-k3\" to \"Kimi K3 series\".",
+    "date": "2026-10-23"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-3-image",
     "method": "POST",
