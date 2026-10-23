@@ -109,6 +109,42 @@
     "date": "2026-10-23"
   },
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "GuidelineBehavior enum restricted: 'offer_support' removed; only 'decline' allowed.",
+    "date": "2026-10-23"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "GuidelineCategory enum updated: 'sexual','self_harm','illicit' removed; new 'nsfw' added (now {nsfw, violence, profanity}).",
+    "date": "2026-10-23"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Guideline description updated to reflect new category/behavior support policy.",
+    "date": "2026-10-23"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-3-image",
     "method": "POST",
