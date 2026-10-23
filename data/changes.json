@@ -1,5 +1,17 @@
 [
   {
+    "provider": "togetherai",
+    "route": "/v1/billing/usage",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional applied_credit object to BillingUsageLineItem indicating credit coverage (type: PREPAID | POSTPAID | CREDIT).",
+    "date": "2026-10-23"
+  },
+  {
     "provider": "black-forest-labs",
     "route": "v1/flux-3-image",
     "method": "POST",
