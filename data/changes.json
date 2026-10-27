@@ -84,6 +84,42 @@
     "date": "2026-10-27"
   },
   {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "GuidelineBehavior enum expanded to include \"allow\" in addition to \"decline\".",
+    "date": "2026-10-27"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "GuidelineCategory enum expanded with new category \"cyber\".",
+    "date": "2026-10-27"
+  },
+  {
+    "provider": "xai",
+    "route": "/v1/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Guideline schema docs updated: category-specific allowed behaviors (nsfw/violence/profanity accept decline; cyber accepts allow).",
+    "date": "2026-10-27"
+  },
+  {
     "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
