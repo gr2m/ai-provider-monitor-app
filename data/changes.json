@@ -1,5 +1,41 @@
 [
   {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to state that expand=openapi-3.0 returns an OpenAPI 3.1 schema (name unchanged).",
+    "date": "2026-10-27"
+  },
+  {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Parameter 'expand' docs updated: 'openapi-3.0' now returns an OpenAPI 3.1 schema (name unchanged).",
+    "date": "2026-10-27"
+  },
+  {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Response schema documentation for the 'openapi' expansion updated from OpenAPI 3.0 to 3.1.",
+    "date": "2026-10-27"
+  },
+  {
     "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
