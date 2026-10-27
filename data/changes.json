@@ -49,6 +49,30 @@
   },
   {
     "provider": "gladia",
+    "route": "/v2/live/{id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 400 Bad Request response when the live job id is not a UUID",
+    "date": "2026-10-27"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v2/live/{id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added BadRequestErrorResponse schema used by the new 400 response",
+    "date": "2026-10-27"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/pre-recorded",
     "method": "GET",
     "change": "added",
