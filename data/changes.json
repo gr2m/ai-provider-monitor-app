@@ -24,6 +24,42 @@
     "date": "2026-10-28"
   },
   {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added GB200_SXM to GPUClusterInfo.gpu_type enum.",
+    "date": "2026-10-28"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Declared gpu_type type as string (was previously unspecified).",
+    "date": "2026-10-28"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Added description for gpu_type.",
+    "date": "2026-10-28"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
