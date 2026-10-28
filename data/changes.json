@@ -12,6 +12,18 @@
     "date": "2026-10-28"
   },
   {
+    "provider": "xai",
+    "route": "/v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new incomplete_details reason value \"content_filter\" which may appear when a response is incomplete.",
+    "date": "2026-10-28"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
