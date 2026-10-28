@@ -1,7 +1,7 @@
 [
   {
     "provider": "fal",
-    "route": "/models",
+    "route": "models",
     "method": "GET",
     "change": "changed",
     "target": "route",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Route description updated to state that expand=openapi-3.0 returns an OpenAPI 3.1 schema (name unchanged).",
-    "date": "2026-10-27"
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1146"
   },
   {
     "provider": "fal",
-    "route": "/models",
+    "route": "models",
     "method": "GET",
     "change": "changed",
     "target": "request",
@@ -21,11 +22,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Parameter 'expand' docs updated: 'openapi-3.0' now returns an OpenAPI 3.1 schema (name unchanged).",
-    "date": "2026-10-27"
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1146"
   },
   {
     "provider": "fal",
-    "route": "/models",
+    "route": "models",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -33,47 +35,12 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Response schema documentation for the 'openapi' expansion updated from OpenAPI 3.0 to 3.1.",
-    "date": "2026-10-27"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v1/history",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": true,
-    "note": "Updated description for TranslationDTO.error to mention it is null when success is true and changed wording from 'failed addon' to 'failed model'.",
-    "date": "2026-10-27"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v2/live/{id}",
-    "method": "DELETE",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added 400 Bad Request response when the live job id is not a UUID",
-    "date": "2026-10-27"
-  },
-  {
-    "provider": "gladia",
-    "route": "/v2/live/{id}",
-    "method": "DELETE",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added BadRequestErrorResponse schema used by the new 400 response",
-    "date": "2026-10-27"
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1146"
   },
   {
     "provider": "fal",
-    "route": "/serverless/runners/{runner_id}/stop",
+    "route": "serverless/runners/{runner_id}/stop",
     "method": "POST",
     "change": "added",
     "target": "route",
@@ -81,11 +48,103 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Introduces POST /serverless/runners/{runner_id}/stop to gracefully stop a serverless runner, with optional replace_first to start a replacement before shutdown; returns 200 acknowledging stop request and requires serverless:runners:terminate permission.",
-    "date": "2026-10-27"
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1149"
+  },
+  {
+    "provider": "gladia",
+    "route": "v1/history",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for TranslationDTO.error to mention it is null when success is true and changed wording from 'failed addon' to 'failed model'.",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1147"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/live/{id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 400 Bad Request response when the live job id is not a UUID",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1148"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/live/{id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added BadRequestErrorResponse schema used by the new 400 response",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1148"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded/{id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added HTTP 400 response for invalid pre recorded job id (not a UUID)",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1148"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/pre-recorded/{id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added BadRequestErrorResponse schema referenced by the new 400 response",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1148"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription/{id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 400 Bad Request response for invalid transcription job UUID, returning BadRequestErrorResponse.",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1148"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription/{id}",
+    "method": "DELETE",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added BadRequestErrorResponse schema referenced by the new 400 response.",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1148"
   },
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -93,11 +152,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "GuidelineBehavior enum expanded to include \"allow\" in addition to \"decline\".",
-    "date": "2026-10-27"
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1150"
   },
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -105,11 +165,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "GuidelineCategory enum expanded with new category \"cyber\".",
-    "date": "2026-10-27"
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1150"
   },
   {
     "provider": "xai",
-    "route": "/v1/chat/completions",
+    "route": "v1/chat/completions",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -117,7 +178,47 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Guideline schema docs updated: category-specific allowed behaviors (nsfw/violence/profanity accept decline; cyber accepts allow).",
-    "date": "2026-10-27"
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1150"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "GuidelineBehavior enum expanded to include \"allow\" in addition to \"decline\".",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1150"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "GuidelineCategory enum expanded with new \"cyber\" category.",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1150"
+  },
+  {
+    "provider": "xai",
+    "route": "v1/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Guideline documentation updated to specify per-category behaviors (nsfw/violence/profanity accept decline; cyber accepts allow).",
+    "date": "2026-10-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1150"
   },
   {
     "provider": "gladia",
