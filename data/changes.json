@@ -1,5 +1,17 @@
 [
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed deprecated chapterization property from PostProcessingConfig; it will no longer appear in job history responses under request_params.post_processing.",
+    "date": "2026-10-28"
+  },
+  {
     "provider": "fal",
     "route": "models",
     "method": "GET",
