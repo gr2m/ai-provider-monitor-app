@@ -1,6 +1,30 @@
 [
   {
     "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed structured_data_extraction property from TranscriptionResultDTO; it will no longer appear in transcription results.",
+    "date": "2026-10-29"
+  },
+  {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed StructuredDataExtractionDTO schema definition from components.",
+    "date": "2026-10-29"
+  },
+  {
+    "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
     "change": "removed",
