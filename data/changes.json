@@ -1,5 +1,29 @@
 [
   {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new vision model variant 'glm-5.3-flashx-legal' to ChatCompletionVisionRequest.model enum.",
+    "date": "2026-11-02"
+  },
+  {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated ChatCompletionVisionRequest.model description to mention the new glm-5.3-flashx-legal variant and its focus on legal workflows.",
+    "date": "2026-11-02"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
