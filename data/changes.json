@@ -48,6 +48,18 @@
     "date": "2026-11-02"
   },
   {
+    "provider": "openai",
+    "route": "/audio/voices",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Updated allowed 'model' enum value in CreateVoicePromptRequest from date-time to date string ('2026-10-08T00:00:00.000Z' -> '2026-10-08').",
+    "date": "2026-11-02"
+  },
+  {
     "provider": "gladia",
     "route": "v1/history",
     "method": "GET",
