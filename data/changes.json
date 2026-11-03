@@ -38,6 +38,18 @@
     "date": "2026-11-03"
   },
   {
+    "provider": "cohere",
+    "route": "/v1/chat",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added billed_units.text_tokens to ApiMeta to report the number of billed text tokens.",
+    "date": "2026-11-03"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
