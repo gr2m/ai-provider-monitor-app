@@ -1,5 +1,29 @@
 [
   {
+    "provider": "openai",
+    "route": "/live/sessions",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to remove note that outbound SIP calling must be enabled for the organization.",
+    "date": "2026-11-03"
+  },
+  {
+    "provider": "openai",
+    "route": "/live/sessions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "LiveSIPTransport description updated to remove the requirement note about enabling outbound SIP calling.",
+    "date": "2026-11-03"
+  },
+  {
     "provider": "zai",
     "route": "/paas/v4/chat/completions",
     "method": "POST",
