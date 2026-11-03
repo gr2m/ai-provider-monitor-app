@@ -62,6 +62,18 @@
     "date": "2026-11-03"
   },
   {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/service_tier_settings",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Adds GET /organization/projects/{project_id}/service_tier_settings to retrieve a project's configured default tier and enabled service tiers.",
+    "date": "2026-11-03"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
