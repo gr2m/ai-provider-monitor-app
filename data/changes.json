@@ -74,6 +74,18 @@
     "date": "2026-11-03"
   },
   {
+    "provider": "deepgram",
+    "route": "/v1/agent/settings/think/models",
+    "method": "GET",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added servers array with Production base URL https://agent.deepgram.com",
+    "date": "2026-11-03"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
