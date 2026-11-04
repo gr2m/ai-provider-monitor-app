@@ -251,6 +251,18 @@
     "date": "2026-11-04"
   },
   {
+    "provider": "openai",
+    "route": "/agents",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional boolean property `async` to function tool schema, indicating the agent may continue without waiting for the function result.",
+    "date": "2026-11-04"
+  },
+  {
     "provider": "cohere",
     "route": "v1/chat",
     "method": "POST",
