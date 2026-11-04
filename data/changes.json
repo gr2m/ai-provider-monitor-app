@@ -155,6 +155,78 @@
     "date": "2026-11-04"
   },
   {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed torchpass add-on configuration from AddOnConfig; TorchPass can no longer be configured on create.",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed torchpass add-on configuration from response AddOnInfo.config (via AddOnConfig).",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed torchpass add-on state from AddOnState in responses.",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed TorchpassConfig schema definition.",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed TorchpassState schema definition.",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/compute/clusters",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated AddOnCreateRequest.add_on_type documentation to remove 'torchpass' from valid values.",
+    "date": "2026-11-04"
+  },
+  {
     "provider": "cohere",
     "route": "v1/chat",
     "method": "POST",
