@@ -227,6 +227,30 @@
     "date": "2026-11-04"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional stream_options to control streaming behavior (e.g., include_obfuscation).",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional obfuscation padding field to streamed session event objects when obfuscation is enabled.",
+    "date": "2026-11-04"
+  },
+  {
     "provider": "cohere",
     "route": "v1/chat",
     "method": "POST",
