@@ -1,6 +1,42 @@
 [
   {
     "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new model ID 'gpt-6-rosalind' to ModelIdsResponses for the request 'model' field.",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Responses may now return 'gpt-6-rosalind' in the 'model' field.",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated CreateResponse.include description to explicitly list 'web_search_call.results' as a supported include value.",
+    "date": "2026-11-04"
+  },
+  {
+    "provider": "openai",
     "route": "live/sessions",
     "method": "POST",
     "change": "changed",
