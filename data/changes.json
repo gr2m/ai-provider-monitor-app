@@ -2713,6 +2713,54 @@
     "date": "2026-11-05"
   },
   {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'replacement' field on each model item to indicate a recommended migration endpoint",
+    "date": "2026-11-05"
+  },
+  {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'retires_at' field on each model item to expose scheduled endpoint retirement time",
+    "date": "2026-11-05"
+  },
+  {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Model item required fields now include 'retires_at' and 'replacement'",
+    "date": "2026-11-05"
+  },
+  {
+    "provider": "fal",
+    "route": "/models",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified metadata.updated_at to reflect catalog or API schema change time",
+    "date": "2026-11-05"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
