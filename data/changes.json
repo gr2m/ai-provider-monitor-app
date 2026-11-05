@@ -2701,6 +2701,18 @@
     "date": "2026-11-05"
   },
   {
+    "provider": "openai",
+    "route": "/content_provenance_checks",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified supported image formats for the file upload parameter in the request body.",
+    "date": "2026-11-05"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
