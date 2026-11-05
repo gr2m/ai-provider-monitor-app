@@ -1,5 +1,17 @@
 [
   {
+    "provider": "deepgram",
+    "route": "/v2/speak",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional query parameter normalize_volume (boolean, default true) to control loudness normalization.",
+    "date": "2026-11-05"
+  },
+  {
     "provider": "openai",
     "route": "responses/compact",
     "method": "POST",
