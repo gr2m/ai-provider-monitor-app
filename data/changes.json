@@ -2677,6 +2677,30 @@
     "date": "2026-11-05"
   },
   {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new allowed model ID 'gpt-6-cyber' for the model parameter.",
+    "date": "2026-11-05"
+  },
+  {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Response 'model' field may now be 'gpt-6-cyber' (enum extended).",
+    "date": "2026-11-05"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
