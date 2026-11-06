@@ -181,6 +181,42 @@
     "date": "2026-11-06"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added prompt_cache_options to SessionResource to expose default prompt cache lifetime per session.",
+    "date": "2026-11-06"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced PromptCacheOptionsResource schema used by session responses.",
+    "date": "2026-11-06"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced PromptCacheTtlResource enum for prompt cache TTL values.",
+    "date": "2026-11-06"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
