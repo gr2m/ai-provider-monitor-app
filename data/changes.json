@@ -217,6 +217,18 @@
     "date": "2026-11-06"
   },
   {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated documentation for ImageGenUsage to apply to all GPT Image models (previously stated gpt-image-1 only).",
+    "date": "2026-11-06"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
