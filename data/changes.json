@@ -1,5 +1,65 @@
 [
   {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added SVG as a supported output_format for both JSON and multipart requests (now via ImagesApiOutputFormat).",
+    "date": "2026-11-06"
+  },
+  {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added svg authoring controls via new svg object for both JSON and multipart (select author model and reasoning for SVG).",
+    "date": "2026-11-06"
+  },
+  {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ImagesResponse.output_format now references ImagesApiOutputFormat (values unchanged).",
+    "date": "2026-11-06"
+  },
+  {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ImagesResponse.svg_usage now references shared SvgUsage schema (no change to fields).",
+    "date": "2026-11-06"
+  },
+  {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documented that SVG output requires a supported image model and project access (JSON and multipart).",
+    "date": "2026-11-06"
+  },
+  {
     "provider": "deepgram",
     "route": "v2/speak",
     "method": "POST",
