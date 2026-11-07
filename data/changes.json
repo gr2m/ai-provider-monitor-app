@@ -1,5 +1,17 @@
 [
   {
+    "provider": "fal",
+    "route": "/models/analytics",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documentation updated to state the date range is capped at 90 days per request.",
+    "date": "2026-11-07"
+  },
+  {
     "provider": "openai",
     "route": "images/edits",
     "method": "POST",
