@@ -12,6 +12,18 @@
     "date": "2026-11-09"
   },
   {
+    "provider": "openai",
+    "route": "/webhook_endpoints",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "WebhookEndpointWithSecretResource.object now uses const instead of a single-value enum; behavior unchanged.",
+    "date": "2026-11-09"
+  },
+  {
     "provider": "fal",
     "route": "models/analytics",
     "method": "GET",
