@@ -24,6 +24,18 @@
     "date": "2026-11-09"
   },
   {
+    "provider": "openai",
+    "route": "/videos",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated documentation for Error-2.headers and its additionalProperties; no schema changes.",
+    "date": "2026-11-09"
+  },
+  {
     "provider": "fal",
     "route": "models/analytics",
     "method": "GET",
