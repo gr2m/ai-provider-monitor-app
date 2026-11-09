@@ -1,5 +1,17 @@
 [
   {
+    "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "In FunctionCallOutputItemParam.namespace, maximum length increased from 64 to 128 characters.",
+    "date": "2026-11-09"
+  },
+  {
     "provider": "fal",
     "route": "models/analytics",
     "method": "GET",
