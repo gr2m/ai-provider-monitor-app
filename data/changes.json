@@ -170,6 +170,18 @@
     "date": "2026-11-10"
   },
   {
+    "provider": "openai",
+    "route": "/realtime/calls",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Single-value enums were replaced with const across several request schemas (no behavioral change, possible minor validation/codegen impact).",
+    "date": "2026-11-10"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
