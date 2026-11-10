@@ -146,6 +146,18 @@
     "date": "2026-11-10"
   },
   {
+    "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated examples for date-related query parameters (date, before_date, after_date).",
+    "date": "2026-11-10"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
