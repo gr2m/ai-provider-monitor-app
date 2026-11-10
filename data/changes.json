@@ -87,6 +87,18 @@
   },
   {
     "provider": "anthropic",
+    "route": "/v1/agents/{agent_id}?beta=true",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description text for the claude-fable-5-2 model in the response schema.",
+    "date": "2026-11-10"
+  },
+  {
+    "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
     "change": "added",
