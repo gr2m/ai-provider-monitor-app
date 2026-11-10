@@ -50,6 +50,42 @@
     "date": "2026-11-10"
   },
   {
+    "provider": "togetherai",
+    "route": "/v2/organizations/{organizationId}/models",
+    "method": "GET",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional query parameter orderBy to sort results by created_at (asc/desc).",
+    "date": "2026-11-10"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v2/organizations/{organizationId}/models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added createdAt timestamp field to DE.Model objects.",
+    "date": "2026-11-10"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v2/organizations/{organizationId}/models",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added updatedAt timestamp field to DE.Model objects.",
+    "date": "2026-11-10"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
