@@ -99,6 +99,18 @@
   },
   {
     "provider": "anthropic",
+    "route": "/v1/organizations/external_keys?beta=true",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified guidance for user_profile_id: bind to the customer’s user profile; only omit for org-wide keys; binding is immutable and affects which Workspaces can attach.",
+    "date": "2026-11-10"
+  },
+  {
+    "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
     "change": "added",
