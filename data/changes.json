@@ -1,6 +1,18 @@
 [
   {
     "provider": "openai",
+    "route": "/live/sessions/{session_id}/accept",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 7 new built-in voice names to the Live session audio voice enum: calandria, compas, destello, halo, hornero, luciernaga, pearl.",
+    "date": "2026-11-10"
+  },
+  {
+    "provider": "openai",
     "route": "/conversations",
     "method": "POST",
     "change": "changed",
