@@ -134,6 +134,18 @@
     "date": "2026-11-10"
   },
   {
+    "provider": "openai",
+    "route": "/images/variations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "CreateImageVariationRequest.model uses const 'dall-e-2' instead of single-value enum; behavior unchanged.",
+    "date": "2026-11-10"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
