@@ -110,6 +110,30 @@
     "date": "2026-11-10"
   },
   {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified truncation=auto behavior: on some models trimming may start earlier based on reserved max output allowance.",
+    "date": "2026-11-10"
+  },
+  {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified truncation field description in response: early trimming possible on some models due to reserved max output allowance.",
+    "date": "2026-11-10"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
