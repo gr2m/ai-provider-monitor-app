@@ -25,6 +25,18 @@
   },
   {
     "provider": "openai",
+    "route": "/responses/compact",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description for the deprecated 'instructions' field to clarify system/developer message semantics and interaction with previous_response_id; no schema change.",
+    "date": "2026-11-11"
+  },
+  {
+    "provider": "openai",
     "route": "live/sessions",
     "method": "POST",
     "change": "added",
