@@ -1,6 +1,30 @@
 [
   {
     "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "New required action type mcp_approval_request added to SessionRequiredActionResource; responses may now include MCP tool-call approval requests.",
+    "date": "2026-11-11"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added schemas to represent MCP approval request details used by the new required action type.",
+    "date": "2026-11-11"
+  },
+  {
+    "provider": "openai",
     "route": "live/sessions",
     "method": "POST",
     "change": "added",
