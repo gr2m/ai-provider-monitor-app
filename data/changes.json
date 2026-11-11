@@ -37,6 +37,18 @@
   },
   {
     "provider": "openai",
+    "route": "/conversations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default image generation model for ImageGenTool changed from gpt-image-2 to gpt-image-2.6-sunburst.",
+    "date": "2026-11-11"
+  },
+  {
+    "provider": "openai",
     "route": "live/sessions",
     "method": "POST",
     "change": "added",
