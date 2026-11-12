@@ -13,6 +13,42 @@
   },
   {
     "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added input_transformations array to Response to report reasoning inputs withheld from the model.",
+    "date": "2026-11-12"
+  },
+  {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced ReasoningInputTransformation schema used by Response.input_transformations.",
+    "date": "2026-11-12"
+  },
+  {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added InputRemovalReason enum for classifying why a reasoning input was removed.",
+    "date": "2026-11-12"
+  },
+  {
+    "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
     "change": "added",
