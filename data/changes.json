@@ -284,6 +284,18 @@
     "date": "2026-11-12"
   },
   {
+    "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 'wo' (Wolof) to TranslationLanguageCodeEnum allowed values used in response objects (e.g., translation results and request_params.translation_config).",
+    "date": "2026-11-12"
+  },
+  {
     "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
