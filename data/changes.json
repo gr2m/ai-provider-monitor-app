@@ -1,5 +1,17 @@
 [
   {
+    "provider": "fal",
+    "route": "/models/requests/by-endpoint",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Documented a new maximum time range of 90 days for start/end filters.",
+    "date": "2026-11-12"
+  },
+  {
     "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
