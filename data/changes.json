@@ -2076,6 +2076,42 @@
     "date": "2026-11-13"
   },
   {
+    "provider": "openai",
+    "route": "/agents",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Default behavior for compaction omission/null flipped to blocking compaction.",
+    "date": "2026-11-13"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "CompactionParam.async default semantics flipped from background (true) to blocking (false) when omitted/null.",
+    "date": "2026-11-13"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "CompactionResource.async documented default changed from true to false.",
+    "date": "2026-11-13"
+  },
+  {
     "provider": "fal",
     "route": "models/requests/by-endpoint",
     "method": "GET",
