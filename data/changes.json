@@ -1,5 +1,29 @@
 [
   {
+    "provider": "openai",
+    "route": "/vector_stores",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "VectorStoreObject.object constraint changed from single-value enum to const \"vector_store\".",
+    "date": "2026-11-13"
+  },
+  {
+    "provider": "openai",
+    "route": "/vector_stores",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "VectorStoreExpirationAfter.anchor constraint changed from single-value enum to const \"last_active_at\".",
+    "date": "2026-11-13"
+  },
+  {
     "provider": "fal",
     "route": "models/requests/by-endpoint",
     "method": "GET",
