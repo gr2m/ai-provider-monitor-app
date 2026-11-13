@@ -2064,6 +2064,18 @@
     "date": "2026-11-13"
   },
   {
+    "provider": "openai",
+    "route": "/files",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "OpenAIFile.object schema now uses JSON Schema const 'file' instead of enum ['file']; no payload impact.",
+    "date": "2026-11-13"
+  },
+  {
     "provider": "fal",
     "route": "models/requests/by-endpoint",
     "method": "GET",
