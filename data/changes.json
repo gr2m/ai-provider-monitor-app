@@ -2052,6 +2052,18 @@
     "date": "2026-11-13"
   },
   {
+    "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of TranslationDTO.error to clarify it is null on success and contains error details otherwise.",
+    "date": "2026-11-13"
+  },
+  {
     "provider": "fal",
     "route": "models/requests/by-endpoint",
     "method": "GET",
