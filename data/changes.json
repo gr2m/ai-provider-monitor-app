@@ -494,6 +494,42 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1227"
   },
   {
+    "provider": "deepgram",
+    "route": "/v1/projects/{project_id}/keys",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Request body schema changed from unconstrained any (oneOf) to a structured object with defined properties and validation.",
+    "date": "2026-11-14"
+  },
+  {
+    "provider": "deepgram",
+    "route": "/v1/projects/{project_id}/keys",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added required properties: comment and scopes in the request body.",
+    "date": "2026-11-14"
+  },
+  {
+    "provider": "deepgram",
+    "route": "/v1/projects/{project_id}/keys",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional request properties: expiration_date, tags, time_to_live_in_seconds.",
+    "date": "2026-11-14"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
