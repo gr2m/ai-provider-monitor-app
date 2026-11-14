@@ -49,6 +49,30 @@
   },
   {
     "provider": "openai",
+    "route": "/moderations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Replaced single-value enums with const for multimodal input 'type' fields ('image_url' and 'text').",
+    "date": "2026-11-14"
+  },
+  {
+    "provider": "openai",
+    "route": "/moderations",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Replaced single-value enums with const for category_applied_input_types items that only allow 'text'.",
+    "date": "2026-11-14"
+  },
+  {
+    "provider": "openai",
     "route": "assistants",
     "method": "GET",
     "change": "changed",
