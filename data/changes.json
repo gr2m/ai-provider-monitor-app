@@ -25,6 +25,30 @@
   },
   {
     "provider": "openai",
+    "route": "/embeddings",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "CreateEmbeddingResponse.object constraint changed from enum [\"list\"] to const \"list\".",
+    "date": "2026-11-14"
+  },
+  {
+    "provider": "openai",
+    "route": "/embeddings",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Embedding.object constraint changed from enum [\"embedding\"] to const \"embedding\".",
+    "date": "2026-11-14"
+  },
+  {
+    "provider": "openai",
     "route": "assistants",
     "method": "GET",
     "change": "changed",
