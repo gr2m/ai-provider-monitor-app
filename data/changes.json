@@ -132,6 +132,18 @@
     "date": "2026-11-16"
   },
   {
+    "provider": "openai",
+    "route": "/moderations",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new allowed model value 'omni-moderation-csam-latest' to CreateModerationRequest.model enum.",
+    "date": "2026-11-16"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/projects/{project_id}/keys",
     "method": "POST",
