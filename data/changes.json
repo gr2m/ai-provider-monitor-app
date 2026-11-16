@@ -24,6 +24,18 @@
     "date": "2026-11-16"
   },
   {
+    "provider": "openai",
+    "route": "/agents/automations",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional pause_reason field to automation resources to indicate why a schedule was paused.",
+    "date": "2026-11-16"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/projects/{project_id}/keys",
     "method": "POST",
