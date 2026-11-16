@@ -84,6 +84,18 @@
     "date": "2026-11-16"
   },
   {
+    "provider": "openai",
+    "route": "/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated documentation for the `n` parameter to advise omitting it by default and note that newer models may reject an explicit `n` value, even `n=1`.",
+    "date": "2026-11-16"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/projects/{project_id}/keys",
     "method": "POST",
