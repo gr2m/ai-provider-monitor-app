@@ -36,6 +36,54 @@
     "date": "2026-11-16"
   },
   {
+    "provider": "togetherai",
+    "route": "/v1/deployments",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added placement_group field to CreateDeploymentRequest to co-locate related deployments",
+    "date": "2026-11-16"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/deployments",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added regions field to CreateDeploymentRequest to restrict placement to specific regions or families",
+    "date": "2026-11-16"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/deployments",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added placement_group field to DeploymentResponseItem",
+    "date": "2026-11-16"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v1/deployments",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added regions field to DeploymentResponseItem",
+    "date": "2026-11-16"
+  },
+  {
     "provider": "deepgram",
     "route": "v1/projects/{project_id}/keys",
     "method": "POST",
