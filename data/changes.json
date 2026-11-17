@@ -432,6 +432,42 @@
     "date": "2026-11-17"
   },
   {
+    "provider": "fal",
+    "route": "/keys",
+    "method": "POST",
+    "change": "added",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Added 'Key Creation Access' note clarifying API keys cannot create keys (returns 403) and directing users to the dashboard.",
+    "date": "2026-11-17"
+  },
+  {
+    "provider": "fal",
+    "route": "/keys",
+    "method": "POST",
+    "change": "removed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Removed the 'Create API keys programmatically without UI access' bullet from Key Features.",
+    "date": "2026-11-17"
+  },
+  {
+    "provider": "fal",
+    "route": "/keys",
+    "method": "POST",
+    "change": "removed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Removed the 'Common Use Cases' section from the description.",
+    "date": "2026-11-17"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
