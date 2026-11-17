@@ -324,6 +324,18 @@
     "date": "2026-11-17"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions/{session_id}/events",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Expanded and clarified Idempotency-Key header behavior (24-hour replay window, replay semantics, potential 409 after expiry, and retry guidance).",
+    "date": "2026-11-17"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
