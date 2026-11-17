@@ -12,6 +12,18 @@
     "date": "2026-11-17"
   },
   {
+    "provider": "openai",
+    "route": "/responses/{response_id}/input_items",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated docs for ContainerAutoParam.skills to specify ZIP/Base64 size limits for inline skills.",
+    "date": "2026-11-17"
+  },
+  {
     "provider": "gladia",
     "route": "/v1/history",
     "method": "GET",
