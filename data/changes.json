@@ -504,6 +504,18 @@
     "date": "2026-11-17"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions/{session_id}/events",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new enum value 'api_key_spend_limit_exceeded' to SessionTurnErrorCodeResource; responses may now include this error code.",
+    "date": "2026-11-17"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
