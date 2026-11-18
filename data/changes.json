@@ -376,6 +376,30 @@
     "date": "2026-11-18"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions/{session_id}",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added vault_ids to UpdateAgentSessionParams to allow replacing the session's referenced vaults.",
+    "date": "2026-11-18"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions/{session_id}",
+    "method": "POST",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to mention updating vaults.",
+    "date": "2026-11-18"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
