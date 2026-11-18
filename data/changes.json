@@ -1,6 +1,18 @@
 [
   {
     "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "POST",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed enum value session_budget_exceeded from SessionTurnErrorCodeResource; clients should not expect this code in turn errors anymore.",
+    "date": "2026-11-18"
+  },
+  {
+    "provider": "openai",
     "route": "conversations",
     "method": "POST",
     "change": "changed",
