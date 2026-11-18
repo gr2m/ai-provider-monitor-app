@@ -13,6 +13,42 @@
   },
   {
     "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed spend_control from SessionResource; session spending limit/consumption is no longer returned.",
+    "date": "2026-11-18"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed SessionBudgetControlResource component schema (previously held session-wide spending limit and consumed).",
+    "date": "2026-11-18"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed 'budget_reached' from SessionStatusResource enum; this status will no longer appear in responses.",
+    "date": "2026-11-18"
+  },
+  {
+    "provider": "openai",
     "route": "conversations",
     "method": "POST",
     "change": "changed",
@@ -477,42 +513,6 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Removed the 'Common Use Cases' section from the description.",
-    "date": "2026-11-17"
-  },
-  {
-    "provider": "openai",
-    "route": "/agents/sessions",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added optional spend_control field to SessionResource exposing session spending limits and consumption.",
-    "date": "2026-11-17"
-  },
-  {
-    "provider": "openai",
-    "route": "/agents/sessions",
-    "method": "GET",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added new SessionBudgetControlResource schema for spend control details.",
-    "date": "2026-11-17"
-  },
-  {
-    "provider": "openai",
-    "route": "/agents/sessions",
-    "method": "GET",
-    "change": "changed",
-    "target": "response",
-    "breaking": true,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added new enum value 'budget_reached' to SessionStatusResource; clients must handle this status.",
     "date": "2026-11-17"
   },
   {
