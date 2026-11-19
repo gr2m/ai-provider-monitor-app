@@ -1,6 +1,30 @@
 [
   {
     "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ImageEditPartialImageEvent.type schema changed from single-value enum to const.",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ImageEditCompletedEvent.type schema changed from single-value enum to const.",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
     "change": "removed",
