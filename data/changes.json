@@ -37,6 +37,30 @@
   },
   {
     "provider": "openai",
+    "route": "/organization/invites",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "InviteListResponse.object schema now uses const \"list\" instead of enum [\"list\"].",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
+    "route": "/organization/invites",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Invite.object schema now uses const \"organization.invite\" instead of enum [\"organization.invite\"].",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
     "change": "removed",
