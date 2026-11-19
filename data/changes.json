@@ -771,6 +771,18 @@
   },
   {
     "provider": "openai",
+    "route": "/audio/speech",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Replaced enum with const for the 'type' field in speech audio stream events (semantics unchanged).",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
     "change": "removed",
