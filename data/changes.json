@@ -651,6 +651,42 @@
   },
   {
     "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Default model for JSON edits changed from gpt-image-2.5-sunburst to gpt-image-2.6-sunburst.",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated model description to reflect the new default (gpt-image-2.6-sunburst).",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
+    "route": "/images/edits",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Removed example value for the model field in JSON edit body.",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
     "change": "removed",
