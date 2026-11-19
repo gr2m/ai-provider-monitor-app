@@ -25,6 +25,18 @@
   },
   {
     "provider": "openai",
+    "route": "/audio/transcriptions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example value for the model field from gpt-4o-transcribe to gpt-transcribe.",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
     "change": "removed",
