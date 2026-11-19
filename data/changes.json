@@ -687,6 +687,42 @@
   },
   {
     "provider": "openai",
+    "route": "/organization/projects/{project_id}/spend_limit",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added notification_channel field to ProjectSpendLimitResource for email notifications when the limit is reached.",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/spend_limit",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "notification_channel is now required in ProjectSpendLimitResource.",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/spend_limit",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced EmailNotificationChannel schema referenced by notification_channel.",
+    "date": "2026-11-19"
+  },
+  {
+    "provider": "openai",
     "route": "agents/sessions",
     "method": "GET",
     "change": "removed",
