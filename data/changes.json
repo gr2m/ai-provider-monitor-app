@@ -37,6 +37,30 @@
   },
   {
     "provider": "openai",
+    "route": "/organization/projects",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ProjectListResponse.object now uses const \"list\" instead of enum [\"list\"].",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
+    "route": "/organization/projects",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Project.object now uses const \"organization.project\" instead of enum [\"organization.project\"].",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
     "route": "audio/transcriptions",
     "method": "POST",
     "change": "changed",
