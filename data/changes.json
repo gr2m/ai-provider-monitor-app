@@ -358,6 +358,30 @@
     "date": "2026-11-20"
   },
   {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/api_keys",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ProjectApiKeyListResponse.object changed from enum [\"list\"] to const \"list\" (no change to allowed value).",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/api_keys",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ProjectApiKey.object changed from enum [\"organization.project.api_key\"] to const \"organization.project.api_key\" (no change to allowed value).",
+    "date": "2026-11-20"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
