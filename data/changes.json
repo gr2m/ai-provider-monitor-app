@@ -61,6 +61,30 @@
   },
   {
     "provider": "openai",
+    "route": "/organization/projects/{project_id}/service_accounts",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "In ProjectServiceAccountListResponse, the object property constraint changed from enum [\"list\"] to const \"list\".",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/service_accounts",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "In ProjectServiceAccount, the object property constraint changed from enum [\"organization.project.service_account\"] to const \"organization.project.service_account\".",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
     "route": "audio/transcriptions",
     "method": "POST",
     "change": "changed",
