@@ -25,6 +25,18 @@
   },
   {
     "provider": "openai",
+    "route": "/organization/projects/{project_id}/users/{user_id}",
+    "method": "DELETE",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ProjectUserDeleteResponse.object now uses const instead of a single-value enum; allowed value unchanged.",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
     "route": "audio/transcriptions",
     "method": "POST",
     "change": "changed",
