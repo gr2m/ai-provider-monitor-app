@@ -442,6 +442,30 @@
     "date": "2026-11-20"
   },
   {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/spend_limit",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "notification_channel schema simplified: direct $ref used; removed discriminator and oneOf wrapper.",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/spend_limit",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Added schema-level description to SpendLimitEmailNotificationChannelParams.",
+    "date": "2026-11-20"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
