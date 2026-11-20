@@ -430,6 +430,18 @@
     "date": "2026-11-20"
   },
   {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/model_permissions",
+    "method": "DELETE",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ProjectModelPermissionsDeleteResponse.object changed from single-value enum to const.",
+    "date": "2026-11-20"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
