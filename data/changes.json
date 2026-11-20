@@ -346,6 +346,18 @@
     "date": "2026-11-20"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new error code value 'audio_input_unavailable' to session turn error codes.",
+    "date": "2026-11-20"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
