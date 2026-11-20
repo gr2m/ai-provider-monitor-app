@@ -298,6 +298,18 @@
     "date": "2026-11-20"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions/{session_id}/traces",
+    "method": "GET",
+    "change": "changed",
+    "target": "route",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Route description updated to clarify 16 MiB page-size behavior, pagination via last_id/has_more, and trace_too_large error when a single trace cannot fit.",
+    "date": "2026-11-20"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
