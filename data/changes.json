@@ -311,6 +311,42 @@
   },
   {
     "provider": "anthropic",
+    "route": "/v1/messages",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new 400 InvalidRequestError details variant: image_dimensions_too_large (ImageDimensionsTooLargeErrorDetails) for oversized images.",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Reworded description of UserProfileNotBillableErrorDetails (clarified phrasing about billing).",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "anthropic",
+    "route": "/v1/messages",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Reworded description of UserProfileBillingNotAuthorizedErrorDetails (clarified phrasing about the request's user profile).",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
     "change": "added",
