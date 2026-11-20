@@ -1,6 +1,30 @@
 [
   {
     "provider": "openai",
+    "route": "/organization/projects/{project_id}/rate_limits",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ProjectRateLimitListResponse.object now uses const \"list\" instead of enum [\"list\"].",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
+    "route": "/organization/projects/{project_id}/rate_limits",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ProjectRateLimit.object now uses const \"project.rate_limit\" instead of enum [\"project.rate_limit\"].",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
     "route": "audio/transcriptions",
     "method": "POST",
     "change": "changed",
