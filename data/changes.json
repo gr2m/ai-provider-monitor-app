@@ -382,6 +382,54 @@
     "date": "2026-11-20"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added spend_control to SessionResource (session-wide budget/consumption info).",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "SessionResource required fields updated to include spend_control.",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced new schema SessionBudgetControlResource for session spending limits/consumption.",
+    "date": "2026-11-20"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new status value 'budget_reached' to SessionStatusResource enum.",
+    "date": "2026-11-20"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
