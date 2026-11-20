@@ -286,6 +286,18 @@
     "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1260"
   },
   {
+    "provider": "openai",
+    "route": "/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated documentation for the 'n' parameter; removed the note that newer models reject explicit 'n'.",
+    "date": "2026-11-20"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
