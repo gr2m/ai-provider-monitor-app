@@ -13,6 +13,18 @@
   },
   {
     "provider": "openai",
+    "route": "/organization/projects/{project_id}/data_retention",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "ProjectDataRetention.object schema switched from single-value enum to const (no change to allowed value).",
+    "date": "2026-11-21"
+  },
+  {
+    "provider": "openai",
     "route": "organization/projects",
     "method": "GET",
     "change": "changed",
