@@ -1,6 +1,18 @@
 [
   {
     "provider": "openai",
+    "route": "/audio/transcriptions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "chunking_strategy 'auto' variant changed from enum [\"auto\"] to const \"auto\"; behavior unchanged.",
+    "date": "2026-11-21"
+  },
+  {
+    "provider": "openai",
     "route": "organization/projects",
     "method": "GET",
     "change": "changed",
