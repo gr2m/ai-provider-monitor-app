@@ -24,6 +24,18 @@
     "date": "2026-11-23"
   },
   {
+    "provider": "gladia",
+    "route": "/v1/history",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed language code 'wo' (Wolof) from TranscriptionLanguageCodeEnum, affecting all response fields that reference it.",
+    "date": "2026-11-23"
+  },
+  {
     "provider": "openai",
     "route": "audio/transcriptions",
     "method": "POST",
