@@ -1,5 +1,29 @@
 [
   {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "removed",
+    "target": "request",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Removed explicit default=true for ChatThinking.clear_thinking; default is now model-dependent (false for GLM-5.4+, true for earlier).",
+    "date": "2026-11-23"
+  },
+  {
+    "provider": "zai",
+    "route": "/paas/v4/chat/completions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of ChatThinking.clear_thinking to explain model-dependent default behavior (false for GLM-5.4+; true for earlier).",
+    "date": "2026-11-23"
+  },
+  {
     "provider": "openai",
     "route": "audio/transcriptions",
     "method": "POST",
