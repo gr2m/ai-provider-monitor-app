@@ -24,6 +24,18 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "openai",
+    "route": "/live/sessions",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified that idle_timeout_s applies to WebRTC or SIP sessions (description only).",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "zai",
     "route": "/paas/v4/chat/completions",
     "method": "POST",
