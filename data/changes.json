@@ -139,6 +139,30 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new healthcare model IDs to ModelIdsResponses enum: gpt-6-astra-healthcare, gpt-6.1-sol-healthcare, gpt-6.2-astra-healthcare, gpt-6.2-sol-healthcare.",
+    "date": "2026-11-24"
+  },
+  {
+    "provider": "openai",
+    "route": "/responses",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new healthcare model IDs to ModelIdsResponses enum in response schema.",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
