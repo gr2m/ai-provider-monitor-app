@@ -36,6 +36,18 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "openai",
+    "route": "/responses/compact?beta=true",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional service_tier field to the compacted response object to report the tier used.",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "zai",
     "route": "/paas/v4/chat/completions",
     "method": "POST",
