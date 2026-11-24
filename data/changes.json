@@ -235,6 +235,18 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "openai",
+    "route": "/threads/{thread_id}/messages/{message_id}",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated the Metadata schema description; removed mention of querying via API or dashboard. No functional changes.",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
