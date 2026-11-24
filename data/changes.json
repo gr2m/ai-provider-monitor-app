@@ -103,6 +103,18 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "openai",
+    "route": "/agents",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added HTTP 429 rate limit response using ErrorResponse-2 schema.",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
