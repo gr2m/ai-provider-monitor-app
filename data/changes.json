@@ -115,6 +115,18 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated 429 response description to clarify it also applies to the endpoint rate limit.",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
