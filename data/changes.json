@@ -199,6 +199,30 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "openai",
+    "route": "/assistants",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated Metadata description (removed note about querying via API/dashboard).",
+    "date": "2026-11-24"
+  },
+  {
+    "provider": "openai",
+    "route": "/assistants",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated Metadata description (removed note about querying via API/dashboard).",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
