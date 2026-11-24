@@ -127,6 +127,18 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "openai",
+    "route": "/vaults/{vault_id}/credentials/{credential_id}",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added 429 Too Many Requests error response with ErrorResponse-2 schema.",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
