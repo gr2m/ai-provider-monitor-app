@@ -163,6 +163,42 @@
     "date": "2026-11-24"
   },
   {
+    "provider": "togetherai",
+    "route": "/v2/projects/{projectId}/endpoints/{endpointId}/deployments/{deploymentId}/adapters",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added new read-only servingState field to AdapterEntry indicating adapter serving readiness.",
+    "date": "2026-11-24"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v2/projects/{projectId}/endpoints/{endpointId}/deployments/{deploymentId}/adapters",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "servingState was added to the required fields of DE.AdapterEntry.",
+    "date": "2026-11-24"
+  },
+  {
+    "provider": "togetherai",
+    "route": "/v2/projects/{projectId}/endpoints/{endpointId}/deployments/{deploymentId}/adapters",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated description of perCluster to clarify reporting only for placed clusters and when it may be empty.",
+    "date": "2026-11-24"
+  },
+  {
     "provider": "anthropic",
     "route": "v1/agents/{agent_id}/archive?beta=true",
     "method": "POST",
