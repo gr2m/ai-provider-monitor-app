@@ -37,6 +37,18 @@
   },
   {
     "provider": "openai",
+    "route": "/audio/translations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "CreateTranslationRequest.model constraint changed from enum ['whisper-1'] to const 'whisper-1' (functionally equivalent).",
+    "date": "2026-11-25"
+  },
+  {
+    "provider": "openai",
     "route": "live/sessions",
     "method": "POST",
     "change": "changed",
