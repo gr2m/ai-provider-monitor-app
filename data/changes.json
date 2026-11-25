@@ -49,6 +49,18 @@
   },
   {
     "provider": "openai",
+    "route": "/agents/automations",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "In SessionAgentConfigParam.tools description, the documented max size increased from 3 MiB to 8 MiB for the resolved tool list JSON.",
+    "date": "2026-11-25"
+  },
+  {
+    "provider": "openai",
     "route": "live/sessions",
     "method": "POST",
     "change": "changed",
