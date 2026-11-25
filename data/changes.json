@@ -13,6 +13,30 @@
   },
   {
     "provider": "openai",
+    "route": "/assistants",
+    "method": "GET",
+    "change": "removed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "In AssistantsApiResponseFormatOption, replaced single-value enum for 'auto' with const; removed oneOf[0].enum.",
+    "date": "2026-11-25"
+  },
+  {
+    "provider": "openai",
+    "route": "/assistants",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "In AssistantsApiResponseFormatOption, added const \"auto\" to oneOf[0], replacing prior enum form.",
+    "date": "2026-11-25"
+  },
+  {
+    "provider": "openai",
     "route": "live/sessions",
     "method": "POST",
     "change": "changed",
