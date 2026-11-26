@@ -1,6 +1,18 @@
 [
   {
     "provider": "gladia",
+    "route": "/v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Updated example values for date-related query parameters.",
+    "date": "2026-11-26"
+  },
+  {
+    "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
     "change": "changed",
