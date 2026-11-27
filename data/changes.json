@@ -72,6 +72,30 @@
     "date": "2026-11-27"
   },
   {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional access_programs to CreateAgentSessionParams to select a cyber access program for the session.",
+    "date": "2026-11-27"
+  },
+  {
+    "provider": "openai",
+    "route": "/agents/sessions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added access_programs field to SessionResource to expose the selected cyber access program when set.",
+    "date": "2026-11-27"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
