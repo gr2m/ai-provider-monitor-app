@@ -1,5 +1,77 @@
 [
   {
+    "provider": "fal",
+    "route": "/models/pricing/estimate",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added request-based pricing via items[] with endpoint_id and input (1–20 per call).",
+    "date": "2026-11-27"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/pricing/estimate",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Request schema combinator changed from oneOf to anyOf to accommodate the new items branch.",
+    "date": "2026-11-27"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/pricing/estimate",
+    "method": "POST",
+    "change": "changed",
+    "target": "request",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": true,
+    "note": "Docs now deprecate estimate_type (historical_api_price, unit_price); recommend items instead.",
+    "date": "2026-11-27"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/pricing/estimate",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": true,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "200 response schema changed from a single object to anyOf (request-based result or legacy).",
+    "date": "2026-11-27"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/pricing/estimate",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added detailed request-based estimate result with items[], rated_amount, status, per_request, warnings, etc.",
+    "date": "2026-11-27"
+  },
+  {
+    "provider": "fal",
+    "route": "/models/pricing/estimate",
+    "method": "POST",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": true,
+    "doc_only": false,
+    "note": "Marked legacy total_cost response as deprecated within 200 schema.",
+    "date": "2026-11-27"
+  },
+  {
     "provider": "gladia",
     "route": "v2/transcription",
     "method": "GET",
