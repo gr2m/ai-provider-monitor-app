@@ -1,7 +1,7 @@
 [
   {
     "provider": "fal",
-    "route": "/models/pricing/estimate",
+    "route": "models/pricing/estimate",
     "method": "POST",
     "change": "added",
     "target": "request",
@@ -9,11 +9,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added request-based pricing via items[] with endpoint_id and input (1–20 per call).",
-    "date": "2026-11-27"
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1292"
   },
   {
     "provider": "fal",
-    "route": "/models/pricing/estimate",
+    "route": "models/pricing/estimate",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -21,11 +22,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Request schema combinator changed from oneOf to anyOf to accommodate the new items branch.",
-    "date": "2026-11-27"
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1292"
   },
   {
     "provider": "fal",
-    "route": "/models/pricing/estimate",
+    "route": "models/pricing/estimate",
     "method": "POST",
     "change": "changed",
     "target": "request",
@@ -33,11 +35,12 @@
     "deprecated": true,
     "doc_only": true,
     "note": "Docs now deprecate estimate_type (historical_api_price, unit_price); recommend items instead.",
-    "date": "2026-11-27"
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1292"
   },
   {
     "provider": "fal",
-    "route": "/models/pricing/estimate",
+    "route": "models/pricing/estimate",
     "method": "POST",
     "change": "changed",
     "target": "response",
@@ -45,11 +48,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "200 response schema changed from a single object to anyOf (request-based result or legacy).",
-    "date": "2026-11-27"
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1292"
   },
   {
     "provider": "fal",
-    "route": "/models/pricing/estimate",
+    "route": "models/pricing/estimate",
     "method": "POST",
     "change": "added",
     "target": "response",
@@ -57,11 +61,12 @@
     "deprecated": false,
     "doc_only": false,
     "note": "Added detailed request-based estimate result with items[], rated_amount, status, per_request, warnings, etc.",
-    "date": "2026-11-27"
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1292"
   },
   {
     "provider": "fal",
-    "route": "/models/pricing/estimate",
+    "route": "models/pricing/estimate",
     "method": "POST",
     "change": "changed",
     "target": "response",
@@ -69,35 +74,12 @@
     "deprecated": true,
     "doc_only": false,
     "note": "Marked legacy total_cost response as deprecated within 200 schema.",
-    "date": "2026-11-27"
-  },
-  {
-    "provider": "openai",
-    "route": "/agents/sessions",
-    "method": "POST",
-    "change": "added",
-    "target": "request",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added optional access_programs to CreateAgentSessionParams to select a cyber access program for the session.",
-    "date": "2026-11-27"
-  },
-  {
-    "provider": "openai",
-    "route": "/agents/sessions",
-    "method": "POST",
-    "change": "added",
-    "target": "response",
-    "breaking": false,
-    "deprecated": false,
-    "doc_only": false,
-    "note": "Added access_programs field to SessionResource to expose the selected cyber access program when set.",
-    "date": "2026-11-27"
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1292"
   },
   {
     "provider": "gladia",
-    "route": "/v1/history",
+    "route": "v1/history",
     "method": "GET",
     "change": "changed",
     "target": "response",
@@ -105,7 +87,190 @@
     "deprecated": false,
     "doc_only": true,
     "note": "Updated description for TranslationDTO.error to clarify it is null when success is true.",
-    "date": "2026-11-27"
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1294"
+  },
+  {
+    "provider": "gladia",
+    "route": "v2/transcription",
+    "method": "GET",
+    "change": "changed",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": true,
+    "note": "Clarified TranslationDTO.error description to specify it is null when success=true and changed wording from 'addon' to 'model'.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1294"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional access_programs field to SessionResource to expose selected access programs for a session.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced AccessProgramsResource schema referenced by SessionResource.access_programs.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added CyberAccessProgramResource enum for cyber access program selection.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added optional access_programs to CreateAgentSessionParams to select a cyber access program for the session.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added access_programs field to SessionResource to expose the selected cyber access program when set.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions/{session_id}/events",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "SessionResource now includes optional access_programs selecting an access program for the session.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions/{session_id}/events",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added AccessProgramsResource schema describing session-level access program selections.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions/{session_id}/events",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added CyberAccessProgramResource enum (standard, daybreak_blue, daybreak_red).",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions/{session_id}",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added access_programs field to SessionResource response with selected access programs for the session.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions/{session_id}",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Introduced AccessProgramsResource schema used by SessionResource.access_programs.",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions/{session_id}",
+    "method": "GET",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added CyberAccessProgramResource enum schema (standard, daybreak_blue, daybreak_red).",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions/{session_id}",
+    "method": "POST",
+    "change": "added",
+    "target": "request",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "Added access_programs to UpdateAgentSessionParams to select a cyber access program for subsequent turns (send null to restore model default).",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
+  },
+  {
+    "provider": "openai",
+    "route": "agents/sessions/{session_id}",
+    "method": "POST",
+    "change": "added",
+    "target": "response",
+    "breaking": false,
+    "deprecated": false,
+    "doc_only": false,
+    "note": "SessionResource may now include access_programs describing the explicitly selected cyber program (omitted when using model default).",
+    "date": "2026-11-27",
+    "diff_url": "https://github.com/gr2m/ai-provider-monitor/pull/1293"
   },
   {
     "provider": "gladia",
